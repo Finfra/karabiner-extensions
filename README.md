@@ -61,7 +61,7 @@ macOS 키보드 커스터마이저 [Karabiner-Elements](https://karabiner-elemen
 | EngCharOnKor | 🚧 제출본 준비 완료, PR 예정 |
 | 12Key2Knob | ⏸️ 미룸 — 매크로 없이는 남의 환경에서 동작하지 않는다 |
 | RemoteDesktop | ⏸️ 미룸 — `alt`↔`command` 스왑은 이미 여럿 등록돼 있다 |
-| n3sh | ❌ 대상 아님 — 생성된 규칙 묶음이라 1건 단위에 맞지 않는다 |
+| n3sh | ⏸️ 제출 계획 없음 — GitHub 공개로 방향이 정해져 있다(2026-07-19 결정) |
 
 # 폴더 구조
 

@@ -66,5 +66,10 @@ python3 tools/verify_layout.py        # 폴더 구조 — 옛 경로·링크·bu
 
 # 공개
 
-* 비공개 — pqrs 등록 대상이 아니다. n3sh 완료(5·6단계) 이후 **별도 서브폴더 신설 → GitHub 직접 공개** 예정
-* 판정 근거: `data/rule_source.yaml` `만든_것` · 관련 이슈 Issue12
+| 대상 | 상태 |
+| :--- | :--- |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09, Issue89) |
+| **pqrs 등록** | ⏸️ 제출 계획 없음 — 2026-07-19(Issue12)에 **GitHub 직접 공개**로 방향이 정해졌다 |
+
+* ⚠️ **pqrs 를 택하지 않은 *이유*는 어느 문서에도 기록돼 있지 않다.** `data/rule_source.yaml` 과 Issue12 는 결정만 적고 근거를 남기지 않았다. 구조상의 결격은 **아니다** — 이 규칙도 `rules` 1건(manipulator 227개)이라 pqrs 에 등록된 [FootPedal](../footPedal/README.md)(1건·18개)과 같은 형태다
+* 판정 근거: `data/rule_source.yaml` `만든_것` · 관련 이슈 Issue12 · Issue89

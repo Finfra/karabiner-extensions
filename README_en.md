@@ -61,7 +61,7 @@ The official registry, [ke-complex-modifications.pqrs.org](https://ke-complex-mo
 | EngCharOnKor | 🚧 Submission ready, PR pending |
 | 12Key2Knob | ⏸️ Postponed — without the macros it cannot work on another machine |
 | RemoteDesktop | ⏸️ Postponed — `alt`↔`command` swaps are already well covered there |
-| n3sh | ❌ Not applicable — a generated rule set doesn't fit the one-per-entry model |
+| n3sh | ⏸️ No submission planned — GitHub publication was chosen for this one (decided 2026-07-19) |
 
 # Layout
 
