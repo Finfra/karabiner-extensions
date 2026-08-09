@@ -10,7 +10,7 @@ date: 2026.08.08
 
 manipulator 대부분이 `shell_command` 로 Keyboard Maestro Engine 에 매크로 이름을 넘기는 구조라, **하드웨어와 개인 매크로 라이브러리 양쪽에 100% 의존**한다. 순수 키매핑은 0건이다.
 
-> 📌 **명칭 통일 (2026-08-08)**: 코드명 `nowageCustom` · 표시명 `12key+2knobe` · 정본 description `Nowage Custom : Combo V2024.03.10` 로 갈려 있던 세 이름을 **장치 이름 `12Key2Knob` 하나**로 모았다. 옛 이름을 만나면 [Extensions.md](../README.md) 의 경로 이전 대응표를 본다.
+> 📌 **명칭 통일 (2026-08-08)**: 코드명 `nowageCustom` · 표시명 `12key+2knobe` · 정본 description `Nowage Custom : Combo V2024.03.10` 로 갈려 있던 세 이름을 **장치 이름 `12Key2Knob` 하나**로 모았다. 옛 이름을 만나면 `Extensions.md` 의 경로 이전 대응표를 본다.
 
 # 파일 위치
 
