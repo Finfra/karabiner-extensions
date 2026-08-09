@@ -1,0 +1,289 @@
+{
+ "doc": "Extensions/n3sh/layout/keymap.md",
+ "oracle_source": {
+  "final": "karabiner_json/_orignal_do-not-update/z_backup/old_history/karabiner-for속기_2026.06.02_최종식3벌_마지막.json",
+  "390": "karabiner_json/_orignal_do-not-update/n3sh_setting/karabiner_2026.06.03_390.json"
+ },
+ "description": "세벌식 최종식 → 세벌식 390 키 매핑 — n3sh Shorthand 227건 중 두 배열 산출이 다른 9건만 기록. 나머지 218건은 최종식·390 동일(매핑 불필요)",
+ "total_manipulators": 227,
+ "identical_count": 217,
+ "diff_count": 10,
+ "diffs": [
+  {
+   "txt": "ㅒ",
+   "pattern": "A",
+   "final": {
+    "keys": [
+     "g",
+     "f"
+    ],
+    "modifiers": [],
+    "to": [
+     "g+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "f",
+     "r"
+    ],
+    "modifiers": [],
+    "to": [
+     "r+shift"
+    ]
+   }
+  },
+  {
+   "txt": "읽",
+   "pattern": "C",
+   "final": {
+    "keys": [
+     "hyphen",
+     "j"
+    ],
+    "modifiers": [],
+    "to": [
+     "j",
+     "d",
+     "2+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "hyphen",
+     "j"
+    ],
+    "modifiers": [],
+    "to": [
+     "j",
+     "d",
+     "d+shift"
+    ]
+   }
+  },
+  {
+   "txt": "늦",
+   "pattern": "B",
+   "final": {
+    "keys": [
+     "3",
+     "h"
+    ],
+    "modifiers": [],
+    "to": [
+     "h",
+     "g",
+     "3+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "3",
+     "h"
+    ],
+    "modifiers": [],
+    "to": [
+     "h",
+     "g",
+     "1+shift"
+    ]
+   }
+  },
+  {
+   "txt": "찾",
+   "pattern": "B",
+   "final": {
+    "keys": [
+     "3",
+     "o"
+    ],
+    "modifiers": [],
+    "to": [
+     "o",
+     "f",
+     "3+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "3",
+     "o"
+    ],
+    "modifiers": [],
+    "to": [
+     "o",
+     "f",
+     "1+shift"
+    ]
+   }
+  },
+  {
+   "txt": "짖",
+   "pattern": "B",
+   "final": {
+    "keys": [
+     "3",
+     "l"
+    ],
+    "modifiers": [],
+    "to": [
+     "l",
+     "d",
+     "3+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "3",
+     "l"
+    ],
+    "modifiers": [],
+    "to": [
+     "l",
+     "d",
+     "1+shift"
+    ]
+   }
+  },
+  {
+   "txt": "맞",
+   "pattern": "B",
+   "final": {
+    "keys": [
+     "3",
+     "i"
+    ],
+    "modifiers": [],
+    "to": [
+     "i",
+     "f",
+     "3+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "3",
+     "i"
+    ],
+    "modifiers": [],
+    "to": [
+     "i",
+     "f",
+     "1+shift"
+    ]
+   }
+  },
+  {
+   "txt": "잊",
+   "pattern": "B",
+   "final": {
+    "keys": [
+     "3",
+     "j"
+    ],
+    "modifiers": [],
+    "to": [
+     "j",
+     "d",
+     "3+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "3",
+     "j"
+    ],
+    "modifiers": [],
+    "to": [
+     "j",
+     "d",
+     "1+shift"
+    ]
+   }
+  },
+  {
+   "txt": "잃",
+   "pattern": "C",
+   "final": {
+    "keys": [
+     "0",
+     "j"
+    ],
+    "modifiers": [],
+    "to": [
+     "j",
+     "d",
+     "r+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "0",
+     "j"
+    ],
+    "modifiers": [],
+    "to": [
+     "j",
+     "d",
+     "v+shift"
+    ]
+   }
+  },
+  {
+   "txt": "싫",
+   "pattern": "C",
+   "final": {
+    "keys": [
+     "1",
+     "n"
+    ],
+    "modifiers": [],
+    "to": [
+     "n",
+     "d",
+     "r+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "1",
+     "n"
+    ],
+    "modifiers": [],
+    "to": [
+     "n",
+     "d",
+     "v+shift"
+    ]
+   }
+  },
+  {
+   "txt": "갖",
+   "pattern": "B",
+   "final": {
+    "keys": [
+     "3",
+     "k"
+    ],
+    "modifiers": [],
+    "to": [
+     "k",
+     "f",
+     "3+shift"
+    ]
+   },
+   "390": {
+    "keys": [
+     "3",
+     "k"
+    ],
+    "modifiers": [],
+    "to": [
+     "k",
+     "f",
+     "1+shift"
+    ]
+   }
+  }
+ ]
+}

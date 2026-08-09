@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://n3sh.local/schema/staging_job.schema.json",
+  "title": "n3sh n390/staging.json (job 단일표)",
+  "description": "2026-08-05 사용자 지시 — n390 staging 을 절 5분류에서 **표 1개 + `job` 컬럼**으로 통일. 구 `id`(절 forward-fill 라벨) 대신 행마다 `job` 을 갖는다. 최종식 판은 아직 구 구조라 rules_staging.schema.json 을 쓴다.",
+  "type": "object",
+  "required": [
+    "records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/stagingJobRule"
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "이 데이터를 만들어내는 사람 정본 md 경로. 링크 방향 = 생성 방향(md → JSON). 규약: .claude/rules/data-md-first-rules.md"
+    }
+  },
+  "$defs": {
+    "stagingJobRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "job",
+        "c1",
+        "c2",
+        "DESC",
+        "h1",
+        "h2"
+      ],
+      "properties": {
+        "job": {
+          "description": "작업 분류 — 추가/수정/제거/금지(구 지정안할)/미정(구 빈자리)",
+          "type": "string",
+          "enum": [
+            "추가",
+            "수정",
+            "제거",
+            "금지",
+            "미정"
+          ]
+        },
+        "c1": {
+          "type": "string",
+          "description": "첫 입력 키. 공란 허용(빈자리 상태)"
+        },
+        "c2": {
+          "type": "string",
+          "description": "둘째 입력 키. 공란 허용"
+        },
+        "⌥": {
+          "type": "string"
+        },
+        "⇧": {
+          "type": "string"
+        },
+        "⌘": {
+          "type": "string"
+        },
+        "txt": {
+          "type": "string",
+          "description": "산출 텍스트. '??'는 미확정을 뜻함"
+        },
+        "기호": {
+          "type": "string"
+        },
+        "sp": {
+          "type": "string"
+        },
+        "품사": {
+          "type": "string"
+        },
+        "w": {
+          "type": "string",
+          "description": "Issue42 병합 — 구 중요도1*100+구 중요도2. 빌드 미사용, 사람 참고용. Issue81 로 `DESC` 뒤로 이동(rules 와 같은 배치)"
+        },
+        "DESC": {
+          "type": "string"
+        },
+        "h1": {
+          "type": "string",
+          "description": "c1 의 한글 자모 표기(사람 판독용) — 종성은 앞에 ~"
+        },
+        "h2": {
+          "type": "string",
+          "description": "c2 의 한글 자모 표기 — 종성은 앞에 ~"
+        }
+      }
+    }
+  }
+}

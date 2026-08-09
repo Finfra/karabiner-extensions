@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://n3sh.local/schema/keymap_final_to_390.schema.json",
+  "title": "n3sh keymap_final_to_390.json",
+  "description": "Issue7 확정 스키마 — Extensions/n3sh/core/keymap_final_to_390.json (세벌식 최종식→390 키 매핑, 227건 중 실제 산출이 다른 9건만 기록)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "description",
+    "doc",
+    "total_manipulators",
+    "identical_count",
+    "diff_count",
+    "diffs"
+  ],
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "doc": {
+      "type": "string",
+      "description": "이 데이터를 설명하는 사람 문서 md 경로. 생성 관계가 아니라 설명 관계 — md 는 이 파일을 만들지 않는다. 규약: .claude/rules/data-md-first-rules.md"
+    },
+    "total_manipulators": {
+      "type": "integer"
+    },
+    "identical_count": {
+      "type": "integer"
+    },
+    "diff_count": {
+      "type": "integer"
+    },
+    "diffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "txt",
+          "pattern",
+          "final",
+          "390"
+        ],
+        "properties": {
+          "txt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "산출 한글. rules.json과 조인되는 값"
+          },
+          "pattern": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ],
+            "description": "A=키 조합 자체가 다름, B=같은 조합·c2=3 그룹 균일 심볼 치환, C=같은 조합·개별 심볼 치환"
+          },
+          "final": {
+            "$ref": "#/$defs/side"
+          },
+          "390": {
+            "$ref": "#/$defs/side"
+          }
+        }
+      }
+    },
+    "oracle_source": {
+      "type": "object",
+      "description": "이 대조표를 산출한 두 배열 오라클 스냅샷 경로 (karabiner_json/_orignal_do-not-update/ 하위)"
+    }
+  },
+  "$defs": {
+    "side": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "keys",
+        "modifiers",
+        "to"
+      ],
+      "properties": {
+        "keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "modifiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    }
+  }
+}

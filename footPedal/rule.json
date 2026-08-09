@@ -1,0 +1,532 @@
+{
+  "title": "USB Foot Pedal (3 pedals) - Editing / Navigation / Media layers",
+  "maintainers": [
+    "nowage"
+  ],
+  "rules": [
+    {
+      "description": "USB Foot Pedal (3 pedals). Pedal 1 (left, 'a') = editing: copy, control=cut, option=paste, shift=paste-without-formatting, command=undo, hyper=redo. Pedal 2 (middle, 'b') = navigation: page down, control=page up, option=end, shift=home, command=Mission Control, hyper=Launchpad. Pedal 3 (right, 'c') = media: play/pause, control=rewind, option=fast-forward, shift=mute, command=volume down, hyper=volume up. Requires a USB foot switch with vendor_id 6790 (0x1a86) / product_id 57382 (0xe026).",
+      "manipulators": [
+        {
+          "description": "hyper + pedal 1 -> redo",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "option",
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "command + pedal 1 -> undo",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "shift + pedal 1 -> paste without formatting",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "left_command",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "option + pedal 1 -> paste",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "control + pedal 1 -> cut",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "x",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "pedal 1 -> copy",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "hyper + pedal 2 -> Launchpad",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "option",
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "launchpad"
+            }
+          ]
+        },
+        {
+          "description": "command + pedal 2 -> Mission Control",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "mission_control"
+            }
+          ]
+        },
+        {
+          "description": "shift + pedal 2 -> home",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "home"
+            }
+          ]
+        },
+        {
+          "description": "option + pedal 2 -> end",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "end"
+            }
+          ]
+        },
+        {
+          "description": "control + pedal 2 -> page up",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_up"
+            }
+          ]
+        },
+        {
+          "description": "pedal 2 -> page down",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "b"
+          },
+          "to": [
+            {
+              "key_code": "page_down"
+            }
+          ]
+        },
+        {
+          "description": "hyper + pedal 3 -> volume up",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "option",
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "volume_increment"
+            }
+          ]
+        },
+        {
+          "description": "command + pedal 3 -> volume down",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "volume_decrement"
+            }
+          ]
+        },
+        {
+          "description": "shift + pedal 3 -> mute",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "mute"
+            }
+          ]
+        },
+        {
+          "description": "option + pedal 3 -> fast-forward",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "fastforward"
+            }
+          ]
+        },
+        {
+          "description": "control + pedal 3 -> rewind",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "rewind"
+            }
+          ]
+        },
+        {
+          "description": "pedal 3 -> play/pause",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 6790,
+                  "product_id": 57382
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "c"
+          },
+          "to": [
+            {
+              "key_code": "play_or_pause"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "title": "[TEST-F] EngCharOnKor — fn 홀드 레이어 (누른 동안 영문, 전환 1회)",
+  "rules": [
+    {
+      "description": "[TEST-F] 한글 모드에서 fn 을 누르고 있는 동안 영문 · 떼면 한글 복귀",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^ko$"
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "fn",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "keyboardLayoutSettingIsEng",
+                "value": 1
+              }
+            },
+            {
+              "select_input_source": {
+                "language": "^en$"
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "keyboardLayoutSettingIsEng",
+                "value": 0
+              }
+            },
+            {
+              "select_input_source": {
+                "language": "^ko$"
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "keyboardLayoutSettingIsEng",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "keyboardLayoutSettingIsEng",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "l"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

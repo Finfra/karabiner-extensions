@@ -1,0 +1,1171 @@
+{
+  "source": "Extensions/n3sh/layout/keymap.md",
+  "symbols": [
+    {
+      "sym": [
+        "cho",
+        "ㄱ"
+      ],
+      "keys": [
+        {
+          "key_code": "k",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㄲ"
+      ],
+      "keys": [
+        {
+          "key_code": "k",
+          "modifiers": []
+        },
+        {
+          "key_code": "k",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㄴ"
+      ],
+      "keys": [
+        {
+          "key_code": "h",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㄷ"
+      ],
+      "keys": [
+        {
+          "key_code": "u",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㄸ"
+      ],
+      "keys": [
+        {
+          "key_code": "u",
+          "modifiers": []
+        },
+        {
+          "key_code": "u",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㄹ"
+      ],
+      "keys": [
+        {
+          "key_code": "y",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅁ"
+      ],
+      "keys": [
+        {
+          "key_code": "i",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅂ"
+      ],
+      "keys": [
+        {
+          "key_code": "semicolon",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅅ"
+      ],
+      "keys": [
+        {
+          "key_code": "n",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅇ"
+      ],
+      "keys": [
+        {
+          "key_code": "j",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅈ"
+      ],
+      "keys": [
+        {
+          "key_code": "l",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅊ"
+      ],
+      "keys": [
+        {
+          "key_code": "o",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅋ"
+      ],
+      "keys": [
+        {
+          "key_code": "0",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅍ"
+      ],
+      "keys": [
+        {
+          "key_code": "p",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "cho",
+        "ㅎ"
+      ],
+      "keys": [
+        {
+          "key_code": "m",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㄱ"
+      ],
+      "keys": [
+        {
+          "key_code": "x",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㄲ"
+      ],
+      "keys": [
+        {
+          "key_code": "1",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㄴ"
+      ],
+      "keys": [
+        {
+          "key_code": "s",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㄶ"
+      ],
+      "keys": [
+        {
+          "key_code": "s",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㄷ"
+      ],
+      "keys": [
+        {
+          "key_code": "a",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㄹ"
+      ],
+      "keys": [
+        {
+          "key_code": "w",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㄺ"
+      ],
+      "keys": [
+        {
+          "key_code": "2",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅀ"
+      ],
+      "keys": [
+        {
+          "key_code": "r",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅁ"
+      ],
+      "keys": [
+        {
+          "key_code": "z",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅂ"
+      ],
+      "keys": [
+        {
+          "key_code": "3",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅄ"
+      ],
+      "keys": [
+        {
+          "key_code": "x",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅅ"
+      ],
+      "keys": [
+        {
+          "key_code": "q",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅆ"
+      ],
+      "keys": [
+        {
+          "key_code": "2",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅇ"
+      ],
+      "keys": [
+        {
+          "key_code": "a",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅈ"
+      ],
+      "keys": [
+        {
+          "key_code": "3",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅊ"
+      ],
+      "keys": [
+        {
+          "key_code": "z",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅌ"
+      ],
+      "keys": [
+        {
+          "key_code": "w",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅍ"
+      ],
+      "keys": [
+        {
+          "key_code": "q",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jong",
+        "ㅎ"
+      ],
+      "keys": [
+        {
+          "key_code": "1",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅏ"
+      ],
+      "keys": [
+        {
+          "key_code": "f",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅐ"
+      ],
+      "keys": [
+        {
+          "key_code": "r",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅑ"
+      ],
+      "keys": [
+        {
+          "key_code": "6",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅓ"
+      ],
+      "keys": [
+        {
+          "key_code": "t",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅔ"
+      ],
+      "keys": [
+        {
+          "key_code": "c",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅕ"
+      ],
+      "keys": [
+        {
+          "key_code": "e",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅗ"
+      ],
+      "keys": [
+        {
+          "key_code": "v",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅘ"
+      ],
+      "keys": [
+        {
+          "key_code": "slash",
+          "modifiers": []
+        },
+        {
+          "key_code": "f",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅙ"
+      ],
+      "keys": [
+        {
+          "key_code": "slash",
+          "modifiers": []
+        },
+        {
+          "key_code": "r",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅚ"
+      ],
+      "keys": [
+        {
+          "key_code": "slash",
+          "modifiers": []
+        },
+        {
+          "key_code": "d",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅛ"
+      ],
+      "keys": [
+        {
+          "key_code": "4",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅜ"
+      ],
+      "keys": [
+        {
+          "key_code": "b",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅝ"
+      ],
+      "keys": [
+        {
+          "key_code": "9",
+          "modifiers": []
+        },
+        {
+          "key_code": "t",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅟ"
+      ],
+      "keys": [
+        {
+          "key_code": "9",
+          "modifiers": []
+        },
+        {
+          "key_code": "d",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅡ"
+      ],
+      "keys": [
+        {
+          "key_code": "g",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅢ"
+      ],
+      "keys": [
+        {
+          "key_code": "8",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "jung",
+        "ㅣ"
+      ],
+      "keys": [
+        {
+          "key_code": "d",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "."
+      ],
+      "keys": [
+        {
+          "key_code": "period",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㄲ"
+      ],
+      "keys": [
+        {
+          "key_code": "k",
+          "modifiers": []
+        },
+        {
+          "key_code": "k",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㄸ"
+      ],
+      "keys": [
+        {
+          "key_code": "u",
+          "modifiers": []
+        },
+        {
+          "key_code": "u",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅃ"
+      ],
+      "keys": [
+        {
+          "key_code": "semicolon",
+          "modifiers": []
+        },
+        {
+          "key_code": "semicolon",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅆ"
+      ],
+      "keys": [
+        {
+          "key_code": "n",
+          "modifiers": []
+        },
+        {
+          "key_code": "n",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅉ"
+      ],
+      "keys": [
+        {
+          "key_code": "l",
+          "modifiers": []
+        },
+        {
+          "key_code": "l",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅑ"
+      ],
+      "keys": [
+        {
+          "key_code": "6",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅒ"
+      ],
+      "keys": [
+        {
+          "key_code": "g",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅖ"
+      ],
+      "keys": [
+        {
+          "key_code": "7",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅘ"
+      ],
+      "keys": [
+        {
+          "key_code": "slash",
+          "modifiers": []
+        },
+        {
+          "key_code": "f",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅙ"
+      ],
+      "keys": [
+        {
+          "key_code": "slash",
+          "modifiers": []
+        },
+        {
+          "key_code": "r",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅚ"
+      ],
+      "keys": [
+        {
+          "key_code": "slash",
+          "modifiers": []
+        },
+        {
+          "key_code": "d",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅝ"
+      ],
+      "keys": [
+        {
+          "key_code": "9",
+          "modifiers": []
+        },
+        {
+          "key_code": "t",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅞ"
+      ],
+      "keys": [
+        {
+          "key_code": "9",
+          "modifiers": []
+        },
+        {
+          "key_code": "c",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅟ"
+      ],
+      "keys": [
+        {
+          "key_code": "9",
+          "modifiers": []
+        },
+        {
+          "key_code": "d",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅠ"
+      ],
+      "keys": [
+        {
+          "key_code": "5",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "lit",
+        "ㅢ"
+      ],
+      "keys": [
+        {
+          "key_code": "8",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "keys": []
+    },
+    {
+      "sym": [
+        "tail",
+        "",
+        "",
+        "",
+        ".",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "period",
+          "modifiers": []
+        },
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "-",
+        "-",
+        "",
+        ""
+      ],
+      "keys": []
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "-",
+        "-",
+        "",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "-",
+        "-",
+        ".",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "period",
+          "modifiers": []
+        },
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "-",
+        "✔",
+        "",
+        ""
+      ],
+      "keys": []
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "-",
+        "✔",
+        "",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "-",
+        "✔",
+        ".",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "period",
+          "modifiers": []
+        },
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "✔",
+        "-",
+        "",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "✔",
+        "-",
+        "?",
+        ""
+      ],
+      "keys": [
+        {
+          "key_code": "slash",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "✔",
+        "-",
+        "?",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "slash",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "✔",
+        "✔",
+        "!",
+        ""
+      ],
+      "keys": [
+        {
+          "key_code": "b",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "-",
+        "✔",
+        "✔",
+        "!",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "b",
+          "modifiers": [
+            "shift"
+          ]
+        },
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "sym": [
+        "tail",
+        "✔",
+        "-",
+        "-",
+        "",
+        ""
+      ],
+      "keys": []
+    },
+    {
+      "sym": [
+        "tail",
+        "✔",
+        "-",
+        "-",
+        "",
+        "✔"
+      ],
+      "keys": [
+        {
+          "key_code": "spacebar",
+          "modifiers": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://n3sh.local/schema/fsnippet_snippets.schema.json",
+  "title": "n3sh fsnippet_snippets.json",
+  "description": "Issue31 확정 스키마 — Extensions/n3sh/core/fsnippet_snippets.json (fSnippet(prj9) `_한글속기` 스니펫 세트: 두 글자 이상 축약은 fSnippet 담당. 구 alfred_snippets.json 대체)",
+  "type": "object",
+  "required": [
+    "records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "Keyword",
+          "Label",
+          "Snippet"
+        ],
+        "properties": {
+          "Keyword": {
+            "type": "string",
+            "minLength": 1,
+            "description": "실제 타이핑하는 로마자 키 시퀀스(예: 'iu'). 입력 후 백틱(`)으로 트리거"
+          },
+          "Label": {
+            "type": "string",
+            "description": "스니펫 파일명에 기록된 390 자모 라벨(예: 'ㅁㄷ'). 라벨 없는 항목은 빈값"
+          },
+          "Snippet": {
+            "type": "string",
+            "description": "치환될 텍스트(예: '맞다. '). 값 미정 항목은 빈값 허용"
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "이 데이터를 만들어내는 사람 정본 md 경로. 링크 방향 = 생성 방향(md → JSON). 규약: .claude/rules/data-md-first-rules.md"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "title": "[TEST-C] EngCharOnKor — 오른쪽 옵션 홀드 레이어 (누른 동안 영문)",
+  "rules": [
+    {
+      "description": "[TEST-C] 한글 모드에서 ⌥(오른쪽)을 누르고 있는 동안 영문 · 떼면 한글 복귀",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^ko$"
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "eng_char_layer",
+                "value": 1
+              }
+            },
+            {
+              "select_input_source": {
+                "language": "^en$"
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "eng_char_layer",
+                "value": 0
+              }
+            },
+            {
+              "select_input_source": {
+                "language": "^ko$"
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "eng_char_layer",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "eng_char_layer",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "l"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

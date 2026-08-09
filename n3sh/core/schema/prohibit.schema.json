@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://n3sh.local/schema/prohibit.schema.json",
+  "title": "n3sh prohibit.json (배정 금지 SSOT)",
+  "description": "2026-08-05 staging 에서 분리 — 의도적으로 비워 두기로 **결정**한 트리거. staging 은 전이 구역이라 나가지 않는 항목을 담지 않는다. `사유` 필수. 불변식: prohibit ∩ rules = ∅ (validate_cross.py 검사)",
+  "type": "object",
+  "required": [
+    "records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/prohibitRule"
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "이 데이터를 만들어내는 사람 정본 md 경로. 링크 방향 = 생성 방향(md → JSON). 규약: .claude/rules/data-md-first-rules.md"
+    }
+  },
+  "$defs": {
+    "prohibitRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "c1",
+        "c2",
+        "h1",
+        "h2",
+        "사유"
+      ],
+      "properties": {
+        "c1": {
+          "type": "string",
+          "description": "첫 입력 키. 공란 허용(빈자리 상태)"
+        },
+        "c2": {
+          "type": "string",
+          "description": "둘째 입력 키. 공란 허용"
+        },
+        "h1": {
+          "type": "string",
+          "description": "c1 의 한글 자모 표기(사람 판독용) — 종성은 앞에 ~"
+        },
+        "h2": {
+          "type": "string",
+          "description": "c2 의 한글 자모 표기 — 종성은 앞에 ~"
+        },
+        "⌥": {
+          "type": "string"
+        },
+        "⇧": {
+          "type": "string"
+        },
+        "⌘": {
+          "type": "string"
+        },
+        "txt": {
+          "type": "string",
+          "description": "산출 텍스트. '??'는 미확정을 뜻함"
+        },
+        "기호": {
+          "type": "string"
+        },
+        "sp": {
+          "type": "string"
+        },
+        "품사": {
+          "type": "string"
+        },
+        "사유": {
+          "type": "string",
+          "minLength": 1,
+          "description": "왜 막았는가. 근거 없는 금지는 되돌릴 수도 신뢰할 수도 없다 — 필수·비어 있을 수 없다"
+        }
+      }
+    }
+  }
+}

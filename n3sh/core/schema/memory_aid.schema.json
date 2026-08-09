@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://n3sh.local/schema/memory_aid.schema.json",
+  "title": "n3sh memory_aid.json",
+  "description": "Issue7 확정 스키마 — Extensions/n3sh/core/memory_aid.json (Numbers '암기용 표'). 알려진 데이터 결함: c1/c2 값에 원본 셀의 앞뒤 공백이 그대로 남아 있는 레코드 존재(예: '  h ') — 트리밍은 향후 정리 대상, 본 스키마는 있는 그대로 허용",
+  "type": "object",
+  "required": [
+    "records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "version",
+          "c1",
+          "c2",
+          "txt"
+        ],
+        "properties": {
+          "version": {
+            "type": "string",
+            "description": "레코드 개정 순번(정수 문자열, 예: '0', '1', '2' — 2026-08-02 정수화)"
+          },
+          "c1": {
+            "type": "string"
+          },
+          "c2": {
+            "type": "string"
+          },
+          "txt": {
+            "type": "string"
+          },
+          "highlight": {
+            "type": "object",
+            "description": "Numbers 원본 셀 하이라이트 보존(강조 있던 레코드만 등장)",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bg": {
+                  "type": "boolean"
+                },
+                "tc": {
+                  "type": "boolean"
+                }
+              },
+              "minProperties": 1
+            }
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "이 데이터를 만들어내는 사람 정본 md 경로. 링크 방향 = 생성 방향(md → JSON). 규약: .claude/rules/data-md-first-rules.md"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://n3sh.local/schema/practice.schema.json",
+  "title": "n3sh practice.json",
+  "description": "Issue7 확정 스키마 — Extensions/n3sh/core/practice.json (Numbers '1·2열 연습 표': 학습·암기 보조용 파생 표)",
+  "type": "object",
+  "required": [
+    "records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "1열",
+          "2열"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "연습 항목 식별자(예: '1오')"
+          },
+          "1열": {
+            "type": "string",
+            "description": "1열 연습 문구"
+          },
+          "2열": {
+            "type": "string",
+            "description": "2열 연습 문구"
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "이 데이터를 만들어내는 사람 정본 md 경로. 링크 방향 = 생성 방향(md → JSON). 규약: .claude/rules/data-md-first-rules.md"
+    }
+  }
+}

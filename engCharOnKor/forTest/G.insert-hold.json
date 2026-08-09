@@ -1,0 +1,169 @@
+{
+  "title": "[TEST-G] EngCharOnKor — Insert 홀드 레이어",
+  "rules": [
+    {
+      "description": "[TEST-G] 한글 모드에서 Insert 를 누르고 있는 동안 영문 · 떼면 한글 복귀",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^ko$"
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "insert",
+            "modifiers": {
+              "mandatory": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar",
+              "hold_down_milliseconds": 10
+            },
+            {
+              "key_code": "delete_or_backspace",
+              "hold_down_milliseconds": 10
+            },
+            {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 30
+            },
+            {
+              "set_variable": {
+                "name": "keyboardLayoutSettingIsEng",
+                "value": 1
+              }
+            },
+            {
+              "select_input_source": {
+                "language": "^en$"
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "keyboardLayoutSettingIsEng",
+                "value": 0
+              }
+            },
+            {
+              "select_input_source": {
+                "language": "^ko$"
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^ko$"
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "insert"
+          },
+          "to": [
+            {
+              "key_code": "spacebar",
+              "hold_down_milliseconds": 10
+            },
+            {
+              "key_code": "delete_or_backspace",
+              "hold_down_milliseconds": 10
+            },
+            {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 30
+            },
+            {
+              "set_variable": {
+                "name": "keyboardLayoutSettingIsEng",
+                "value": 1
+              }
+            },
+            {
+              "select_input_source": {
+                "language": "^en$"
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "keyboardLayoutSettingIsEng",
+                "value": 0
+              }
+            },
+            {
+              "select_input_source": {
+                "language": "^ko$"
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "keyboardLayoutSettingIsEng",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "keyboardLayoutSettingIsEng",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "l"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

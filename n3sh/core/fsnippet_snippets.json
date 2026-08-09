@@ -1,0 +1,635 @@
+{
+  "source": "Extensions/n3sh/_doc/n390/fsnippet-한글속기.md",
+  "records": [
+    {
+      "Keyword": "''",
+      "Label": "ㅌㅌ",
+      "Snippet": "어요. "
+    },
+    {
+      "Keyword": "'yu",
+      "Label": "ㅌㄹㄷ",
+      "Snippet": "틀리다. "
+    },
+    {
+      "Keyword": ",",
+      "Label": "",
+      "Snippet": "겠습니다. "
+    },
+    {
+      "Keyword": ",0",
+      "Label": ",ㅋ",
+      "Snippet": "겠는가? "
+    },
+    {
+      "Keyword": "0y",
+      "Label": "ㅋㄹ",
+      "Snippet": "클릭"
+    },
+    {
+      "Keyword": ";",
+      "Label": "ㅂ",
+      "Snippet": "바랍니다. "
+    },
+    {
+      "Keyword": ";'",
+      "Label": "ㅂㅌ",
+      "Snippet": "부터 "
+    },
+    {
+      "Keyword": ";0",
+      "Label": "ㅂㅋ",
+      "Snippet": "버튼 클릭"
+    },
+    {
+      "Keyword": ";k",
+      "Label": "ㅂㄱ",
+      "Snippet": "반갑습니다. "
+    },
+    {
+      "Keyword": ";u",
+      "Label": "ㅂㄷ",
+      "Snippet": "보다 "
+    },
+    {
+      "Keyword": "[k",
+      "Label": "(ㄱ",
+      "Snippet": "는가? "
+    },
+    {
+      "Keyword": "[u",
+      "Label": "(ㄷ",
+      "Snippet": "는다. "
+    },
+    {
+      "Keyword": "h",
+      "Label": "ㄴ",
+      "Snippet": ""
+    },
+    {
+      "Keyword": "h,",
+      "Label": "ㄴ,",
+      "Snippet": "는다. "
+    },
+    {
+      "Keyword": "h.",
+      "Label": "ㄴ.",
+      "Snippet": "는데"
+    },
+    {
+      "Keyword": "h\\",
+      "Label": "ㄴ_",
+      "Snippet": "나요? "
+    },
+    {
+      "Keyword": "hk",
+      "Label": "ㄴㄱ",
+      "Snippet": "는가? "
+    },
+    {
+      "Keyword": "hk,",
+      "Label": "ㄴㄱ,",
+      "Snippet": "니까"
+    },
+    {
+      "Keyword": "hl",
+      "Label": "ㄴㅈ",
+      "Snippet": "는지 "
+    },
+    {
+      "Keyword": "hu",
+      "Label": "ㄴㄷ",
+      "Snippet": "니다. "
+    },
+    {
+      "Keyword": "i",
+      "Label": "ㅁ",
+      "Snippet": "만 "
+    },
+    {
+      "Keyword": "ih'",
+      "Label": "ㅁㄴㅌ",
+      "Snippet": "만나요. "
+    },
+    {
+      "Keyword": "ij",
+      "Label": "ㅁㅇ",
+      "Snippet": "뭐야?"
+    },
+    {
+      "Keyword": "ij'",
+      "Label": "ㅁㅇㅌ",
+      "Snippet": "맞아요. "
+    },
+    {
+      "Keyword": "iu",
+      "Label": "ㅁㄷ",
+      "Snippet": "맞다. "
+    },
+    {
+      "Keyword": "J",
+      "Label": "J_",
+      "Snippet": "에게 "
+    },
+    {
+      "Keyword": "j",
+      "Label": "ㅇ",
+      "Snippet": "입니다. "
+    },
+    {
+      "Keyword": "j'",
+      "Label": "ㅇㅌ",
+      "Snippet": "이요. "
+    },
+    {
+      "Keyword": "j,",
+      "Label": "ㅇ,",
+      "Snippet": "있다. "
+    },
+    {
+      "Keyword": "j,'",
+      "Label": "ㅇ,ㅌ",
+      "Snippet": "있어요. "
+    },
+    {
+      "Keyword": "j,.",
+      "Label": "ㅇ,.",
+      "Snippet": "없다. "
+    },
+    {
+      "Keyword": "j,.'",
+      "Label": "ㅇ,.ㅌ",
+      "Snippet": "없어요. "
+    },
+    {
+      "Keyword": "j,.j",
+      "Label": "ㅇ,.ㅇ",
+      "Snippet": "없었다. "
+    },
+    {
+      "Keyword": "j,.j'",
+      "Label": "j,.jㅌ",
+      "Snippet": "없었어요. "
+    },
+    {
+      "Keyword": "j,j",
+      "Label": "ㅇ,ㅇ",
+      "Snippet": "있었다. "
+    },
+    {
+      "Keyword": "j,j'",
+      "Label": "ㅇ,ㅇㅌ",
+      "Snippet": "있었어요. "
+    },
+    {
+      "Keyword": "j,n",
+      "Label": "ㅇ,ㅅ",
+      "Snippet": "있습니다. "
+    },
+    {
+      "Keyword": "j.",
+      "Label": "ㅇ.",
+      "Snippet": "않다. "
+    },
+    {
+      "Keyword": "j.'",
+      "Label": "ㅇ.ㅌ",
+      "Snippet": "않아요. "
+    },
+    {
+      "Keyword": "j.j",
+      "Label": "ㅇ.ㅇ",
+      "Snippet": "않았다. "
+    },
+    {
+      "Keyword": "j.j'",
+      "Label": "ㅇ.ㅇㅌ",
+      "Snippet": "않았어요. "
+    },
+    {
+      "Keyword": "j['",
+      "Label": "ㅇ(ㅌ",
+      "Snippet": "아요. "
+    },
+    {
+      "Keyword": "Jh",
+      "Label": "Jh_",
+      "Snippet": "에나 "
+    },
+    {
+      "Keyword": "jh",
+      "Label": "ㅇㄴ",
+      "Snippet": "이나 "
+    },
+    {
+      "Keyword": "jh'",
+      "Label": "ㅇㄴㅌ",
+      "Snippet": "안녕하세요! "
+    },
+    {
+      "Keyword": "jhm",
+      "Label": "ㅇㄴㅎ",
+      "Snippet": "안녕하십니까? "
+    },
+    {
+      "Keyword": "jhu",
+      "Label": "ㅇㄴㄷ",
+      "Snippet": "아니다. "
+    },
+    {
+      "Keyword": "jj",
+      "Label": "ㅇㅇ",
+      "Snippet": "이었다. "
+    },
+    {
+      "Keyword": "jj'",
+      "Label": "ㅇㅇㅌ",
+      "Snippet": "이에요. "
+    },
+    {
+      "Keyword": "jjn",
+      "Label": "ㅇㅇㅅ",
+      "Snippet": "있었습니다. "
+    },
+    {
+      "Keyword": "jk",
+      "Label": "ㅇㄱ",
+      "Snippet": "이고 "
+    },
+    {
+      "Keyword": "jku",
+      "Label": "ㅇㄱㄷ",
+      "Snippet": "에게도 "
+    },
+    {
+      "Keyword": "jl",
+      "Label": "ㅇㅈ",
+      "Snippet": "인지 "
+    },
+    {
+      "Keyword": "jm",
+      "Label": "ㅇㅎ",
+      "Snippet": "위해 "
+    },
+    {
+      "Keyword": "Jn",
+      "Label": "Jn_",
+      "Snippet": "이해하고 설명할 수 있어야 한다. "
+    },
+    {
+      "Keyword": "jn",
+      "Label": "ㅇㅅ",
+      "Snippet": "에서 "
+    },
+    {
+      "Keyword": "jnh",
+      "Label": "ㅇㅅㄴ",
+      "Snippet": "에서는 "
+    },
+    {
+      "Keyword": "ju",
+      "Label": "ㅇㄷ",
+      "Snippet": "이다. "
+    },
+    {
+      "Keyword": "juk",
+      "Label": "ㅇㄷㄱ",
+      "Snippet": "어떻게 "
+    },
+    {
+      "Keyword": "jum",
+      "Label": "ㅇㄷㅎ",
+      "Snippet": "어떠한 "
+    },
+    {
+      "Keyword": "jy",
+      "Label": "ㅇㄹ",
+      "Snippet": "으로 "
+    },
+    {
+      "Keyword": "jyk",
+      "Label": "ㅇㄹㄱ",
+      "Snippet": "이렇게 "
+    },
+    {
+      "Keyword": "K",
+      "Label": "K_",
+      "Snippet": "그러나, "
+    },
+    {
+      "Keyword": "k",
+      "Label": "ㄱ",
+      "Snippet": "그리고, "
+    },
+    {
+      "Keyword": "k'",
+      "Label": "ㄱㅌ",
+      "Snippet": "가요. "
+    },
+    {
+      "Keyword": "k.",
+      "Label": "ㄱ.",
+      "Snippet": "근데 "
+    },
+    {
+      "Keyword": "kh",
+      "Label": "ㄱㄴ",
+      "Snippet": "가능"
+    },
+    {
+      "Keyword": "kj",
+      "Label": "ㄱㅇ",
+      "Snippet": "같이 "
+    },
+    {
+      "Keyword": "kj,",
+      "Label": "ㄱㅇ,",
+      "Snippet": "기에 "
+    },
+    {
+      "Keyword": "kl",
+      "Label": "ㄱㅈ",
+      "Snippet": "까지 "
+    },
+    {
+      "Keyword": "kn",
+      "Label": "ㄱㅅ",
+      "Snippet": "감사합니다. "
+    },
+    {
+      "Keyword": "kn'",
+      "Label": "ㄱㅅㅌ",
+      "Snippet": "감사해요. "
+    },
+    {
+      "Keyword": "kn,",
+      "Label": "ㄱㅅ,",
+      "Snippet": "감사하겠습니다. "
+    },
+    {
+      "Keyword": "ky",
+      "Label": "ㄱㄹ",
+      "Snippet": "그래."
+    },
+    {
+      "Keyword": "ky'",
+      "Label": "ㄱㄹㅌ",
+      "Snippet": "그래요. "
+    },
+    {
+      "Keyword": "ky.",
+      "Label": "ㄱㄹ.",
+      "Snippet": "그런데 "
+    },
+    {
+      "Keyword": "kyi",
+      "Label": "ㄱㄹㅁ",
+      "Snippet": "그러면 "
+    },
+    {
+      "Keyword": "kyk",
+      "Label": "ㄱㄹㄱ",
+      "Snippet": "그렇게 "
+    },
+    {
+      "Keyword": "kyl",
+      "Label": "ㄱㄹㅈ",
+      "Snippet": "그렇지 "
+    },
+    {
+      "Keyword": "kyn",
+      "Label": "ㄱㄹㅅ",
+      "Snippet": "그래서 "
+    },
+    {
+      "Keyword": "kyu",
+      "Label": "ㄱㄹㄷ",
+      "Snippet": "그렇다. "
+    },
+    {
+      "Keyword": "l",
+      "Label": "ㅈ",
+      "Snippet": "즉, "
+    },
+    {
+      "Keyword": "l'",
+      "Label": "ㅈㅌ",
+      "Snippet": "지요. "
+    },
+    {
+      "Keyword": "l,",
+      "Label": "ㅈ,",
+      "Snippet": "지겠습니다. "
+    },
+    {
+      "Keyword": "li",
+      "Label": "ㅈㅁ",
+      "Snippet": "지만 "
+    },
+    {
+      "Keyword": "ln",
+      "Label": "ㅈㅅ",
+      "Snippet": "자세하게 "
+    },
+    {
+      "Keyword": "lyk",
+      "Label": "ㅈㄹㄱ",
+      "Snippet": "저렇게 "
+    },
+    {
+      "Keyword": "m",
+      "Label": "ㅎ",
+      "Snippet": "합니다. "
+    },
+    {
+      "Keyword": "m'",
+      "Label": "ㅎㅌ",
+      "Snippet": "해요. "
+    },
+    {
+      "Keyword": "m,",
+      "Label": "ㅎ,",
+      "Snippet": "하겠습니다. "
+    },
+    {
+      "Keyword": "m;",
+      "Label": "ㅎㅂ",
+      "Snippet": "하시기 바랍니다. "
+    },
+    {
+      "Keyword": "mj",
+      "Label": "ㅎㅇ",
+      "Snippet": "확인한다. "
+    },
+    {
+      "Keyword": "mj'",
+      "Label": "ㅎㅇㅌ",
+      "Snippet": "했어요. "
+    },
+    {
+      "Keyword": "Mk",
+      "Label": "Mk_",
+      "Snippet": "하게"
+    },
+    {
+      "Keyword": "mk",
+      "Label": "ㅎㄱ",
+      "Snippet": "하기"
+    },
+    {
+      "Keyword": "mk,",
+      "Label": "ㅎㄱ,",
+      "Snippet": "함께 "
+    },
+    {
+      "Keyword": "mkj",
+      "Label": "ㅎㄱㅇ",
+      "Snippet": "하기에 "
+    },
+    {
+      "Keyword": "mky",
+      "Label": "ㅎㄱㄹ",
+      "Snippet": "하기로 "
+    },
+    {
+      "Keyword": "ml",
+      "Label": "ㅎㅈ",
+      "Snippet": "하자. "
+    },
+    {
+      "Keyword": "mli",
+      "Label": "ㅎㅈㅁ",
+      "Snippet": "하지만 "
+    },
+    {
+      "Keyword": "mn'",
+      "Label": "ㅎㅅㅌ",
+      "Snippet": "하세요. "
+    },
+    {
+      "Keyword": "mnj",
+      "Label": "ㅎㅅㅇ",
+      "Snippet": "하시오. "
+    },
+    {
+      "Keyword": "msu",
+      "Label": "ㅎㄴㄷ",
+      "Snippet": "한다. "
+    },
+    {
+      "Keyword": "Mu",
+      "Label": "Mu_",
+      "Snippet": "할때 "
+    },
+    {
+      "Keyword": "mu",
+      "Label": "ㅎㄷ",
+      "Snippet": "하다. "
+    },
+    {
+      "Keyword": "muj",
+      "Label": "ㄷㅎㅇ",
+      "Snippet": "대하여 "
+    },
+    {
+      "Keyword": "n",
+      "Label": "ㅅ",
+      "Snippet": "습니다. "
+    },
+    {
+      "Keyword": "n'",
+      "Label": "ㅅㅌ",
+      "Snippet": "세요. "
+    },
+    {
+      "Keyword": "n,",
+      "Label": "ㅅ,",
+      "Snippet": "살겠습니다. "
+    },
+    {
+      "Keyword": "ni",
+      "Label": "ㅅㅁ",
+      "Snippet": "설명해줘. "
+    },
+    {
+      "Keyword": "nj",
+      "Label": "ㅅㅇ",
+      "Snippet": "시오. "
+    },
+    {
+      "Keyword": "nk",
+      "Label": "ㅅㄱ",
+      "Snippet": "수고하셨습니다. "
+    },
+    {
+      "Keyword": "nn",
+      "Label": "ㅅㅅ",
+      "Snippet": "실습"
+    },
+    {
+      "Keyword": "nu",
+      "Label": "ㅅㄷ",
+      "Snippet": "시다. "
+    },
+    {
+      "Keyword": "ny",
+      "Label": "ㅅㄹ",
+      "Snippet": "사랑"
+    },
+    {
+      "Keyword": "o,",
+      "Label": "ㅊ,",
+      "Snippet": "차겠습니다. "
+    },
+    {
+      "Keyword": "oy",
+      "Label": "ㅊㄹ",
+      "Snippet": "처럼 "
+    },
+    {
+      "Keyword": "pi",
+      "Label": "ㅍㅁ",
+      "Snippet": "감. "
+    },
+    {
+      "Keyword": "uh",
+      "Label": "ㄷㄴ",
+      "Snippet": "되는 "
+    },
+    {
+      "Keyword": "ui",
+      "Label": "ㄷㅁ",
+      "Snippet": "때문"
+    },
+    {
+      "Keyword": "uj",
+      "Label": "ㄷㅇ",
+      "Snippet": "다음 "
+    },
+    {
+      "Keyword": "uy",
+      "Label": "ㄷㄹ",
+      "Snippet": "대로 "
+    },
+    {
+      "Keyword": "uyn",
+      "Label": "ㄷㄹㅅ",
+      "Snippet": "따라서 "
+    },
+    {
+      "Keyword": "yh",
+      "Label": "ㄹㄴ",
+      "Snippet": "라는 "
+    },
+    {
+      "Keyword": "yk",
+      "Label": "ㄹㄱ",
+      "Snippet": "라고 "
+    },
+    {
+      "Keyword": "yn",
+      "Label": "ㄹㅅ",
+      "Snippet": "로서 "
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+---
+name: info
+description: "Builded Extension — 12Key2Knob: 12키+2노브 매크로패드 + Keyboard Maestro 매크로 트리거"
+date: 2026.08.08
+ke_sync:
+  rule_description: "12Key2Knob : v2024.03.10"
+  source_json: Extensions/12Key2Knob/rule.json
+---
+
+# 개요
+
+`12Key2Knob`이라는 12키+노브 2개짜리 매크로패드 장치를 감지해서, 키·노브 조합별로 Keyboard Maestro 매크로를 실행하는 규칙. Karabiner-Elements complex_modifications description: `12Key2Knob : v2024.03.10`.
+
+> 📌 **명칭 통일 (2026-08-08)**: 이 규칙은 오래 `NowageCustom`·`Nowage Custom : Combo V2024.03.10`·`12key+2knobe` 세 이름으로 갈려 불렸다. `Nowage Custom` 은 무엇을 하는 규칙인지 말해 주지 않고 `12key+2knobe` 는 오타(`knobe`)였다. **장치 이름 `12Key2Knob` 하나로 통일**한다 — 폴더명·표시명·스냅샷 파일명이 모두 같은 값이다. 옛 이름은 오라클 백업(`_orignal_do-not-update/`)에만 남으며 그쪽은 수정 금지 영역이다.
+
+# 소스 위치
+
+* 정본 JSON: [Extensions/12Key2Knob/rule.json](rule.json) — rule 단위 원본. `description: "12Key2Knob : v2024.03.10"`
+* 구조화 분류 데이터: `data/rule_source.yaml` `만든_것` 섹션
+* 계보: 전체 config 백업 `karabiner_json/_orignal_do-not-update/all_setting/karabiner_2026.06.03_390.json` 의 같은 rule 에서 유래. 2026-07-26(Issue24) 부터 `ke_sync` 는 위 rule 단위 원본을 직접 참조한다
+* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다(Issue24). 구 `artifact/nowage-custom.json` 은 manipulator 전건 동일한 중복본이었다(Issue22 판정)
+
+# 의존성 (ke-sync 자동 생성)
+
+<!-- ke-sync:begin -->
+<!-- 이 블록은 tools/ke_sync.py 가 생성합니다. 직접 수정하면 다음 apply 때 덮어써집니다. -->
+
+| 항목 | 값 |
+| :--- | :--- |
+| manipulator 총 수 | 66 |
+| type 분포 | `basic` 66 |
+| `device_if` 의존 | 66 |
+| 대상 장치 | vendor_id `4489` / product_id `34960` |
+| `shell_command` 의존 | 62 |
+| 순수 키매핑 (장치·외부앱 비의존) | 0 |
+
+* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `12Key2Knob : v2024.03.10`
+* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다 (Issue24)
+* 원본 rule 다이제스트(sha256 앞 12): `11954eb79bf5`
+<!-- ke-sync:end -->
+
+위 표는 `tools/ke_sync.py` 가 원본 JSON 에서 직접 계산한다.
+
+해석: 대상 장치는 12키+2노브 매크로패드이며, 12키(`f1`~`f12`) 단독 / Control·Option·Shift 조합 / 노브 6동작(숫자 `1`~`6` — 회전 up·down·누름)까지 세분화된 식별자(`12Key2Knob_a`, `12Key2Knob_a_with_ct`, `12Key2Knob__knob1__d` 등)로 매핑이 나뉜다. `shell_command` 항목은 Keyboard Maestro 매크로 호출이고, 순수 키매핑이 0개라 원본 그대로는 타인 환경에서 재현되지 않는다.
+
+# 장비 정보 (2026-08-08)
+
+12키(3×4) + 노브 2개짜리 **범용 CH57x 매크로패드**다. 단일 브랜드 제품이 아니라 같은 펌웨어·같은 USB 식별자를 쓰는 OEM 물량이 여러 판매자 이름으로 풀린 계열이라, "제조사" 는 아래 셋을 구분해야 한다.
+
+| 층 | 실체 | 근거 |
+| :--- | :--- | :--- |
+| **칩 제조사** | 난징 QinHeng Microelectronics (**WCH**, [wch-ic.com](https://www.wch-ic.com/)) — `CH57x` 시리즈 | 2026-08-07 `ioreg` 실측이 `wch.cn` / `CH57x` 를 그대로 보고했다 |
+| **USB vendor_id 등록자** | `0x1189` = **Trisat Industrial Co., Ltd.** | USB ID 목록. ⚠️ 이 계열 매크로패드가 **공용으로 쓰는 VID** 이지 실제 조립사가 아니다 |
+| **완제품 판매자** | AliExpress·Amazon 등의 무명 OEM 다수 | 아래 판매 링크 |
+
+* **USB 식별자**: `vendor_id 4489`(`0x1189`) / `product_id 34960`(`0x8890`). 장치 식별자 정본은 `data/devices.json`(설명: `data/devices.md`)
+* **장비 사진·형태**: 3×4 키 + 노브 2개. 같은 계열 전체를 사진과 함께 정리한 곳이 [ch57x-keyboard-tool 저장소](https://github.com/kriomant/ch57x-keyboard-tool) 다 — README 에 배열별(3×4+2노브 포함) 실물 사진이 있다
+* **판매 링크(동형 제품)**: [AliExpress — 12 Key 2 Knob Macropad](https://www.aliexpress.com/item/1005005992174580.html) · [Bluetooth 판](https://www.aliexpress.com/item/1005009937927521.html). ⚠️ VID/PID 를 판매 페이지가 노출하지 않아 **완전 동일 제품 여부는 미확정** — 판정은 `ioreg` 의 `1189/8890` 로만 한다
+* **키 재정의 도구(참고)**: 이 계열은 번들 Windows 전용 설정 앱 대신 오픈소스로 프로그래밍할 수 있다 — [ch57x-keyboard-tool](https://github.com/kriomant/ch57x-keyboard-tool)(`1189:8890` 명시 지원, macOS 가능) · [VMacropad](https://github.com/visiuun/VMacropad)
+    - ⚠️ **이 규칙은 패드가 보내는 키에 의존한다.** 현재 12키는 `f1`~`f12`(×4층 = 48건), 노브 6동작은 숫자 `1`~`6`(18건)을 보내는 것을 전제로 짜여 있다. 2023년 백업(`karabiner_json/_orignal_do-not-update/z_backup/old_history/karabiner-for속기_2023.05.17.json`)에서는 같은 패드가 `a`~`l` 을 보내고 있었으므로, 그 사이에 **패드 자체의 키 배정이 한 번 바뀌었다**. 패드를 초기화하거나 다른 개체로 교체하면 이 규칙은 통째로 안 먹는다 — 그때 배정을 되돌리는 수단이 위 도구다
+
+# 공개 상태
+
+* **공개하지 않는다 (예정 없음, 2026-08-07 확정)** — 이 규칙은 **트리거 껍데기**이고 실체는 Keyboard Maestro 매크로 쪽에 있다. rule 만 공개하면 존재하지 않는 매크로 이름을 호출하는 빈 껍데기가 되므로 **매크로를 함께 공개해야** 의미가 있는데, 그 매크로가 개인 작업 흐름에 지나치게 밀착돼 있어 공개하지 않는다
+* ⚠️ **[FootPedal](../footPedal/info.md) 식 해법은 여기 성립하지 않는다.** FootPedal 은 Keyboard Maestro 의존을 순수 키 동작으로 걷어내 공개했지만(PR #1982), 본 규칙은 **매크로 호출 자체가 기능**이라 걷어내면 남는 것이 없다. "아직 안 한 작업"이 아니라 **하지 않기로 한 판단**이다
+* 판정 근거: `data/rule_source.yaml` `공개_비대상_사유`
+* 관련: Issue1(보류), Issue2(완료 — 분류)
+
+# 관련 이슈
+
+* Issue2: 받은 것/만든 것(Builded Extension) 분류
+* Issue1: 공개 검토 → 부적합으로 보류
+* Issue3(본 문서): Builded Extension별 정보 파일 생성
+* Issue4: 본 문서(md) ↔ 실제 karabiner json 규칙 1:1 연결·드리프트 검출 → 완료(`/ke-sync`, commit f46b265)

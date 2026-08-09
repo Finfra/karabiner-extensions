@@ -1,0 +1,100 @@
+{
+  "title": "[TEST-E] EngCharOnKor — 한/영 키 + 글자 모아치기 (한 글자용)",
+  "rules": [
+    {
+      "description": "[TEST-E] 한글 모드에서 한/영(keypad_comma) 과 a/l 을 모아치면 영문 한 글자",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^ko$"
+                }
+              ]
+            }
+          ],
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "keypad_comma"
+              },
+              {
+                "key_code": "a"
+              }
+            ],
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "select_input_source": {
+                "language": "^en$"
+              }
+            },
+            {
+              "key_code": "a"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "select_input_source": {
+                "language": "^ko$"
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^ko$"
+                }
+              ]
+            }
+          ],
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "keypad_comma"
+              },
+              {
+                "key_code": "l"
+              }
+            ],
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "select_input_source": {
+                "language": "^en$"
+              }
+            },
+            {
+              "key_code": "l"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "select_input_source": {
+                "language": "^ko$"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

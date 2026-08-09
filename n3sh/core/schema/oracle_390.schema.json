@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://n3sh.local/schema/oracle_390.schema.json",
+  "title": "n3sh oracle_390.json",
+  "description": "Issue39 — 390 배열 오라클 정리본. 원본 대용량 Karabiner 설정 덤프(karabiner_json/_orignal_do-not-update/)에서 n3sh Shorthand rule 의 manipulators 만 추출한 파생물. `doc`/`source_original` 은 설명 관계(문서·원본 경로) — md 파생이 아니므로 `source` 아님. `manual_overrides`는 Issue40 신설 — 원본 재추출 시에도 보존되는 손 관리 구간(별도 키)",
+  "type": "object",
+  "required": ["manipulators"],
+  "additionalProperties": false,
+  "properties": {
+    "doc": {
+      "type": "string",
+      "description": "이 데이터를 설명하는 md 경로(생성 관계 아님)"
+    },
+    "source_original": {
+      "type": "string",
+      "description": "추출 원본 — 원본 대용량 Karabiner 설정 덤프의 프로젝트 루트 기준 상대경로. 수정 금지 파일이므로 재추출 시에도 이 경로에서 다시 뽑는다"
+    },
+    "manipulators": {
+      "type": "array",
+      "description": "Karabiner complex_modifications manipulator 원문 그대로(가공 없음) — 원본 재추출 시 이 키만 덮어쓴다",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "object" },
+          "to": { "type": "array" },
+          "type": { "type": "string" },
+          "conditions": { "type": "array" }
+        }
+      }
+    },
+    "manual_overrides": {
+      "type": "array",
+      "description": "Issue40 — 키맵 미학습 출력의 손 확정 literal 키열. rules.md `to키열` 컬럼을 대체. manipulators 와 동일 shape(from/to) + `note` 로 사유를 남긴다. 원본 재추출로 덮이지 않는 별도 키",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "object" },
+          "to": { "type": "array" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

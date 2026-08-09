@@ -1,0 +1,70 @@
+---
+name: README
+description: NowageShorthand(n3sh) 진입점 — 이 프로젝트의 본체이자 유일하게 데이터 파이프라인 전체를 쓰는 Extension
+date: 2026.08.06
+---
+
+# 개요
+
+세벌식 390 자판에서 자모 조합으로 완성형 한글 단어·구를 산출하는 속기 규칙. 라이브 rule 이름은 `n3sh(...) : v2026.07.26` 이다.
+
+**이 Extension 만 전용 데이터를 갖는다.** 사람 정본 md 는 [layout/](layout), 생성 JSON·스키마는 [core/](core), 도구가 열지 않는 문서는 [_doc/](_doc), 포매터 정렬 원형은 [z_done/forTest/](z_done/forTest) 에 **아카이브**돼 있다(소비처 0건, 2026-08-08). 나머지 4종은 rule JSON 과 정보 md 뿐이다.
+
+> 📦 **역할 3분할** (Issue87, 2026-08-08) — `layout/`(입력) · `core/`(출력) · `_doc/`(문서). 판정 한 줄: **프로그램이 이 파일을 여는가.** 열면 `layout/`, 안 열면 `_doc/`. 전에는 셋이 `data/` 한 폴더에 섞여 있어 폴더만 보고는 손으로 고쳐도 되는지 알 수 없었다.
+
+> 📌 본 문서는 **링크 모음**이다. 규칙 내용·건수·설계 근거는 링크 대상이 정본이며 여기에 옮겨 적지 않는다 — 옮겨 적은 숫자는 반드시 낡는다.
+
+# 어디를 봐야 하나
+
+| 알고 싶은 것 | 문서 |
+| :--- | :--- |
+| 데이터 문서 전체 색인 | [layout/README.md](layout/README.md) |
+| 규칙 정본 (390 / 최종식) | [n390/rules.md](layout/n390/rules.md) · [final/rules.md](layout/final/rules.md) |
+| 현행 규칙 서술 | [n390/rules_notes.md](_doc/n390/rules_notes.md) |
+| 학습 단계 정의 | [n390/rules_step.md](layout/n390/rules_step.md) |
+| 대기 중인 규칙 (추가·수정·미정) | [n390/staging.md](layout/n390/staging.md) |
+| 비워 두기로 한 자리 | [n390/rules_prohibit.md](layout/n390/rules_prohibit.md) |
+| 표기 규약 (`—`·`␣`·`~` 등) | [notation.md](_doc/notation.md) |
+| 자판 배열 | [keymap.md](layout/keymap.md) |
+| 파이프라인 설계 (md → JSON → rule) | `_doc_arch/data-pipeline-design.md` |
+| 데이터 편집 규약 | `.claude/rules/data-md-first-rules.md` |
+| 규칙 정보 파일 (ke_sync 결속) | [nowage-shorthand.md](info.md) |
+
+# 파일 위치
+
+| 구분 | 경로 | 편집 |
+| :--- | :--- | :-: |
+| 사람 정본 (md — 도구가 읽는다) | [layout/](layout) — 배열별 `n390/` · `final/` | ✅ |
+| 문서 (도구가 열지 않는다) | [_doc/](_doc) — 색인 [_doc/README.md](_doc/README.md) | ✅ |
+| 데이터 (생성 JSON) | [core/](core) | ❌ 생성물 |
+| 스키마 | [core/schema/](core/schema) | ✅ |
+| 포매터 정렬 원형 | [z_done/forTest/](z_done/forTest) — before/after 픽스처 | 📦 아카이브 |
+| 파이프라인 도구 | `tools` — **Extension 밖**(코드는 인스턴스를 따라가지 않는다) | ✅ |
+| **배포 파일** | ⚙️ `build/n3sh-{390,final}.json` — gitignore 라 clone 직후엔 없다. 만드는 것은 `tools/gen_rules.py` | ❌ 생성물 |
+| rule 단위 원본 | [rule.json](rule.json) — 2022 오라클 스냅샷(227) | 📦 **수정 금지** |
+
+> ⚠️ **이 규칙만 `rule.json` 이 라이브가 아니다.** 라이브는 `build/` 생성 산출물이고(`b869835` 에서 배포 소스를 재지정), `rule.json` 은 2026-06-03 오라클에서 뜬 **227 스냅샷**이다. 나머지 4종은 `rule.json` 이 곧 라이브라 편집 대상이지만 여기서는 아니다.
+>
+> 그래서 `tools/gen_indivisual.py` 가 n3sh 만 `compare_org: False` 로 회귀 대조에서 **명시적으로 제외**한다 — 대조하면 영구 NG 다. 라이브 정합은 `ke_deploy diff` 가 본다. 이 불일치는 몰라서 남은 것이 아니라 **알고 제외한 것**이며, 발단은 Issue25 조사였다.
+
+> 📦 데이터가 `data/` 에서 이 폴더로 온 것은 2026-08-06(Issue84)이다. 공유 자산(`rule_source.yaml`·`devices.*`)은 여전히 `data` 에 있다 — 소비자가 여럿이기 때문이다. 판정 기준: `_doc_arch/extension-layout-design.md`
+
+# 주요 명령
+
+```bash
+python3 tools/md_to_json.py build     # md → JSON 재생성
+python3 tools/md_to_json.py check     # md ↔ JSON 정합 (exit 0 이어야 함)
+python3 tools/gen_rules.py            # 규칙 → Karabiner JSON 생성 + 오라클 대조
+python3 tools/validate_schema.py      # 스키마 검증
+python3 tools/validate_cross.py       # 파일 사이의 모순 검출
+python3 tools/validate_docs.py        # 파급 문서의 기계적 주장 대조
+python3 tools/verify_layout.py        # 폴더 구조 — 옛 경로·링크·build 해시
+/ke-deploy                                 # 라이브 반영 (백업·lint·확인 게이트)
+```
+
+* 위 명령은 **저장소 루트에서** 실행한다(경로가 루트 기준)
+
+# 공개
+
+* 비공개 — pqrs 등록 대상이 아니다. n3sh 완료(5·6단계) 이후 **별도 서브폴더 신설 → GitHub 직접 공개** 예정
+* 판정 근거: `data/rule_source.yaml` `만든_것` · 관련 이슈 Issue12

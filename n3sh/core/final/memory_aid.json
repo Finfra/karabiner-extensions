@@ -1,0 +1,100 @@
+{
+  "source": "Extensions/n3sh/_doc/final/training.md",
+  "records": [
+    {
+      "version": "1",
+      "c1": "  h ",
+      "c2": "1",
+      "txt": "놓"
+    },
+    {
+      "version": "0",
+      "c1": "  h ",
+      "c2": "[ ",
+      "txt": "넷"
+    },
+    {
+      "version": "1",
+      "c1": "  i ",
+      "c2": "9",
+      "txt": "뭘"
+    },
+    {
+      "version": "1",
+      "c1": "  j ",
+      "c2": "- ",
+      "txt": "읽"
+    },
+    {
+      "version": "1",
+      "c1": "  j ",
+      "c2": "0",
+      "txt": "잃",
+      "highlight": {
+        "txt": {
+          "bg": true
+        }
+      }
+    },
+    {
+      "version": "0",
+      "c1": "  j ",
+      "c2": "y ",
+      "txt": "인"
+    },
+    {
+      "version": "1",
+      "c1": "  k ",
+      "c2": " '",
+      "txt": "군"
+    },
+    {
+      "version": "0",
+      "c1": "  k ",
+      "c2": "h ",
+      "txt": "괜"
+    },
+    {
+      "version": "2",
+      "c1": "  k ",
+      "c2": "m ",
+      "txt": "고 "
+    },
+    {
+      "version": "1",
+      "c1": "  u ",
+      "c2": "8",
+      "txt": "된"
+    },
+    {
+      "version": "0",
+      "c1": "  u ",
+      "c2": "] ",
+      "txt": "될"
+    },
+    {
+      "version": "0",
+      "c1": "  u ",
+      "c2": "l ",
+      "txt": "돼"
+    },
+    {
+      "version": "2",
+      "c1": "⇧u  ",
+      "c2": "_ ",
+      "txt": "데"
+    },
+    {
+      "version": "2",
+      "c1": "  n ",
+      "c2": "_ ",
+      "txt": "수"
+    },
+    {
+      "version": "2",
+      "c1": "  y ",
+      "c2": "i ",
+      "txt": "로"
+    }
+  ]
+}
