@@ -35,7 +35,7 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해 페달마다 계층을 
 | 공개본 부가 설명 HTML   | `pqrs_submission/extra_descriptions/nowage_foot_pedal.html` |
 | 구세대 규칙 (미배포)    | `karabiner_json/_orignal_do-not-update/all_setting/karabiner_2026.06.03_390.json` `Default profile` 의 `FootSwitch ` |
 
-> manipulator 수·`device_if` 의존 건수 등 통계는 [정보 파일](info.md)의 `ke-sync` 관리 블록이 정본이다. 손으로 옮겨 적던 시절 22 → 20 오기가 실제로 있었다(Issue3).
+> manipulator 수·`device_if` 의존 건수 등 통계는 [정보 파일](info.md)의 `ke-sync` 관리 블록이 정본이다. 손으로 옮겨 적던 시절 22 → 20 오기가 실제로 있었다.
 
 # 장비
 
@@ -54,6 +54,3 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해 페달마다 계층을 
 
 구세대 `FootSwitch ` 는 같은 페달 장치를 쓰되 모든 동작을 개인 Keyboard Maestro 매크로 호출(`shell_command`)로 처리했다. 두 세대의 manipulator 교집합은 **0** — 이름만 바뀐 것이 아니라 구현이 통째로 교체됐고, 그 재작성이 pqrs 공개의 직접 조건이었다. 상세 비교표: [정보 파일 "이력" 절](info.md)
 
-# 관련 이슈
-
-Issue2(분류) · Issue1·Issue1_1·Issue1_2(공개 검토·규칙 재작성) · Issue3(정보 파일) · Issue4(ke-sync) · Issue14(PR merge)

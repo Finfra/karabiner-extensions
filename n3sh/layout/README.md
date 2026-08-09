@@ -7,9 +7,9 @@ arch: _doc_arch/data-pipeline-design.md
 ---
 # 목적
 
-`Extensions/n3sh/core/` 의 JSON 파일 각각이 **무엇이고, 어떤 컬럼을 갖고, 누가 만들고 누가 읽는지**를 사람이 읽을 수 있는 형태로 모아 둔다. JSON 배열만 놓고는 규칙 250여 건을 검토할 수 없어서 데이터 결함이 도구가 깨진 뒤에야 발견되던 문제(Issue20)를 앞단에서 막는 것이 목적이다.
+`Extensions/n3sh/core/` 의 JSON 파일 각각이 **무엇이고, 어떤 컬럼을 갖고, 누가 만들고 누가 읽는지**를 사람이 읽을 수 있는 형태로 모아 둔다. JSON 배열만 놓고는 규칙 250여 건을 검토할 수 없어서 데이터 결함이 도구가 깨진 뒤에야 발견되던 문제를 앞단에서 막는 것이 목적이다.
 
-> 📦 **여기 있는 것은 전부 도구가 읽는 md 다** (Issue87, 2026-08-08). n3sh 폴더는 **역할 3분할**이다 —
+> 📦 **여기 있는 것은 전부 도구가 읽는 md 다** (2026-08-08). n3sh 폴더는 **역할 3분할**이다 —
 > `layout/`(입력·사람 정본) · [core/](../core)(출력·생성 JSON) · [_doc/](../_doc)(문서·어떤 도구도 열지 않는다).
 > 판정 한 줄: **프로그램이 이 파일을 여는가.** 열면 `layout/`, 안 열면 `_doc/`.
 > 규칙 서술(`rules_notes*`)·표기 SSOT(`notation.md`)·`CHANGELOG.md` 는 [_doc/README.md](../_doc/README.md) 가 색인한다.
@@ -50,17 +50,16 @@ arch: _doc_arch/data-pipeline-design.md
 | [n390/training.md](../_doc/n390/training.md)                         | 📝 **매뉴얼 초안**  | 단계별 드릴·연습 문장 — 배우는 사람의 진입점           |
 | [n390/training_cheatsheet.md](../_doc/n390/training_cheatsheet.md)   | 📝 **매뉴얼 초안**  | 치트시트 — 매뉴얼과 짝인 한 장 요약                    |
 | [n390/rules_step.md](n390/rules_step.md)                     | 📐 설계             | 단계 정의·배정 근거·건수 SSOT (`rules.md` 와 한 묶음)  |
-| `_doc_base/training_for_nowage.md`                        | 🙋 개인 전용        | 전환기 자료 — 재배치 이전 손버릇 교정. 범용 아님. **`_doc_base/` 로 나갔다**(Issue89) |
-
+| `_doc_base/training_for_nowage.md`                        | 🙋 개인 전용        | 전환기 자료 — 재배치 이전 손버릇 교정. 범용 아님. **`_doc_base/` 로 나갔다** |
 
 | 문서                                                       | 대응 데이터                                                                                         | 내용                                                                                 |   건수 |
 | :--------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------- | -----: |
 | [final/training.md](../_doc/final/training.md)         | [practice.json](../core/final/practice.json) · [memory_aid.json](../core/final/memory_aid.json) | 최종식 1·2열 연습 + 암기용 발췌 (Numbers 원본 유래. 390 훈련은 `n390/training.md`)   | 4 / 15 |
-| [fsnippet-한글속기.md](../_doc/n390/fsnippet-한글속기.md) | [fsnippet_snippets.json](../core/fsnippet_snippets.json)                                          | fSnippet(prj9) `_한글속기` 스니펫 세트 — 두 글자 이상 축약 담당 (구 alfred, Issue31) |    126 |
+| [fsnippet-한글속기.md](../_doc/n390/fsnippet-한글속기.md) | [fsnippet_snippets.json](../core/fsnippet_snippets.json)                                          | fSnippet(prj9) `_한글속기` 스니펫 세트 — 두 글자 이상 축약 담당  |    126 |
 
 ## 4. 배열별 계층
 
-배열마다 `n390/`·`final/` 하위에 규칙표와 **버전 단위**(`VERSION`)를 함께 둔다. 그 배열의 변경 이력(`CHANGELOG.md`)만은 도구가 읽지 않으므로 [_doc/](../_doc) 의 같은 이름 하위 폴더에 있다(Issue87).
+배열마다 `n390/`·`final/` 하위에 규칙표와 **버전 단위**(`VERSION`)를 함께 둔다. 그 배열의 변경 이력(`CHANGELOG.md`)만은 도구가 읽지 않으므로 [_doc/](../_doc) 의 같은 이름 하위 폴더에 있다.
 
 # 링크 = 생성·설명 방향
 
@@ -102,7 +101,7 @@ python3 tools/gen_rules.py             # 규칙 데이터면 오라클 대조까
     - 예외: [final/training.md](../_doc/final/training.md) 의 `memory_aid` 는 `c1`/`c2` 값이 패딩 공백을 포함한 키 문자열(`␣␣h␣`)이라 스페이스바를 `_` 그대로 적는다.
     - ⚠️ `sync-md` 는 **모든 절의 `idx` 를 0-based 전역 번호로 덮어쓰고 표 서식도 자체 렌더러로 다시 짠다**(2026-08-05 실측 — `rules.md`·`rules_step.md` 까지 전면 재렌더). (n390 staging 은 2026-08-05 `job` 단일표로 바뀌며 `idx` 컬럼 자체를 뺐다 — 구 `{계열}-{순번}` 수기 체계는 폐지.) 표기만 고칠 때는 `sync-md` 대신 해당 셀을 직접 편집할 것. `build`·`check` 는 `idx` 를 잘라 버리므로 안전하다.
 * 도구가 JSON 을 먼저 바꿔 버린 경우엔 `md_to_json.py sync-md` 로 md 를 되맞춘다.
-* `keymap_{390,final}` 은 **`keymap.md` 가 정본**이지만(Issue76) 심볼 shape 이 2종이라 `md_to_json` 의 `Spec` 모델 밖이다 — 전용 도구 `keymap_build.py build`·`check` 가 담당하고 `md_to_json` 은 사유와 함께 `SKIP` 한다. `keymap_final_to_390` 은 손 관리 SSOT.
+* `keymap_{390,final}` 은 **`keymap.md` 가 정본**이지만 심볼 shape 이 2종이라 `md_to_json` 의 `Spec` 모델 밖이다 — 전용 도구 `keymap_build.py build`·`check` 가 담당하고 `md_to_json` 은 사유와 함께 `SKIP` 한다. `keymap_final_to_390` 은 손 관리 SSOT.
 
 # 관련
 

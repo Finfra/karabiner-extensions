@@ -7,7 +7,7 @@ arch: _doc_arch/data-pipeline-design.md
 ---
 규칙표의 행을 **산문·훈련 문서에서 어떻게 적는가**를 정한다. 같은 표기를 [rules_step.md](../layout/n390/rules_step.md)·[n390/training.md](n390/training.md)·[training_cheatsheet.md](n390/training_cheatsheet.md)가 각자 정의하다 갈라진 것을 여기로 모았다.
 
-자모를 적는 방법(초성/종성 `~` 접두)도 여기가 SSOT 다 — 그쪽은 산문뿐 아니라 **셀 값**으로도 들어간다: [staging.md](../layout/n390/staging.md) 의 `h1`·`h2`, 그리고 **규칙표 `txt` 의 종성 낱자**(`~ㄲ`·`~ㄷ` — Issue63, 2026-08-06).
+자모를 적는 방법(초성/종성 `~` 접두)도 여기가 SSOT 다 — 그쪽은 산문뿐 아니라 **셀 값**으로도 들어간다: [staging.md](../layout/n390/staging.md) 의 `h1`·`h2`, 그리고 **규칙표 `txt` 의 종성 낱자**(`~ㄲ`·`~ㄷ` — , 2026-08-06).
 
 ⚠️ **md 표 셀의 값 보존 규약(`—`·`␣` ↔ JSON `""`·`" "`·`_`)과는 별개 축이다.** 그쪽 SSOT 는 `.claude/rules/data-md-first-rules.md` "셀 표기 — 값 손실 없는 왕복" 이다. 본 문서가 정하는 것은 **무엇을 어떻게 표기하는가**이지, md↔JSON 왕복을 위한 치환이 아니다 — `~ㅎ` 는 값 그 자체라 JSON 에도 `"~ㅎ"` 로 남는다.
 
@@ -37,7 +37,7 @@ arch: _doc_arch/data-pipeline-design.md
 | 종성 | **`~` 접두** | `1 2 3` · `q w` · `a s` · `z x`            |
 
 * 초성과 중성은 **자음이냐 모음이냐로 이미 갈리므로** 접두를 쓰지 않는다. 접두가 필요한 것은 자음의 초성↔종성 구분뿐이다
-* ✅ **이 표기는 규칙표 `txt` 에서 실제로 동작한다**(Issue63, 2026-08-06). 그 전까지 두 `ㄲ` 행은 글자가 같아 생성기가 키를 정하지 못했고, 오라클 literal(`억지=✔`)로 덮어 산출했다. `1w` 행을 `~ㄲ` 로 적자 심볼이 `jong ㄲ`(`1+shift`)와 `lit ㄲ`(초성 `k k`)로 갈려 그 예외가 사라졌다 — **표현으로 푼 것**이다
+* ✅ **이 표기는 규칙표 `txt` 에서 실제로 동작한다**(2026-08-06). 그 전까지 두 `ㄲ` 행은 글자가 같아 생성기가 키를 정하지 못했고, 오라클 literal(`억지=✔`)로 덮어 산출했다. `1w` 행을 `~ㄲ` 로 적자 심볼이 `jong ㄲ`(`1+shift`)와 `lit ㄲ`(초성 `k k`)로 갈려 그 예외가 사라졌다 — **표현으로 푼 것**이다
 * 자리는 **누르는 키**가 정한다. 위 목록은 [keymap_390.json](../core/keymap_390.json) 의 `cho`·`jung`·`jong` 에서 나온 것이다([keymap.md](../layout/keymap.md))
 
 ## 어디에 쓰고 어디에 쓰지 않는가
@@ -118,7 +118,7 @@ arch: _doc_arch/data-pipeline-design.md
 | 항목                                                     | SSOT                                                                                   |
 | :-------------------------------------------------------- | :------------------------------------------------------------------------------------- |
 | md 셀 `—`·`␣` ↔ JSON `""`·`" "`·`_` 왕복 규약           | `.claude/rules/data-md-first-rules.md` "셀 표기"                |
-| 무수식=`.` / ⇧=`?` / ⇧⌘=`!` 분기 (390 ↔ 최종식 **반대**) | [n390/rules_notes.md](n390/rules_notes.md) 규칙3 (Issue36)                  |
+| 무수식=`.` / ⇧=`?` / ⇧⌘=`!` 분기 (390 ↔ 최종식 **반대**) | [n390/rules_notes.md](n390/rules_notes.md) 규칙3                   |
 | 품사 컬럼 값·확실성 등급                                  | [rules_Intersection.md](../layout/rules_Intersection.md) "품사 컬럼 값"               |
 | 규칙표 컬럼 구성                                          | [n390/rules.md](../layout/n390/rules.md) · [final/rules.md](../layout/final/rules.md) |
 

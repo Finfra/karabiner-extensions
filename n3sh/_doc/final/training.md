@@ -72,5 +72,5 @@ generates: [Extensions/n3sh/core/final/practice.json, Extensions/n3sh/core/final
 
 # 주의
 
-* `c2` 의 `1.0` 표기는 도구가 `normalize_key()` 로 흡수하지만, 사람이 읽을 때 헷갈리지 말 것.
+* `c2` 의 `1.0` 표기는 도구가 `normalize_key` 로 흡수하지만, 사람이 읽을 때 헷갈리지 말 것.
 * 동작을 바꾸려면 정본([rules.md](../../layout/final/rules.md) / `final/rules.json`)을 고쳐야 한다.

@@ -14,11 +14,11 @@ n3sh(세벌식 390 속기 자동화) 본체. 세벌식 390 자판에서 c1(첫 �
 # 소스 위치
 
 * 정본 JSON: [Extensions/n3sh/rule.json](rule.json) — rule 단위 원본(수정 금지, manipulator 227). `description: "Nowage Shorthand for 3set 390 : Combo V2022.08.01"`
-* 계보: 전체 config 백업 `karabiner_json/_orignal_do-not-update/all_setting/karabiner_2026.06.03_390.json` 의 같은 rule 에서 유래. 2026-07-26(Issue24) 부터 `ke_sync` 는 rule 단위 원본을 직접 참조한다
+* 계보: 전체 config 백업 `karabiner_json/_orignal_do-not-update/all_setting/karabiner_2026.06.03_390.json` 의 같은 rule 에서 유래. 2026-07-26 부터 `ke_sync` 는 rule 단위 원본을 직접 참조한다
 * 구조화 분류 데이터: `data/rule_source.yaml` `만든_것` 섹션
-* 원천 규칙표(Numbers): 관리자 로컬의 iCloud Numbers 문서 `HotKeyForJmac_n3sh.numbers` (2026-08-02 `HotKeyForJmac.numbers`에서 n3sh 관련 정보·`자판`·`AlfredSnippet`·`속기` 탭 분리 이동. 상세: `_doc_base/background/README.md`) — ⚠️ 이 파일은 저장소에 없다. 데이터 정본은 [layout/](layout) 의 md 다(Issue20 md-first 전환 이후)
-* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다(Issue24). 구 `artifact/nowage-shorthand.json` 은 manipulator 전건 동일한 중복본이었다(Issue22 판정)
-* ⚠️ manipulator 수 주의: 오라클·정본 227 / 라이브·build 228 (Issue11 신규 1건)
+* 원천 규칙표(Numbers): 관리자 로컬의 iCloud Numbers 문서 `HotKeyForJmac_n3sh.numbers` (2026-08-02 `HotKeyForJmac.numbers`에서 n3sh 관련 정보·`자판`·`AlfredSnippet`·`속기` 탭 분리 이동. 상세: `_doc_base/background/README.md`) — ⚠️ 이 파일은 저장소에 없다. 데이터 정본은 [layout/](layout) 의 md 다
+* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다. 구 `artifact/nowage-shorthand.json` 은 manipulator 전건 동일한 중복본이었다
+* ⚠️ manipulator 수 주의: 오라클·정본 227 / 라이브·build 228
 
 # 의존성 (ke-sync 자동 생성)
 
@@ -35,7 +35,7 @@ n3sh(세벌식 390 속기 자동화) 본체. 세벌식 390 자판에서 c1(첫 �
 | 순수 키매핑 (장치·외부앱 비의존) | 227 |
 
 * 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `Nowage Shorthand for 3set 390 : Combo V2022.08.01`
-* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다 (Issue24)
+* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
 * 원본 rule 다이제스트(sha256 앞 12): `2b31692b6921`
 <!-- ke-sync:end -->
 
@@ -47,17 +47,8 @@ n3sh(세벌식 390 속기 자동화) 본체. 세벌식 390 자판에서 c1(첫 �
 
 | 대상 | 상태 |
 | :--- | :--- |
-| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09, Issue89) |
-| **pqrs 등록** | ⏸️ **계획 없음** — 규칙 1건 단위 등록 체계에 맞지 않는다. GitHub 공개로 방향이 정해져 있다(2026-07-19 Issue12) |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
+| **pqrs 등록** | ⏸️ **계획 없음** — 규칙 1건 단위 등록 체계에 맞지 않는다. GitHub 공개로 방향이 정해져 있다(2026-07-19) |
 
-> 📌 **경위**: 이 절은 오래 *"비공개 확정 — 애초부터 비공개가 목적"* 으로 적혀 있었다. 그 판단은 2026-07-19 Issue12 에서 **완성 후 GitHub 공개**로 이미 뒤집혔고, Issue89 로 완성을 기다리지 않고 [Extensions/](..) 통째 공개에 실렸다. 남아 있던 문장이 낡은 것이다.
+> 📌 **경위**: 이 절은 오래 *"비공개 확정 — 애초부터 비공개가 목적"* 으로 적혀 있었다. 그 판단은 2026-07-19 에서 **완성 후 GitHub 공개**로 이미 뒤집혔고, 로 완성을 기다리지 않고 [Extensions/](..) 통째 공개에 실렸다. 남아 있던 문장이 낡은 것이다.
 
-* 관련: Issue1(구 공개 제외 명시), Issue2(완료 — 분류), Issue12(공개 전환), Issue89(공개 repo 신설)
-
-# 관련 이슈
-
-* Issue2: 받은 것/만든 것(Builded Extension) 분류
-* Issue1: 공개 범위에서 처음부터 제외
-* Issue3(본 문서): Builded Extension별 정보 파일 생성
-* Issue4: 본 문서(md) ↔ 실제 karabiner json 규칙 1:1 연결·드리프트 검출 → 완료(`/ke-sync`, commit f46b265)
-* 이슈후보 3~6: Numbers 규칙표 구조화·JSON 생성기·diff 검증·390 전환 깨진 규칙 검출 — 전부 이 Builded Extension을 대상으로 함

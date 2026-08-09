@@ -18,8 +18,8 @@ ke_sync:
 * 정본 JSON: [Extensions/12Key2Knob/rule.json](rule.json) — rule 단위 원본. `description: "12Key2Knob : v2024.03.10"`
 * **매크로 export**: [KeyboardMaestro_exports/12Key2Knob_Macros.kmmacros](KeyboardMaestro_exports/12Key2Knob_Macros.kmmacros) — Keyboard Maestro 매크로 19종(그룹 `9.6.1_12Key2Knob_`). 규칙이 부르는 62개 중 **이름 일치 14건**이며 그 14건의 본문은 비어 있는 뼈대다(액션 분포 — Comment 15 · IfThenElse 4 · ExecuteMacro 1). 동작이 든 것은 규칙이 **부르지 않는** 노브 회전 4종뿐이다. 상세·주의 2건: [README.md](README.md) "이름 뼈대이지 완성품이 아니다"
 * 구조화 분류 데이터: `data/rule_source.yaml` `만든_것` 섹션
-* 계보: 전체 config 백업 `karabiner_json/_orignal_do-not-update/all_setting/karabiner_2026.06.03_390.json` 의 같은 rule 에서 유래. 2026-07-26(Issue24) 부터 `ke_sync` 는 위 rule 단위 원본을 직접 참조한다
-* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다(Issue24). 구 `artifact/nowage-custom.json` 은 manipulator 전건 동일한 중복본이었다(Issue22 판정)
+* 계보: 전체 config 백업 `karabiner_json/_orignal_do-not-update/all_setting/karabiner_2026.06.03_390.json` 의 같은 rule 에서 유래. 2026-07-26 부터 `ke_sync` 는 위 rule 단위 원본을 직접 참조한다
+* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다. 구 `artifact/nowage-custom.json` 은 manipulator 전건 동일한 중복본이었다
 
 # 의존성 (ke-sync 자동 생성)
 
@@ -36,7 +36,7 @@ ke_sync:
 | 순수 키매핑 (장치·외부앱 비의존) | 0 |
 
 * 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `12Key2Knob : v2024.03.10`
-* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다 (Issue24)
+* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
 * 원본 rule 다이제스트(sha256 앞 12): `11954eb79bf5`
 <!-- ke-sync:end -->
 
@@ -64,7 +64,7 @@ ke_sync:
 
 | 대상 | 상태 |
 | :--- | :--- |
-| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09, Issue89) |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
 | **pqrs 등록** | ⏸️ **미룸** — 동봉 export 는 이름 뼈대뿐이라(본문 비어 있음) 남의 환경에서 곧바로 동작하지 않는다. 등록 기준을 아직 못 채운다. *하지 않기로 한 것이 아니라 지금은 안 하는 것* |
 
 > 📌 **방침 철회 (2026-08-09)**: 이 절은 *"공개하지 않는다 — 예정 없음"* 으로 적혀 있었다. 이 폴더는 `tools/build_public.py` 가 통째로 공개 트리에 복사하므로 **push 되는 순간 이미 공개**이며, 비공개 방침은 사실과 어긋난 채 남아 있었다. 철회하고 두 축으로 갈라 적는다 — 근본 원인은 `data/rule_source.yaml` 의 `공개_대상` 한 필드가 **pqrs 등록**과 **GitHub 공개**를 겸한 것이다.
@@ -73,11 +73,4 @@ ke_sync:
 * ✅ **매크로 export 동봉 (2026-08-09)** — 구 방침은 *"export 원본은 개인 경로가 박혀 있어 공개 트리 밖에 둔다"* 였다. 실제로 내보낸 파일을 전수 스캔한 결과 **개인 경로·계정·실명·메일 0건**이었다(본문이 비어 있는 뼈대라 경로가 애초에 없다). 방침을 철회하고 [KeyboardMaestro_exports/](KeyboardMaestro_exports) 에 동봉한다 — 보관소였던 `_doc_base/km_macros/12Key2Knob/README.md` 는 이제 익명화 절차 문서만 남는다
 * ⚠️ **개인 동작이 든 매크로를 추가로 내려면 익명화가 선행 조건**이다 — 경로는 지우지 말고 `/Users/{yourname}` 로 예제화하고, `build_public.py` → `validate_public.py` **exit 0** 을 확인한 뒤 push 한다
 * 판정 근거: `data/rule_source.yaml` `pqrs_보류_사유`
-* 관련: Issue1(보류), Issue2(완료 — 분류), Issue89(공개 repo 신설)
 
-# 관련 이슈
-
-* Issue2: 받은 것/만든 것(Builded Extension) 분류
-* Issue1: 공개 검토 → 부적합으로 보류
-* Issue3(본 문서): Builded Extension별 정보 파일 생성
-* Issue4: 본 문서(md) ↔ 실제 karabiner json 규칙 1:1 연결·드리프트 검출 → 완료(`/ke-sync`, commit f46b265)

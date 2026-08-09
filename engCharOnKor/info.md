@@ -107,7 +107,7 @@ ke_sync:
 
 # 공개
 
-`device_if` 0 · `shell_command` 0 인 순수 키매핑이라 [FootPedal](../footPedal/README.md) 과 같은 경로로 pqrs 등록이 가능하다. 다만 한국어 입력소스 전용이라 대상이 좁고, `⇧space` 전환키 전제가 환경 의존이다 — [RemoteDesktop](../remoteDesktop/README.md) 과 묶는 안이 검토 중이다(Issue85 쟁점 ⑥, 미결).
+`device_if` 0 · `shell_command` 0 인 순수 키매핑이라 [FootPedal](../footPedal/README.md) 과 같은 경로로 pqrs 등록이 가능하다. 다만 한국어 입력소스 전용이라 대상이 좁고, `⇧space` 전환키 전제가 환경 의존이다 — [RemoteDesktop](../remoteDesktop/README.md) 과 묶는 안이 검토 중이다.
 
 # 의존성 (ke-sync 자동 생성)
 
@@ -124,6 +124,6 @@ ke_sync:
 | 순수 키매핑 (장치·외부앱 비의존) | 30 |
 
 * 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `Eng Char on Kor : v2026.08.07`
-* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다 (Issue24)
+* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
 * 원본 rule 다이제스트(sha256 앞 12): `82f1a68f05cd`
 <!-- ke-sync:end -->

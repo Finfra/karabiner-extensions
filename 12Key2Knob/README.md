@@ -77,13 +77,10 @@ grep -o 'do script \\"[^\\]*\\"' rule.json | sed 's/do script \\"//;s/\\"//' | s
 
 | 대상 | 상태 |
 | :--- | :--- |
-| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09, Issue89) |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
 | **pqrs 등록** | ⏸️ **미룸** — 동봉 export 는 이름 뼈대뿐이라(본문 비어 있음) 남의 환경에서 곧바로 동작하지 않는다. 등록 기준을 아직 못 채운다. *하지 않기로 한 것이 아니라 지금은 안 하는 것* |
 
 > 📌 **판정 정정 (2026-08-09)**: 이 절은 오래 *"공개하지 않는다 — 예정 없음"* 으로 적혀 있었다. 실제 판단은 **pqrs 등록을 미룬다**였고 GitHub 공개는 거부한 적이 없다. `data/rule_source.yaml` 의 `공개_대상` 한 필드가 **두 종류의 공개**(pqrs 등록 / GitHub 공개)를 겸해 생긴 혼동이다.
 
 * 참고: 하드웨어·외부앱 의존 자체는 pqrs 결격 사유가 아니다(device-specific 그룹 36건 확인, 2026-07-18). 걸리는 것은 **매크로 부재**다
 
-# 관련 이슈
-
-Issue2(분류) · Issue1(공개 검토 — 보류) · Issue3(정보 파일) · Issue4(ke-sync) · Issue24(정본 재지정, 아티팩트 제거)

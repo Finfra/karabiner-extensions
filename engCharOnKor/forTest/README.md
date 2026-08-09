@@ -1,6 +1,6 @@
 ---
 name: README
-description: EngCharOnKor 후보 시험 기록 (종료) — G(Insert 홀드) 전 항목 통과·정본 승격, A~F 기각 (Issue85_1, 2026-08-07)
+description: EngCharOnKor 후보 시험 기록 (종료) — G(Insert 홀드) 전 항목 통과·정본 승격, A~F 기각 (2026-08-07)
 date: 2026.08.07
 ---
 
@@ -189,4 +189,3 @@ open -a "Karabiner-EventViewer"
 
 * 상위 진입점: [../README.md](../README.md)
 * 기각된 후보 A~F: [z_old/README.md](z_old/README.md)
-* 이슈: **Issue85_1** · 부모 **Issue85**

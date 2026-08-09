@@ -89,4 +89,3 @@ date: 2026.08.07
 
 * 신규 Extension 추가 절차: `Extensions.md`
 * 분류 배경: `_doc_base/background/rule-classification.md`
-* 이슈: **Issue85**(완료 2026-08-07) · **Issue85_1**(후보 시험)

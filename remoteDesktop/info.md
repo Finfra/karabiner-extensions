@@ -16,7 +16,7 @@ Microsoft Remote Desktop(RDC) 앱이 최전면일 때만 발동하는 규칙. Wi
 * 정본 JSON: [remote_desktop.json](rule.json) — rule 단위 원본(수정 금지)
 * 구조화 분류 데이터: `data/rule_source.yaml` `만든_것` 섹션
 * 계보: 전체 config 백업 `karabiner_json/_orignal_do-not-update/all_setting/karabiner_2026.06.03_390.json` 의 같은 rule 에서 유래
-* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다(Issue24 원칙)
+* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다
 
 # 자작 판정 근거 (2026-07-29 정정)
 
@@ -45,7 +45,7 @@ Microsoft Remote Desktop(RDC) 앱이 최전면일 때만 발동하는 규칙. Wi
 | 순수 키매핑 (장치·외부앱 비의존) | 3 |
 
 * 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `Remote Desktop에서 left_alt를 left_command로, left_command를 left_alt로 매핑`
-* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다 (Issue24)
+* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
 * 원본 rule 다이제스트(sha256 앞 12): `cef53c76a5b9`
 <!-- ke-sync:end -->
 
@@ -57,16 +57,10 @@ Microsoft Remote Desktop(RDC) 앱이 최전면일 때만 발동하는 규칙. Wi
 
 | 대상 | 상태 |
 | :--- | :--- |
-| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09, Issue89) |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
 | **pqrs 등록** | ⏸️ **미룸** — 아래 사유 |
 
-* pqrs 를 미루는 이유는 결격이 아니다. 하드웨어·매크로 의존이 없다는 점에서 다른 3종보다 사정이 좋다 — 다만 pqrs 에 이미 alt↔command 스왑 계열이 다수 등록돼 있어 차별점이 `keypad_comma` 한/영 전환 하나뿐이고, 그 매핑은 세벌식 + Windows 원격이라는 좁은 조합 전용이다. 등록 여부는 Issue1 재개 시 함께 판단한다
+* pqrs 를 미루는 이유는 결격이 아니다. 하드웨어·매크로 의존이 없다는 점에서 다른 3종보다 사정이 좋다 — 다만 pqrs 에 이미 alt↔command 스왑 계열이 다수 등록돼 있어 차별점이 `keypad_comma` 한/영 전환 하나뿐이고, 그 매핑은 세벌식 + Windows 원격이라는 좁은 조합 전용이다. 등록 여부는 재개 시 함께 판단한다
 * 📌 **정정 (2026-08-09)**: 이 절은 *"비공개 (현재 공개 대상 아님)"* 으로 적혀 있었으나, 이 폴더는 `tools/build_public.py` 가 공개 트리에 통째로 복사하므로 **push 되는 순간 이미 공개**였다. 보류는 pqrs 축의 판단이다
 * 라이브 상태: ✅ `Remote Desktop : v2026.07.26` (manipulator 3)
 
-# 관련 이슈
-
-* Issue2: 받은 것/만든 것(Builded Extension) 분류 — 본 규칙 오분류 발생
-* Issue1: 공개 검토 → 보류
-* Issue3: Builded Extension별 정보 파일 생성
-* Issue4: md ↔ json 1:1 연결·드리프트 검출 (`/ke-sync`)

@@ -18,7 +18,7 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해, 페달마다 편집·�
 * 정본 JSON: [foot_pedal.json](rule.json) — rule 단위 원본(수정 금지)
 * 구조화 분류 데이터: `data/rule_source.yaml` `만든_것` 섹션
 * 계보: 구세대 `FootSwitch` rule 은 전체 config 백업 `karabiner_json/_orignal_do-not-update/all_setting/karabiner_2026.06.03_390.json` 의 `Default profile` 에 남아 있다
-* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다(Issue24 원칙)
+* 아티팩트 없음 — 원본이 이미 rule 단위라 추출본을 두지 않는다
 
 # 의존성 (ke-sync 자동 생성)
 
@@ -35,11 +35,11 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해, 페달마다 편집·�
 | 순수 키매핑 (장치·외부앱 비의존) | 0 |
 
 * 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `USB Foot Pedal (3 pedals). Pedal 1 (left, 'a') = editing: copy, control=cut, option=paste, shift=paste-without-formatting, command=undo, hyper=redo. Pedal 2 (middle, 'b') = navigation: page down, control=page up, option=end, shift=home, command=Mission Control, hyper=Launchpad. Pedal 3 (right, 'c') = media: play/pause, control=rewind, option=fast-forward, shift=mute, command=volume down, hyper=volume up. Requires a USB foot switch with vendor_id 6790 (0x1a86) / product_id 57382 (0xe026).`
-* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다 (Issue24)
+* 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
 * 원본 rule 다이제스트(sha256 앞 12): `0903db46e22b`
 <!-- ke-sync:end -->
 
-위 표는 `tools/ke_sync.py` 가 원본 JSON 에서 직접 계산한다. 사람이 손으로 옮겨 적던 시절 구세대 규칙의 manipulator 수를 22개로 잘못 기록했다가 아티팩트 추출 과정에서 20개로 정정한 전례가 있어(Issue3), 이 수치들은 기계 산출로 넘겼다.
+위 표는 `tools/ke_sync.py` 가 원본 JSON 에서 직접 계산한다. 사람이 손으로 옮겨 적던 시절 구세대 규칙의 manipulator 수를 22개로 잘못 기록했다가 아티팩트 추출 과정에서 20개로 정정한 전례가 있어, 이 수치들은 기계 산출로 넘겼다.
 
 # 구조
 
@@ -54,7 +54,7 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해, 페달마다 편집·�
 | command    | 실행 취소          | Mission Control   | 볼륨 down           |
 | hyper      | 다시 실행          | Launchpad         | 볼륨 up             |
 
-# 장비 정보 (Issue1_1, 2026-07-18)
+# 장비 정보 (2026-07-18)
 
 ## 장비사 3층 (2026-08-08 보강)
 
@@ -83,7 +83,7 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해, 페달마다 편집·�
 
 # 공개 상태
 
-* **공개 등록 완료 (Issue14, 2026-07-19)** — PR [#1982](https://github.com/pqrs-org/KE-complex_modifications/pull/1982) merge(commit `42db4a4`) 후 [ke-complex-modifications.pqrs.org](https://ke-complex-modifications.pqrs.org/?q=foot%20pedal) 에 **USB Foot Pedal (3 pedals) - Editing / Navigation / Media layers** (Maintained by @nowage) 로 노출 중
+* **공개 등록 완료 (2026-07-19)** — PR [#1982](https://github.com/pqrs-org/KE-complex_modifications/pull/1982) merge(commit `42db4a4`) 후 [ke-complex-modifications.pqrs.org](https://ke-complex-modifications.pqrs.org/?q=foot%20pedal) 에 **USB Foot Pedal (3 pedals) - Editing / Navigation / Media layers** (Maintained by @nowage) 로 노출 중
 * 공개본 `pqrs_submission/json/nowage_foot_pedal.json` 과 정본 [foot_pedal.json](rule.json) 은 **manipulator 전건 동일**하다(2026-07-29 실측). 공개용으로 재작성한 규칙을 그대로 개인 환경에도 올린 결과다
 * 요구 장비는 `pqrs_submission/extra_descriptions/nowage_foot_pedal.html` 에 명시했고 `karabiner_cli --lint-complex-modifications` 를 통과했다. 제출 절차·현황: `pqrs_submission/README.md`
 
@@ -100,15 +100,6 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해, 페달마다 편집·�
 | 배포        | ❌ 대체됨                                                                | ✅ 라이브                             |
 
 * 두 세대의 manipulator 교집합은 **0** 이다. 이름만 바뀐 것이 아니라 구현이 통째로 교체됐다.
-* 구세대는 개인 매크로 이름에 100% 의존해 타인 환경에서 아무것도 동작하지 않았고, 그 점이 pqrs 공개를 위해 순수 키 동작으로 재작성한 직접 이유였다(Issue1_2). 개인 전용 `FootSwitch__Unlock`·`FootSwitch__Lock` 2개는 그때 제외돼 20 → 18 이 됐다.
+* 구세대는 개인 매크로 이름에 100% 의존해 타인 환경에서 아무것도 동작하지 않았고, 그 점이 pqrs 공개를 위해 순수 키 동작으로 재작성한 직접 이유였다. 개인 전용 `FootSwitch__Unlock`·`FootSwitch__Lock` 2개는 그때 제외돼 20 → 18 이 됐다.
 * 구세대 추출 아티팩트 `artifact/footswitch.json` 은 2026-07-29 제거했다. 정본이 전체 config 백업에 그대로 남아 있어 언제든 다시 뽑을 수 있고, 현행 규칙과 무관한 사본을 유지하면 드리프트 대상만 늘어난다. 복구가 필요하면 git 이력에서 꺼낸다.
 
-# 관련 이슈
-
-* Issue2: 받은 것/만든 것(Builded Extension) 분류
-* Issue1: 공개 검토 → 재개, 본 규칙 우선 대상
-* Issue1_1(본 문서 장비 정보 절): 장비 정보 업데이트
-* Issue1_2: 공개 가능하게 규칙 수정 → 공개본 작성 완료
-* Issue14: pqrs upstream PR 제출 → PR #1982 merge·사이트 노출 확인 (완료, 2026-07-19)
-* Issue3: Builded Extension별 정보 파일 생성
-* Issue4: 본 문서(md) ↔ 실제 karabiner json 규칙 1:1 연결·드리프트 검출 → 완료(`/ke-sync`, commit f46b265)

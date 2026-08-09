@@ -10,7 +10,7 @@ date: 2026.08.06
 
 **이 Extension 만 전용 데이터를 갖는다.** 사람 정본 md 는 [layout/](layout), 생성 JSON·스키마는 [core/](core), 도구가 열지 않는 문서는 [_doc/](_doc), 포매터 정렬 원형은 [z_done/forTest/](z_done/forTest) 에 **아카이브**돼 있다(소비처 0건, 2026-08-08). 나머지 4종은 rule JSON 과 정보 md 뿐이다.
 
-> 📦 **역할 3분할** (Issue87, 2026-08-08) — `layout/`(입력) · `core/`(출력) · `_doc/`(문서). 판정 한 줄: **프로그램이 이 파일을 여는가.** 열면 `layout/`, 안 열면 `_doc/`. 전에는 셋이 `data/` 한 폴더에 섞여 있어 폴더만 보고는 손으로 고쳐도 되는지 알 수 없었다.
+> 📦 **역할 3분할** (2026-08-08) — `layout/`(입력) · `core/`(출력) · `_doc/`(문서). 판정 한 줄: **프로그램이 이 파일을 여는가.** 열면 `layout/`, 안 열면 `_doc/`. 전에는 셋이 `data/` 한 폴더에 섞여 있어 폴더만 보고는 손으로 고쳐도 되는지 알 수 없었다.
 
 > 📌 본 문서는 **링크 모음**이다. 규칙 내용·건수·설계 근거는 링크 대상이 정본이며 여기에 옮겨 적지 않는다 — 옮겨 적은 숫자는 반드시 낡는다.
 
@@ -45,9 +45,9 @@ date: 2026.08.06
 
 > ⚠️ **이 규칙만 `rule.json` 이 라이브가 아니다.** 라이브는 `build/` 생성 산출물이고(`b869835` 에서 배포 소스를 재지정), `rule.json` 은 2026-06-03 오라클에서 뜬 **227 스냅샷**이다. 나머지 4종은 `rule.json` 이 곧 라이브라 편집 대상이지만 여기서는 아니다.
 >
-> 그래서 `tools/gen_indivisual.py` 가 n3sh 만 `compare_org: False` 로 회귀 대조에서 **명시적으로 제외**한다 — 대조하면 영구 NG 다. 라이브 정합은 `ke_deploy diff` 가 본다. 이 불일치는 몰라서 남은 것이 아니라 **알고 제외한 것**이며, 발단은 Issue25 조사였다.
+> 그래서 `tools/gen_indivisual.py` 가 n3sh 만 `compare_org: False` 로 회귀 대조에서 **명시적으로 제외**한다 — 대조하면 영구 NG 다. 라이브 정합은 `ke_deploy diff` 가 본다. 이 불일치는 몰라서 남은 것이 아니라 **알고 제외한 것**이며, 발단은 조사였다.
 
-> 📦 데이터가 `data/` 에서 이 폴더로 온 것은 2026-08-06(Issue84)이다. 공유 자산(`rule_source.yaml`·`devices.*`)은 여전히 `data` 에 있다 — 소비자가 여럿이기 때문이다. 판정 기준: `_doc_arch/extension-layout-design.md`
+> 📦 데이터가 `data/` 에서 이 폴더로 온 것은 2026-08-06이다. 공유 자산(`rule_source.yaml`·`devices.*`)은 여전히 `data` 에 있다 — 소비자가 여럿이기 때문이다. 판정 기준: `_doc_arch/extension-layout-design.md`
 
 # 주요 명령
 
@@ -68,8 +68,8 @@ python3 tools/verify_layout.py        # 폴더 구조 — 옛 경로·링크·bu
 
 | 대상 | 상태 |
 | :--- | :--- |
-| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09, Issue89) |
-| **pqrs 등록** | ⏸️ 제출 계획 없음 — 2026-07-19(Issue12)에 **GitHub 직접 공개**로 방향이 정해졌다 |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
+| **pqrs 등록** | ⏸️ 제출 계획 없음 — 2026-07-19에 **GitHub 직접 공개**로 방향이 정해졌다 |
 
-* ⚠️ **pqrs 를 택하지 않은 *이유*는 어느 문서에도 기록돼 있지 않다.** `data/rule_source.yaml` 과 Issue12 는 결정만 적고 근거를 남기지 않았다. 구조상의 결격은 **아니다** — 이 규칙도 `rules` 1건(manipulator 227개)이라 pqrs 에 등록된 [FootPedal](../footPedal/README.md)(1건·18개)과 같은 형태다
-* 판정 근거: `data/rule_source.yaml` `만든_것` · 관련 이슈 Issue12 · Issue89
+* ⚠️ **pqrs 를 택하지 않은 *이유*는 어느 문서에도 기록돼 있지 않다.** `data/rule_source.yaml` 과 는 결정만 적고 근거를 남기지 않았다. 구조상의 결격은 **아니다** — 이 규칙도 `rules` 1건(manipulator 227개)이라 pqrs 에 등록된 [FootPedal](../footPedal/README.md)(1건·18개)과 같은 형태다
+* 판정 근거: `data/rule_source.yaml` `만든_것` · 관련 이슈 ·

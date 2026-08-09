@@ -42,7 +42,7 @@ documents: [Extensions/n3sh/core/final/rules.json]
 | `⇧⌘` | `!` | `b` | **`!`** |
 | `⌘` | 행마다 다름 | `period` / 없음 | — |
 
-✅ **해소(Issue73, 2026-08-06)** — 오래 `🚧 미해소` 로 남아 있던 불일치다. 원문(Numbers, 최종식 시절)은
+✅ **해소(2026-08-06)** — 오래 `🚧 미해소` 로 남아 있던 불일치다. 원문(Numbers, 최종식 시절)은
 `⇧`=`!`·`⇧⌘`=`?` 라고 적는데 정본 데이터는 `⇧`=`?`·`⇧⌘`=`!` 였고, 어느 쪽이 맞는지 몰랐다.
 
 **데이터가 옳다.** 사용자가 macOS 입력 소스를 세벌식 최종으로 두고 직접 입력해 확인했다 —
@@ -60,8 +60,8 @@ documents: [Extensions/n3sh/core/final/rules.json]
 
 `(c1, c2, ⌥, ⇧, ⌘)` 복합키는 유일해야 한다. Karabiner 는 같은 `from` 중 먼저 나온 것만 발동시키므로 뒤엣것은 **죽은 규칙**이다.
 
-* 집행: `tools/validate_schema.py` `check_trigger_unique()` (Issue53)
-* ✅ 해소(2026-08-05, Issue70) — `함`(`m+l` 무수식)이 어미·명사형 두 행이었다. 390 과 같은 사안이라 같은 판정으로 `품사 n` 행을 삭제했다(출력이 `함.␣` 로 동일해 산출 불변). 현재 이 규칙의 미해소 건은 0 이다
+* 집행: `tools/validate_schema.py` `check_trigger_unique`
+* ✅ 해소(2026-08-05) — `함`(`m+l` 무수식)이 어미·명사형 두 행이었다. 390 과 같은 사안이라 같은 판정으로 `품사 n` 행을 삭제했다(출력이 `함.␣` 로 동일해 산출 불변). 현재 이 규칙의 미해소 건은 0 이다
 
 ## 규칙5. 실제로 쓰는 기호 키는 10종
 
@@ -76,7 +76,7 @@ documents: [Extensions/n3sh/core/final/rules.json]
 
 `억지=✔` 는 자모 조립이 불가능해 오라클 키열을 그대로 써야 하는 행에만 붙인다. 그 literal 은 [oracle_final.json](../../core/oracle_final.json) `manual_overrides` 로 지정한다.
 
-* 최종식의 `manual_overrides` 는 Issue49 에서 **최초 신설**됐다(`될` 재배치 1건)
+* 최종식의 `manual_overrides` 는 에서 **최초 신설**됐다(`될` 재배치 1건)
 
 # 390 과의 차이
 
@@ -85,11 +85,11 @@ documents: [Extensions/n3sh/core/final/rules.json]
 | 출력 | 최종식 | 390 | 비고 |
 | :--- | :--- | :--- | :--- |
 | `ㅒ` | `g+f` | `r+f` | 트리거 자체가 다른 유일한 유형(pattern A) |
-| `될` | `u+[` | `u+[` | Issue49·48 — 양 배열 모두 구 `u+]` 에서 이동 |
+| `될` | `u+[` | `u+[` |·48 — 양 배열 모두 구 `u+]` 에서 이동 |
 | `해` | `m+;`+⌘ **비활성** | 해당 행 없음(staging `지정안할` 이관) | ⌘+m 이 macOS 윈도우 최소화에 선점 |
 
 * 출력만 다른 유형(pattern B·C, 9건)은 [keymap_final_to_390.json](../../core/keymap_final_to_390.json) 참조
-* 최종식 정본은 **390 단계 설계 대상이 아니다** — 단계를 담는 `id` 컬럼이 전량 공란이다(구 `단계` 컬럼은 Issue81 로 폐지)
+* 최종식 정본은 **390 단계 설계 대상이 아니다** — 단계를 담는 `id` 컬럼이 전량 공란이다
 
 # 관련
 

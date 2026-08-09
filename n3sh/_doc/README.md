@@ -6,7 +6,7 @@ arch: _doc_arch/extension-layout-design.md
 ---
 # 역할
 
-n3sh 폴더는 **역할 3분할**이다(Issue87, 2026-08-08).
+n3sh 폴더는 **역할 3분할**이다(2026-08-08).
 
 | 폴더 | 역할 | 누가 읽나 |
 | :--- | :--- | :--- |
@@ -27,10 +27,10 @@ n3sh 폴더는 **역할 3분할**이다(Issue87, 2026-08-08).
 | [n390/rules_notes.md](n390/rules_notes.md) | **390 적용 규칙** — 출력 꼬리·기호 대응·트리거 유일성·배열 차이 (전건 실측) |
 | [final/rules_notes.md](final/rules_notes.md) | **최종식 적용 규칙** — 같은 구조. ⚠️ 미배포 배열이라 계산값이며 실기 미확인 |
 | [n390/CHANGELOG.md](n390/CHANGELOG.md) · [final/CHANGELOG.md](final/CHANGELOG.md) | 배열별 변경 이력. 짝인 `VERSION` 은 [layout/](../layout) 에 남았다 — `emit.py` 가 rule description 에 각인하므로 도구가 읽는다 |
-| [n390/fsnippet-한글속기.md](n390/fsnippet-한글속기.md) | fSnippet(prj9) `_한글속기` 스니펫 세트 — 두 글자 이상 축약 담당 (구 alfred, Issue31) |
+| [n390/fsnippet-한글속기.md](n390/fsnippet-한글속기.md) | fSnippet(prj9) `_한글속기` 스니펫 세트 — 두 글자 이상 축약 담당  |
 | [n390/training.md](n390/training.md) | **390 매뉴얼 초안** — 단계별 타건 드릴과 연습 문장 |
 | [n390/training_cheatsheet.md](n390/training_cheatsheet.md) | 매뉴얼과 짝인 **한 장 요약** — 초성 자판 지도와 1·2·3열 배치 |
-| `_doc_base/training_for_nowage.md` | 옛 습관 교정표 — Issue27 재배치 **이전** 손버릇을 가진 사람 전용(범용 아님) |
+| `_doc_base/training_for_nowage.md` | 옛 습관 교정표 — 재배치 **이전** 손버릇을 가진 사람 전용(범용 아님) |
 | [final/training.md](final/training.md) | 최종식 매뉴얼 초안 + 암기 보조표 |
 
 ## ⚠️ 판정 기준의 예외 2건

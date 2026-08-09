@@ -59,4 +59,3 @@ date: 2026.08.07
 # 관련
 
 * 현행 후보: [../README.md](../README.md) — G (`insert` 홀드)
-* 이슈: **Issue85_1**

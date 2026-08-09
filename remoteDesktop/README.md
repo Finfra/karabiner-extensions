@@ -12,7 +12,7 @@ macOS 와 Windows 의 수식키 위치 차이 때문에 원격 세션에서 복�
 
 # 자작 판정 근거
 
-Issue2 최초 분류가 이 규칙을 pqrs [virtual_machine_alt.json](https://ke-complex-modifications.pqrs.org/json/virtual_machine_alt.json) 에서 받은 것으로 **잘못 판정해** `_doc_base/builded_extensions` 에서 누락돼 있었다. 2026-07-29 대조로 자작임이 확정됐다.
+ 최초 분류가 이 규칙을 pqrs [virtual_machine_alt.json](https://ke-complex-modifications.pqrs.org/json/virtual_machine_alt.json) 에서 받은 것으로 **잘못 판정해** `_doc_base/builded_extensions` 에서 누락돼 있었다. 2026-07-29 대조로 자작임이 확정됐다.
 
 | 항목                | pqrs `virtual_machine_alt.json`        | 본 규칙                                          |
 | :------------------ | :-------------------------------------- | :----------------------------------------------- |
@@ -39,6 +39,3 @@ Issue2 최초 분류가 이 규칙을 pqrs [virtual_machine_alt.json](https://ke
 
 > 💡 [EngCharOnKor](../engCharOnKor/README.md) 도 한/영 전환을 다룬다. 그쪽이 완성되면 "한국어 입력 + macOS/Windows 혼용" 묶음으로 함께 공개하는 편이 개별 등록보다 설득력이 있다 — 공개 재검토 시 같이 볼 것.
 
-# 관련 이슈
-
-Issue2(분류 — 최초 오판정) · Issue1(공개 검토 — 보류) · Issue24(정본 재지정)

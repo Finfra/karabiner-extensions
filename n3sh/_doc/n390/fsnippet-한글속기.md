@@ -177,9 +177,9 @@ Keyword(로마자 키 시퀀스)를 그대로 타이핑한 뒤 **백틱(`)** 을
 
 * 이 항목들은 **Karabiner 설정에 존재하지 않는다**. 라이브 config 에서 찾아도 안 나오는 것이 정상이다(fSnippet 담당 영역).
 * 폴더 부속 3종은 JSON 생성 대상에서 제외했다: `Icon`·`icon.png`(폴더 아이콘) · Keyword `___memo__`(운용 메모 스니펫 — 다행 텍스트라 md 셀 왕복 규약 밖. 원문은 기준 폴더에서 직접 확인).
-* Keyword `h`(Label ㄴ) 는 스냅샷 시점에 **타건 실험 잔여물**(`짖`·`잖` 반복, Issue27 실험 글자)이 들어 있었다 — 실스니펫 값이 아니라 판단해 **빈값(`—`)으로 정본화**. 확정 값이 생기면 이 표를 고치고 build 할 것.
+* Keyword `h`(Label ㄴ) 는 스냅샷 시점에 **타건 실험 잔여물**이 들어 있었다 — 실스니펫 값이 아니라 판단해 **빈값(`—`)으로 정본화**. 확정 값이 생기면 이 표를 고치고 build 할 것.
 * Keyword `,` 는 기준 폴더 파일명에 `===Label` 부분이 없다 — Label 빈값으로 보존.
-* 구 명칭 `alfred-snippets.md`/`alfred_snippets.json`(Numbers "Alfred Snippet로" 표 12건)은 본 문서로 대체됐다(Issue31) — Alfred → fSnippet 이관 후 실데이터 기준.
+* 구 명칭 `alfred-snippets.md`/`alfred_snippets.json`(Numbers "Alfred Snippet로" 표 12건)은 본 문서로 대체됐다 — Alfred → fSnippet 이관 후 실데이터 기준.
 
 # z_old 이관 (n3sh 규칙과 출력 겹침 — 2026-08-02)
 
