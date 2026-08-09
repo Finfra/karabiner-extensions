@@ -5,11 +5,6 @@ date: 2026.08.09
 ---
 [![ko](https://img.shields.io/badge/lang-ko-red.svg)](README.md)
 
-> 📦 **This repository is generated.** The source of truth lives in a private working
-> repository; what you see here is a public copy produced by `tools/build_public.py`.
-> Backticked paths in the text (e.g. `data/rule_source.yaml`) point into that private
-> repository and do **not** exist here — only linked paths resolve within this tree.
-
 # Karabiner-Elements Extensions
 
 Five `complex_modifications` rules for [Karabiner-Elements](https://karabiner-elements.pqrs.org/), the macOS keyboard customizer. Each rule gets its own folder holding a **ready-to-install JSON** (`rule.json`) and a document explaining what it does.

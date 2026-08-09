@@ -5,11 +5,6 @@ date: 2026.08.09
 ---
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README_en.md)
 
-> 📦 **이 저장소는 파생본이다.** 정본은 비공개 작업 저장소(Karabiner-Elements 규칙 관리)에 있고,
-> 여기 있는 것은 거기서 생성된 공개 사본이다 — `tools/build_public.py` 가 만든다.
-> 본문에 백틱으로 적힌 경로(ex `data/rule_source.yaml`)는 **그 작업 저장소 안의 위치**이며
-> 이 저장소에는 존재하지 않는다. 링크로 걸린 것만 여기서 열린다.
-
 # Karabiner-Elements Extensions
 
 macOS 키보드 커스터마이저 [Karabiner-Elements](https://karabiner-elements.pqrs.org/) 의 `complex_modifications` 규칙 다섯 개다. 규칙마다 폴더 하나를 쓰고, 그 안에 **바로 쓸 수 있는 JSON**(`rule.json`)과 **무엇을 하는 규칙인지 설명하는 문서**가 함께 있다.
