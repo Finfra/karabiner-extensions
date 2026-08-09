@@ -55,7 +55,13 @@ Microsoft Remote Desktop(RDC) 앱이 최전면일 때만 발동하는 규칙. Wi
 
 # 공개 상태
 
-* **비공개 (현재 공개 대상 아님)** — 다만 하드웨어·매크로 의존이 없다는 점에서 다른 3종과 사정이 다르다. pqrs 에 이미 alt↔command 스왑 계열 규칙이 다수 등록돼 있어 차별점이 `keypad_comma` 한/영 전환 하나뿐이며, 그 매핑은 세벌식 + Windows 원격 환경이라는 좁은 조합에 특화돼 있다. 공개 여부는 Issue1 재개 시 함께 판단한다.
+| 대상 | 상태 |
+| :--- | :--- |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09, Issue89) |
+| **pqrs 등록** | ⏸️ **미룸** — 아래 사유 |
+
+* pqrs 를 미루는 이유는 결격이 아니다. 하드웨어·매크로 의존이 없다는 점에서 다른 3종보다 사정이 좋다 — 다만 pqrs 에 이미 alt↔command 스왑 계열이 다수 등록돼 있어 차별점이 `keypad_comma` 한/영 전환 하나뿐이고, 그 매핑은 세벌식 + Windows 원격이라는 좁은 조합 전용이다. 등록 여부는 Issue1 재개 시 함께 판단한다
+* 📌 **정정 (2026-08-09)**: 이 절은 *"비공개 (현재 공개 대상 아님)"* 으로 적혀 있었으나, 이 폴더는 `tools/build_public.py` 가 공개 트리에 통째로 복사하므로 **push 되는 순간 이미 공개**였다. 보류는 pqrs 축의 판단이다
 * 라이브 상태: ✅ `Remote Desktop : v2026.07.26` (manipulator 3)
 
 # 관련 이슈
