@@ -56,7 +56,9 @@ The official registry, [ke-complex-modifications.pqrs.org](https://ke-complex-mo
 | EngCharOnKor | 🚧 Submission ready, PR pending |
 | 12Key2Knob | ⏸️ Postponed — without the macros it cannot work on another machine |
 | RemoteDesktop | ⏸️ Postponed — `alt`↔`command` swaps are already well covered there |
-| n3sh | ⏸️ No submission planned — GitHub publication was chosen for this one (decided 2026-07-19) |
+| n3sh | 🚧 Submission planned — became feasible once this repository's docs existed (changed 2026-08-10). **390 layout only** |
+
+* n3sh's **final layout** is deliberately absent from the table — it will be split into its own project and published only if someone asks for it, after the 390 submission. A layout with no confirmed users is not shipped first.
 
 # Layout
 
