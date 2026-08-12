@@ -11,25 +11,31 @@
 <header class="hero">
 <h1>n3sh</h1>
 <p class="tagline">자모 2개를 동시에 눌러 완성형 한 글자를 낸다</p>
+<a class="repo-link" href="https://github.com/Finfra/karabiner-extensions" target="_blank" rel="noopener">⭐ GitHub 저장소 · Finfra/karabiner-extensions</a>
 </header>
 <main>
 <section class="lead">
-<p>세벌식은 초성·중성·종성을 따로 치므로 받침 있는 글자가 3타다.
-자주 나오는 글자를 <b>2타</b>로 줄인다. 254 규칙이 들어 있다.</p>
+<p class="lede">자주 나오는 글자를 <b>2타</b>로 줄인다. 250여가지 규칙이 들어 있다.</p>
 <table class="demo">
-<thead><tr><th>누르면</th><th>나온다</th><th>원래 타수</th></tr></thead>
+<thead><tr><th>누르면</th><th>나온다</th><th>일반 타건</th></tr></thead>
 <tbody>
-<tr><td><kbd>j</kbd>+<kbd>h</kbd></td><td>을</td><td>3타 (ㅇ ㅡ ㄹ)</td></tr>
-<tr><td><kbd>h</kbd>+<kbd>l</kbd></td><td>는</td><td>3타</td></tr>
-<tr><td><kbd>y</kbd>+<kbd>u</kbd></td><td>를</td><td>3타</td></tr>
+<tr><td><kbd>j</kbd>+<kbd>h</kbd></td><td>을␣</td><td>4타 (ㅇ ㅡ ㄹ ␣)</td></tr>
+<tr><td><kbd>h</kbd>+<kbd>l</kbd></td><td>는␣</td><td>4타</td></tr>
+<tr><td><kbd>y</kbd>+<kbd>u</kbd></td><td>를␣</td><td>4타</td></tr>
 <tr><td><kbd>j</kbd>+<kbd>i</kbd></td><td>있</td><td>3타 (ㅇ ㅣ ㅆ)</td></tr>
 </tbody>
 </table>
+<p class="tnote">조사·어미는 <b>뒤 공백까지 함께</b> 나온다. 그래서 을·는·를의 일반 타건은
+자모 3타에 스페이스를 더해 4타다.</p>
 <p class="warn"><b>세벌식 390 배열 전용이다.</b> 두벌식에서는 동작하지 않는다 —
 자모의 물리 위치가 규칙의 전제다.</p>
 </section>
 
-<h2 class="sec">읽는 순서</h2>
+<section class="sec">
+<div class="sec-head">
+<h2>읽는 순서</h2>
+<p>설치부터 규칙표까지 — 위에서 아래로 한 번씩 지나가면 된다</p>
+</div>
 <div class="cards">
 <a class="card" href="start.html">
 <span class="num">1</span>
@@ -56,14 +62,20 @@
 
 </a>
 </div>
+</section>
 
-<h2 class="sec">참고</h2>
+<section class="sec">
+<div class="sec-head">
+<h2>참고</h2>
+<p>학습 경로에 끼지 않는다. 필요할 때 들어와 찾아보는 곳</p>
+</div>
 <ul class="refs">
 <li><a href="reference/notation.html">표기법</a> — 문서가 쓰는 기호(`␣`·`·`·`~ㅂ`·모디파이어)의 뜻</li>
 <li><a href="reference/rules-notes.html">규칙 서술</a> — 꼬리 공백·문장부호처럼 행마다 외우지 않아도 되는 메타 규칙</li>
 <li><a href="reference/keymap.html">키 배치</a> — 자모를 어느 키로 치는가 — 심볼 ↔ 키열 매핑</li>
 <li><a href="reference/steps.html">단계 배정 근거</a> — 무엇을 몇 단계에 두었고 왜 그렇게 정했는가 (설계 문서)</li>
 </ul>
+</section>
 </main>
 <footer>
 <p><a href="https://github.com/Finfra/karabiner-extensions">저장소</a> · 규칙 정본과 이 문서의 마크다운 원본이 있다</p>
