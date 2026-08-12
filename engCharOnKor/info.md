@@ -107,7 +107,18 @@ ke_sync:
 
 # 공개
 
-`device_if` 0 · `shell_command` 0 인 순수 키매핑이라 [FootPedal](../footPedal/README.md) 과 같은 경로로 pqrs 등록이 가능하다. 다만 한국어 입력소스 전용이라 대상이 좁고, `⇧space` 전환키 전제가 환경 의존이다 — [RemoteDesktop](../remoteDesktop/README.md) 과 묶는 안이 검토 중이다.
+| 대상 | 상태 |
+| :--- | :--- |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
+| **pqrs 등록** | 🚧 **PR [#1991](https://github.com/pqrs-org/KE-complex_modifications/pull/1991) OPEN** (2026-08-10 제출) — 대상 그룹 **`international`**(Language Specific). 정본과 manipulator 30건 전건 동일 |
+
+`device_if` 0 · `shell_command` 0 인 순수 키매핑이라 [FootPedal](../footPedal/README.md) 과 같은 경로로 간다. 바뀐 것은 카탈로그용 메타뿐이었다 — 재작성이 필요 없었던 유일한 건이다.
+
+* ⚠️ **구 보류 사유 2건은 2026-08-08 재판정으로 모두 내려갔다** (판정 SSOT `data/rule_source.yaml`)
+    - *"`⇧space` 전환키 전제가 환경 의존"* — **사실이 아니었다.** 전환은 `select_input_source`(`^ko$`/`^en$`)로 하지 `⇧space` 를 보내지 않고, `space`+`backspace` 는 전환이 아니라 **조합중 글자 커밋용**이다. `⇧space` 는 2026-08-07 2차 실기의 **누출 사고**였고 설계 요점 3(`mandatory:["any"]` 2분기)이 이미 차단했다 — 고쳐 놓고 그 위험을 보류 사유로 계속 들고 있었다
+    - *"한국어 입력소스 전용이라 대상이 좁다"* — upstream `international` 그룹이 70건이라 결격이 아니다. FootPedal 때 *"하드웨어 의존은 결격"* 이 오판이었던 것과 같은 구조
+* [RemoteDesktop](../remoteDesktop/README.md) 과 **묶지 않는다**  — 트리거·목적·조건이 전혀 달라, 묶으면 RDC 를 안 쓰는 사용자가 불필요한 규칙까지 받는다. 그쪽은 `Issue.md` 로 **별도 제출본**을 갖췄다(`application-specific` 그룹)
+* 기존 한국어 규칙 7건과의 차별성 대조표: `pqrs_submission/README.md` `nowage_eng_char_on_kor.json` 절
 
 # 의존성 (ke-sync 자동 생성)
 

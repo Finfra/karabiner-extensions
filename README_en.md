@@ -18,7 +18,7 @@ These grew out of one person's setup over more than a decade, so they are uneven
 | [RemoteDesktop](remoteDesktop/README.md) | Swaps `alt` ↔ `command`, but only while Microsoft Remote Desktop is frontmost | **Nothing** — a plain key remap |
 | [EngCharOnKor](engCharOnKor/README.md) | Types English **while `Insert` is held**, without switching away from the Korean input source | A key that emits `insert` · a Korean IME |
 | [FootPedal](footPedal/README.md) | USB 3-pedal foot switch — editing / navigation / media layers across six modifier tiers | A 3-pedal USB foot switch |
-| [NowageShorthand (n3sh)](n3sh/README.md) | Korean shorthand for the 3-set 390 layout — jamo chords expand into whole words and phrases | A Korean IME · the 3-set 390 layout |
+| [NowageShorthand (n3sh)](n3sh/README.md) | Korean shorthand for the 3-set 390 layout — a two-jamo chord types a whole syllable in one stroke <br>📖 [Documentation site](https://finfra.github.io/karabiner-extensions/) (Korean) | A Korean IME · the 3-set 390 layout |
 | [12Key2Knob](12Key2Knob/README.md) | Turns a 12-key + 2-knob macropad into Keyboard Maestro triggers | That macropad **plus 62 macros you write yourself** ⚠️ |
 
 ## Where to start
@@ -26,6 +26,8 @@ These grew out of one person's setup over more than a decade, so they are uneven
 **[RemoteDesktop](remoteDesktop/README.md)** is the shortest and has no prerequisites — a good look at how a Karabiner rule is put together.
 
 **[EngCharOnKor](engCharOnKor/README.md)** is the one most likely to be useful if you type Korean. It covers the common case of typing a few English characters mid-sentence, and because it never switches the input source, **it does not care what your language-switch shortcut is**.
+
+**[n3sh](https://finfra.github.io/karabiner-extensions/)** is the only one you have to *learn* — 254 rules is not a drop-in amount — so it has a documentation site of its own, which is also where you download the installable file. It is written in Korean, and deliberately so: the rules are Korean jamo, and there is no reader for whom an English translation of them would help. It does nothing unless you type on the 3-set 390 layout.
 
 # Installing
 

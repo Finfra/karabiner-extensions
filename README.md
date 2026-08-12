@@ -18,7 +18,7 @@ macOS 키보드 커스터마이저 [Karabiner-Elements](https://karabiner-elemen
 | [RemoteDesktop](remoteDesktop/README.md) | MS 원격 데스크톱이 앞에 있을 때만 `alt` ↔ `command` 를 맞바꾼다 | **없음** — 순수 키 리매핑 |
 | [EngCharOnKor](engCharOnKor/README.md) | 한글 입력 상태에서 `Insert` 를 **누르고 있는 동안만** 영문이 나온다. 입력기를 전환하지 않는다 | `insert` 를 내보내는 키 · 한글 IME |
 | [FootPedal](footPedal/README.md) | USB 3페달 풋스위치 — 편집·탐색·미디어 3계층 × 모디파이어 6층 | 3페달 USB 풋스위치 |
-| [NowageShorthand (n3sh)](n3sh/README.md) | 세벌식 390 속기 — 자모 조합을 완성형 단어·구로 펼친다 <br>📖 [문서 사이트](https://finfra.github.io/karabiner-extensions/) | 한글 IME · 세벌식 390 배열 |
+| [NowageShorthand (n3sh)](n3sh/README.md) | 세벌식 390 속기 — 자모 2키를 모아치면 완성형 한 글자가 한 번에 나온다 <br>📖 [문서 사이트](https://finfra.github.io/karabiner-extensions/) | 한글 IME · 세벌식 390 배열 |
 | [12Key2Knob](12Key2Knob/README.md) | 12키+2노브 매크로패드를 Keyboard Maestro 매크로 트리거로 쓴다 | 그 매크로패드 **+ 직접 만든 매크로 62종** ⚠️ |
 
 ## 처음이라면
