@@ -328,33 +328,41 @@ href="#공통-표기">공통 표기</a> <code>c1c2</code>)과 다른 축이다 �
 <div class="tablewrap"><table>
 <thead>
 <tr>
-<th style="text-align: left;">후치 (<code>+⌘</code>)</th>
-<th style="text-align: left;">전치 (<code>{cmd}</code>)</th>
+<th style="text-align: left;">후치</th>
+<th style="text-align: left;">전치</th>
 <th style="text-align: left;">뜻</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><code>k;</code>+⌘</td>
-<td style="text-align: left;"><code>{cmd}k;</code></td>
+<td style="text-align: left;"><code>⌘k;</code></td>
 <td style="text-align: left;">⌘ 를 누른 채 k+; → 까</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>k␣</code>+⇧</td>
-<td style="text-align: left;"><code>{shift}k␣</code></td>
+<td style="text-align: left;"><code>⇧k␣</code></td>
 <td style="text-align: left;">⇧ 를 누른 채 k+스페이스바 → 께</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>f.</code>+⇧⌘</td>
-<td style="text-align: left;"><code>{shift}{cmd}f.</code></td>
+<td style="text-align: left;"><code>⇧⌘f.</code></td>
 <td style="text-align: left;">⇧+⌘ 를 누른 채 f+. → 아!</td>
 </tr>
 </tbody>
 </table></div>
 <ul>
+<li><strong>모디파이어는 언제나 키캡 기호로 적는다</strong> — ⌥·⇧·⌘.
+<code>{cmd}</code>·<code>{shift}</code>·<code>{opt}</code> 같은
+<strong>중괄호 토큰을 쓰지 않는다</strong>(2026-08-12 사용자 지시로 74건
+전량 전환). 이 문서들은 <strong>공개된다</strong> — 읽는 사람이 자기
+키보드에서 찾을 기호를 그대로 보여주는 편이 낫고, 중괄호는 코드
+자리표시자처럼 보인다. 도구·스크립트 내부에서 문자열로 다루는 것은 이
+규약 밖이다</li>
 <li><strong>왜 통일하지 않는가</strong>: 시퀀스
-예문(<code>j1·{cmd};o·13·k2·n`</code>)에서는 <strong>전치</strong>가
-<code>·</code> 구분과 겹치지 않아 토큰 경계를 잡아 준다. 단건
+예문(<code>j1·⌘;o·13·k2·n`</code>)에서는 <strong>전치</strong>가
+<code>·</code> 구분과 겹치지 않아 토큰 경계를 잡아 준다 — 기호는
+한글·라틴 어느 쪽과도 시각적으로 갈려 경계가 오히려 또렷하다. 단건
 나열(<code>k;</code>+⌘ = 까)에서는 <strong>후치</strong>가 트리거를 먼저
 보여줘 읽기 쉽다. 한쪽으로 강제하면 반대쪽이 반드시 나빠진다</li>
 <li><strong>단, 한 문서 안에서는 한 표기만 쓴다.</strong> 혼용은 규약
@@ -377,19 +385,19 @@ href="#공통-표기">공통 표기</a> <code>c1c2</code>)과 다른 축이다 �
 <tr>
 <td style="text-align: left;"><a
 href="../reference/steps.html">rules_step.md</a></td>
-<td style="text-align: left;">후치 <code>+⌘</code></td>
+<td style="text-align: left;">후치 <code>k;</code>+⌘</td>
 <td style="text-align: left;">단계 설계 — 단계별 단건 나열</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a
 href="../training.html">n390/training.md</a></td>
-<td style="text-align: left;">전치 <code>{cmd}</code></td>
+<td style="text-align: left;">전치 <code>⌘k;</code></td>
 <td style="text-align: left;"><code>·</code> 로 잇는 문장 예문 다수</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a
 href="../cheatsheet.html">training_cheatsheet.md</a></td>
-<td style="text-align: left;">전치 <code>{cmd}</code></td>
+<td style="text-align: left;">전치 <code>⌘k;</code></td>
 <td style="text-align: left;">training.md 의 한 장 요약이라 표기를
 승계</td>
 </tr>
