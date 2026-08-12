@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>단계 배정 근거 — n3sh — 세벌식 390 속기</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="steps"><a class="home" href="../index.html">n3sh</a><a href="../start.html"><b>1</b> 설치와 준비</a><a href="../cheatsheet.html"><b>2</b> 한 장 치트시트</a><a href="../training.html"><b>3</b> 6단계 학습 드릴</a><a href="../rules.html"><b>4</b> 전체 규칙표</a></nav>
+<main>
+<h1 class="page-title">단계 배정 근거</h1>
+<p class="refnote">학습 경로가 아니라 <b>참고 문서</b>다. 필요할 때 들어와 찾아보는 곳.</p>
+<blockquote>
+<p>📐 <strong>설계 문서다 — 배우는 사람이 읽을 문서가 아니다.</strong>
+<a href="../rules.html">rules.md</a>(정본 데이터)와 <strong>한 묶음의
+설계 계열</strong>이고, 여기서 정하는 것은 <em>무엇을 몇 단계에 배우게
+할 것인가</em>(단계 정의·배정 근거·건수)다. 배우는 쪽은
+<code>training*.md</code> <strong>매뉴얼 계열 초안</strong>이 맡는다 —
+<a href="../training.html">training.md</a>·<a
+href="../cheatsheet.html">training_cheatsheet.md</a>.</p>
+</blockquote>
+<p><a href="../rules.html">n390/rules.md</a> 254행 전체를 학습 순서로
+재배열한 <strong>단계 설계</strong>다(예비 + <strong>6단계</strong>). 본
+문서가 단계 정의·배정·건수의 <strong>SSOT</strong> 이고,
+<code>rules.md</code> 는 그 배정을 <code>id</code>
+<strong>접두</strong>로만 들고 있다(<code>3-047</code> → 3단계 · 접두
+<code>0</code> = 예비). 2026-08-06 로 <code>단계</code> 컬럼을 폐지해
+<strong>사본 열이 사라졌다</strong> — 이제 정의(여기) ↔︎ 배정(id) 한 쌍만
+맞추면
+된다(rules-step-sync-rules.md(<code>.claude/rules/rules-step-sync-rules.md</code>)).</p>
+<p><a href="../training.html">6단계 학습 드릴</a>이 같은 단계 번호를
+축으로 드릴·문장을 담는다 — <strong>두 문서의 단계 번호는 같은
+축</strong>이다.</p>
+<h1 id="표기법">표기법</h1>
+<p>공통 표기(동시타 <code>c1c2</code> · 스페이스바 <code>␣</code> ·
+<code>→</code> · ⌥⇧⌘ 등)는 <a
+href="../reference/notation.html">notation.md</a> 가 SSOT 다. 본 문서
+고유 사항만 아래에 적는다.</p>
+<ul>
+<li><strong>모디파이어는 후치</strong> — <code>kj</code>+⌘ = k+j 를 ⌘
+누른 채 → 까. (무수식 <code>kj</code> 는 1단계 초성 ㄲ 이다 — 같은 키를
+수식키로 가른다) <a href="../training.html">n390/training.md</a>는
+전치(<code>{cmd}k;</code>)를 쓰니 <strong>혼용하지 말 것</strong> (두
+표기 대응표: <a href="../reference/notation.html">notation.md</a>
+"모디파이어")</li>
+<li><code>.</code>/<code>?</code>/<code>!</code> — 어미·조사에서
+모디파이어에 따라 갈리는 문장부호. <strong>390 은 무수식=<code>.</code>,
+⇧=<code>?</code>, ⇧+⌘=<code>!</code></strong> 이고 최종식은 ⇧·⇧⌘ 이
+반대다( — <a
+href="../reference/rules-notes.html">n390/rules_notes.md</a> 규칙3)</li>
+</ul>
+<h1 id="판정-기준--무엇을-가성비로-보는가">판정 기준 — 무엇을 "가성비"로
+보는가</h1>
+<p>아래 4가지는 <strong>서로 독립된 축</strong>이다 — 한 점수로 합산해
+단조증가/감소하는 값이 아니라, 단계마다 그중 다른 조합이 "쉬움"의 근거가
+된다. 특히 <code>학습 단계 개요</code> 표의
+<code>전체행-고유 암기단위</code> 격차는 이 중 <strong>"규칙 재사용성"
+하나(그것도 모디파이어 파생분만)</strong> 를 반영할 뿐이다 — 모디파이어
+변형 자체가 없는 항목(자모 출력, 열 규칙)은 재사용성이 있어도 격차가
+0으로 나오므로, 이 격차만으로 단계 간 난이도를 비교하면 안 된다.</p>
+<ul>
+<li><strong>모디파이어 없음</strong> — ⌥·⇧·⌘ 조합 없이
+<code>c1+c2</code> 두 키만으로 끝남</li>
+<li><strong>니모닉이 강함</strong> — 초성 배치 그대로 두 키를 누르는
+감각과 일치(쌍자음·이중모음 자모, 혹은 "ㅇ은 <code>j</code>로 친다"처럼
+자모→키 대응이 있는 경우)</li>
+<li><strong>규칙 재사용성</strong> — 한 번 익히면 여러 행에 그대로
+적용되는 메타 규칙. 두 갈래가 있다: (a) <strong>모디파이어형</strong> —
+예: 무수식=<code>.</code>, ⇧=<code>?</code>, ⇧+⌘=<code>!</code>
+(전체행을 부풀리고 <code>고유 암기단위</code>로 수렴됨) / (b)
+<strong>열(column)형</strong> — 예: 6단계 "1·2·3받침"의
+<code>c2</code>가 1·2·3 중 하나로 고정된 경우 (전체행을 안 부풀리므로
+격차에 안 잡힘)</li>
+<li><strong>문법적 필수성</strong> — 조사·어미처럼 한국어 문장에 거의
+반드시 등장</li>
+</ul>
+<p>반대로 높은 단계는 키 배치가 손가락 인접성과
+무관하고(<code>w+q</code>, <code>x+z</code> 등), 니모닉 없이 항목별로
+개별 암기해야 하며, 행마다 재사용 규칙(모디파이어형이든 열형이든)이
+없다.</p>
+<h2 id="단계별로-어느-축이-작동하는가">단계별로 어느 축이
+작동하는가</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">단계</th>
+<th style="text-align: left;">포함 품사</th>
+<th style="text-align: left;">모디파이어</th>
+<th style="text-align: left;">니모닉</th>
+<th style="text-align: left;">재사용성</th>
+<th style="text-align: left;">문법필수성</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1(쌍자음·복모음)</td>
+<td style="text-align: left;">d+g</td>
+<td style="text-align: left;">없음 (0/9행)</td>
+<td style="text-align: left;">초성 그대로</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">2(조사·짧은 기능어)</td>
+<td style="text-align: left;">p+n+c</td>
+<td style="text-align: left;">일부 (21/45행)</td>
+<td style="text-align: left;">부분적(고유 24개 중 10개가 ㅇ/ㄱ/ㄹ
+매치)</td>
+<td style="text-align: left;">모디파이어형 4트리거(은·는·와·과)</td>
+<td style="text-align: left;">거의 단어마다</td>
+</tr>
+<tr>
+<td style="text-align: left;">3(종결어미)</td>
+<td style="text-align: left;">e+n</td>
+<td style="text-align: left;">다수 (79/108행)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">모디파이어형(고유 30 → 108행)</td>
+<td style="text-align: left;">문장마다</td>
+</tr>
+<tr>
+<td style="text-align: left;">4(자모 — 종성·이중모음)</td>
+<td style="text-align: left;">l+j</td>
+<td style="text-align: left;">없음 (0/14행)</td>
+<td style="text-align: left;">❌ 자리 인접성 무관</td>
+<td style="text-align: left;">후반 7종은 <strong>스페이스바
+결합</strong> 패턴</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">5(1·2·3받침)</td>
+<td style="text-align: left;">c+f</td>
+<td style="text-align: left;">없음 (0/38행)</td>
+<td style="text-align: left;">—</td>
+<td
+style="text-align: left;"><strong>열형</strong>(<code>c2</code>=1/2/3
+고정)</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">6(낱글자)</td>
+<td style="text-align: left;">c+f+공란</td>
+<td style="text-align: left;">2행만 (즉·행 ⌘)</td>
+<td style="text-align: left;">부분적(ㅇ초성 음절 9건만)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>2단계는 조사만이 아니다</strong> — 두 차례에 걸쳐 넓어졌다.
+① 2026-08-04: <code>도</code>(보조사) + <code>은</code> 의 수식키 변형
+4행(3단계에서) + <code>않</code>(<code>13</code>, 품사 <code>c</code> —
+<code>안</code> 이웃 니모닉) ② 2026-08-05: <strong>비종결 기능어
+8행</strong>(만·면·더·데·한·할·수·서 — 품사 <code>n</code>). 그래서 포함
+품사가 <code>p+n+c</code> 다</li>
+<li>모디파이어 열은 <strong>그 단계에서 수식키를 쓰는 행 수 /
+전체행</strong>이다 — 3단계가 압도적이고(79/108) 4·5·6단계는 0 이다</li>
+</ul>
+<p>즉 1단계는 ①②로, 2·3단계는 ④+③(모디파이어형)으로, 5단계는 ③(열형)으로
+각자 다른 축에서 "쉬움"을 얻고, 4·6단계는 해당하는 축이 거의 없어서 뒤로
+밀렸다 — 넷을 한 줄로 세운 단일 척도가 아니라 <strong>네 축 중 무엇이
+있고 무엇이 없는지</strong>로 순서를 정했다.</p>
+<p>데이터 원본의 구 <code>중요도1</code>을 분석 뼈대로 삼되,
+<strong>최상위 학습 단계는 품사 구분에 얽매이지 않고 7단계로
+묶었다</strong> — 성격이 비슷한 품사군을 하나의 단계로 합쳐 실제로 익힐
+때 느끼는 난이도 굴곡에 맞췄다. 원래의 품사별 9단계 상세는 각 단계 안에
+하위 절(<code>## </code>)로 그대로 남겨 뒀다. 품사별 확실성 등급은
+rules_Intersection.md(<code>Extensions/n3sh/layout/rules_Intersection.md</code>)
+"품사 컬럼 값" 표 참조 — <code>e</code>·<code>n</code>은 확정, 나머지는
+패턴 관찰에 따른 추정이다.</p>
+<h1 id="학습-단계-개요">학습 단계 개요</h1>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">단계</th>
+<th style="text-align: left;">단계명</th>
+<th style="text-align: left;">포함(품사)</th>
+<th style="text-align: right;">전체행</th>
+<th style="text-align: right;">고유 암기단위</th>
+<th style="text-align: left;">대표 예시 (트리거→출력)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">예비</td>
+<td style="text-align: left;">사전 지식</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;"><code>.,</code>→<code>.</code>,
+<code>cv</code>→<code>.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">쌍자음·복모음</td>
+<td style="text-align: left;">d+g</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;"><code>kj</code>→ㄲ, <code>ui</code>→ㄸ,
+<code>;p</code>→ㅃ, <code>fd</code>→ㅑ, <code>er</code>→ㅠ</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">조사·짧은 기능어</td>
+<td style="text-align: left;">p+n+c</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;"><code>jl</code>→은, <code>hl</code>→는,
+<code>dc</code>→이, <code>jh</code>→을, <code>m,</code>→할,
+<code>n␣</code>→수</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">종결어미</td>
+<td style="text-align: left;">e+n</td>
+<td style="text-align: right;">107</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: left;"><code>k;</code>→가, <code>u;</code>→다,
+<code>kj</code>+⌘→까, <code>h;</code>→네, <code>o;</code>→지,
+<code>ml</code>→함</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">자모(종성·이중모음)</td>
+<td style="text-align: left;">l+j</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;"><code>aw</code>→<code>~ㄷ</code>,
+<code>wq</code>→<code>~ㅌ</code>, <code>sa</code>→<code>~ㄶ</code>,
+<code>f␣</code>→ㅘ, <code>t␣</code>→ㅝ</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">1·2·3받침</td>
+<td style="text-align: left;">c+f</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: left;"><code>k1</code>→갖, <code>k2</code>→겠,
+<code>k3</code>→갑, <code>h1</code>→낮, <code>n3</code>→습,
+<code>j1</code>→잊</td>
+</tr>
+<tr>
+<td style="text-align: left;">6(최상)</td>
+<td style="text-align: left;">낱글자</td>
+<td style="text-align: left;">c+f</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;"><code>j[</code>→았, <code>kh</code>→괜,
+<code>io</code>→많, <code>9s</code>→윈, <code>mn</code>→후,
+<code>l.</code>→적</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>고유 암기단위</code>가 <code>전체행</code>보다 작은 이유: 같은
+트리거의 <code>.</code>/<code>?</code>/<code>!</code> 모디파이어 변형은
+별도 행으로 잡히지만, 모디파이어 메타 규칙(무=<code>.</code>,
+⇧=<code>?</code>, ⇧+⌘=<code>!</code>) 하나만 익히면 자동으로 파생돼
+<strong>실제로 손이 따로 외워야 할 개수는 아니다</strong>. 그래서
+"가성비"는 전체행이 아니라 고유 암기단위 기준으로 판단한다 — 3단계
+"어미(문장 종결형)"는 105행이지만 실제 암기 부담은 29에 가깝다.</p>
+<h1 id="예비-단계--사전-지식-x-2건">예비 단계 — 사전 지식 (x, 2건)</h1>
+<p>손풀기와 동시타 가능한 장비인제 확인용 : <code>.,</code>(마침표+쉼표
+동시타)·<code>cv</code> 모두 출력이 <code>.</code>(마침표) 자체다.
+세벌식 자체 지식이 아니라 <strong>동시타 메커니즘 확인용</strong>
+워밍업이므로 별도 연습 없이 통과해도 된다.</p>
+<h1 id="1단계--쌍자음복모음-9건">1단계 — 쌍자음·복모음 (9건)</h1>
+<p>쌍자음 5종과 y계 이중모음 4종을 묶었다. 둘 다 모디파이어 없이
+<code>c1+c2</code> 두 키만으로 끝나는 가장 단순한 패턴이라, 이후 모든
+자모·복잡글자 조합에서 반복되는 "두 키 동시타" 감각을 여기서
+완성한다.</p>
+<h2 id="쌍자음-d-5건">쌍자음 (d, 5건)</h2>
+<ul>
+<li><strong>항목</strong>: ㄲ(<code>kj</code>) · ㄸ(<code>ui</code>) ·
+ㅃ(<code>;p</code>) · ㅆ(<code>nj</code>) · ㅉ(<code>lk</code>) — 전부
+<strong>초성</strong>이다(접두 없음). 4단계의 종성
+<code>~ㄲ</code>(<code>1w</code>)과 글자는 같아도 다른 자리다(<a
+href="../reference/notation.html">notation.md</a> "자모")</li>
+<li><strong>묶은 근거</strong>: 모디파이어 없이 <code>c1+c2</code> 두
+키만 누른다. 이후 모든 자모·복잡글자 조합에서 반복되는 <strong>"두 키
+동시타"</strong> 감각을 여기서 완성한다</li>
+<li><strong>가성비 근거</strong>: 항목 5개뿐이고 규칙 예외가 전혀 없다 —
+전체 표에서 학습비용이 가장 낮다</li>
+</ul>
+<h2 id="y계-이중모음-자모-g-4건">y계 이중모음 자모 (g, 4건)</h2>
+<ul>
+<li><strong>항목</strong>: ㅑ(<code>fd</code>) · ㅠ(<code>er</code>) ·
+ㅖ(<code>rt</code>) · ㅒ(<code>rf</code>)</li>
+<li><strong>묶은 근거</strong>: 1단계와 동일한 무모디파이어 2키 패턴의
+확장. ㅒ 는 <strong>390 이 <code>rf</code>, 최종식이
+<code>gf</code></strong> 로 갈리니 390 전용임을 의식할 것(2026-08-04
+정정 — 구 서술은 반대로 적혀 있었다. 근거: 양 배열 rules.md·<a
+href="../reference/rules-notes.html">rules_notes.md</a> 배열
+차이표)</li>
+<li><strong>가성비 근거</strong>: 4건뿐이고 1단계에서 익힌 손놀림을
+그대로 재사용</li>
+</ul>
+<h1 id="2단계--조사짧은-기능어-46건--고유-25건">2단계 — 조사·짧은 기능어
+(46건 / 고유 25건)</h1>
+<p>조사·짧은 접미음절에 부정 <code>안</code>·<code>않</code> 과
+<strong>비종결 기능어 8행</strong>(만·면·더·데·한·할·수·서)을 더해
+묶었다. <code>sp</code>(공백 자동 삽입) 개념이 처음 등장하고,
+은/는/이/가/을/를처럼 한국어 문장에 거의 매번 등장하는 필수 문법소라
+실사용 편익이 매우 높다.</p>
+<h2 id="조사짧은-기능어-pnc-46건--고유-25건">조사·짧은 기능어 (p+n+c,
+46건 / 고유 25건)</h2>
+<ul>
+<li><strong>항목(고유 순)</strong> — 조사: 이(<code>dc</code>) ·
+히(<code>de</code>) · 가(<code>fe</code>) · 을(<code>jh</code>) ·
+를(<code>yu</code>) · 로(<code>yi</code>) · 도(<code>uo</code>) ·
+은(<code>jl</code>) · 는(<code>hl</code>) · 고(<code>km</code>) ·
+과(<code>k.</code>) · 와(<code>j.</code>) · 에(<code>j␣</code>) ·
+인(<code>jy</code>) · 게(<code>k␣</code>) · 의(<code>8␣</code>)</li>
+<li><strong>비종결 기능어</strong>(2026-08-05 3단계에서 이관):
+만(<code>i␣</code>) · 면(<code>i␣</code>+⇧) · 더(<code>u␣</code>) ·
+데(<code>u␣</code>+⇧) · <strong>던(<code>u␣</code>+⌥)</strong> ·
+한(<code>m␣</code>) · 수(<code>n␣</code>) · 할(<code>m,</code>) ·
+서(<code>n'</code>) — 조사가 아니라 연결어미·관형사형·의존명사지만,
+<strong>무수식 2키 + 자동 공백</strong>이라 손 패턴이 조사와 같다</li>
+<li><strong>부정</strong>: 안(<code>23</code>) ·
+않(<code>13</code>)</li>
+<li><strong>편입 이력</strong>: 2026-08-04
+<code>도</code>·<code>은</code> 변형 4행(품사 <code>p</code> 로 통일) +
+<code>않</code>(품사 <code>c</code> 유지 — 니모닉) · 2026-08-05 비종결
+기능어 8행(품사 <code>n</code> 유지). <strong>단계는 학습 묶음, 품사는
+사실</strong> — 둘을 억지로 맞추지 않는다</li>
+<li><strong>묶은 근거</strong>: <code>sp</code>(공백 자동 삽입) 개념이
+처음 등장한다 — 이 단계 45행 중 <strong>대부분이 자동 공백</strong>이라
+스페이스바를 또 누르지 않는 손버릇을 여기서 만든다. 수식키를 쓰는 것은
+9트리거 21행뿐(은·는·와·과 + 을·를·고·만/면·더/데)이고 나머지는 무변형
+단일 형태다</li>
+<li><strong>가성비 근거</strong>: 은/는/이/가/을/를처럼 한국어 문장에
+거의 매번 등장하는 필수 문법소라 실사용 편익이 매우 높다. 고유 암기
+단위가 24개뿐이라 비용도 낮다</li>
+</ul>
+<h1 id="3단계--종결어미-107건--고유-30건">3단계 — 종결어미 (107건 / 고유
+30건)</h1>
+<p><strong>문장을 끝맺는 종결어미</strong>만 남긴 단계다(2026-08-05 정리
+— 만·면·더·데·한·할·수·서 8행은 종결형이 아니라 2단계로 옮겼다). 행 수는
+107개로 표 전체에서 가장 많지만, 모디파이어 메타 규칙만 잡으면 실제 암기
+단위는 30개뿐이다.</p>
+<h2 id="어미문장-종결형-e기-105건--고유-29건">어미(문장 종결형) (e+기,
+105건 / 고유 29건)</h2>
+<ul>
+<li><strong>항목(rules.md 순 = 기능 묶음)</strong>
+<ul>
+<li><strong>평서</strong> 14: 다(<code>u;</code>) · 해(<code>m;</code>)
+· 야(<code>d.</code>) · 아(<code>f.</code>) · 어(<code>j⏎</code>) ·
+지(<code>o;</code>) · 죠(<code>l'</code>) · 요(<code>j'</code>) ·
+오(<code>j;</code>) · 소(<code>n;</code>) · 네(<code>h;</code>) ·
+군(<code>k'</code>) · 돼(<code>ul</code>) · 리(<code>y8</code>)</li>
+<li><strong>의문</strong> 6: 까(<code>kj</code>+⌘) · 가(<code>k;</code>)
+· 나(<code>hu</code>) · 냐(<code>hi</code>) · 니(<code>ho</code>) ·
+래(<code>y;</code>)</li>
+<li><strong>청유·명령</strong> 5: 자(<code>l;</code>) ·
+줘(<code>l,</code>) · 봐(<code>;'</code>) · 마(<code>i;</code>) ·
+라(<code>y7</code>)</li>
+<li><strong>명사형</strong> 4: 함(<code>ml</code>) · 음(<code>jm</code>)
+· 임(<code>ju</code>) · 기(<code>kp</code>)</li>
+<li><strong>조사 잔류</strong> 1: 께(<code>k␣</code>+⌘)</li>
+</ul></li>
+<li><strong>묶은 근거</strong>: 전체 표에서 행 수가 가장 많지만(100행 +
+<code>기</code> 3행 + ⌥ 변형 2행), 실제로 외워야 할 조합은
+<strong>29개</strong>뿐이다. 나머지는 하나의 메타 규칙 — <strong>390 은
+무수식=<code>.</code>, ⇧=<code>?</code>, ⇧+⌘=<code>!</code></strong> —
+로 자동 파생된다. 이 규칙 하나만 확실히 익히면 문장 종결 부호를 전부
+해결한다. <code>기</code>(<code>kp</code>)는 원래 품사가 미배정이었지만
+<code>기.</code>/⇧<code>기?</code>/⇧⌘<code>기!</code> 로 완전히 같은
+규칙을 따르므로 여기로 편입했다(문법상은 명사형 어미 <code>-기</code>
+지만, 손에 익히는 규칙은 어미 쪽과 동일)</li>
+<li><strong>가성비 근거</strong>: 실사용 빈도 1위(모든 문장이 어미로
+끝난다) + 조합 수는 많아도 반복 규칙이라 단위 학습비용은 여전히 낮다. 이
+문서에서 "볼륨은 크지만 가성비는 여전히 높은" 유일한 절</li>
+</ul>
+<h2 id="높임-잔류-께-2건--고유-1건">높임 잔류 (께, 2건 / 고유 1건)</h2>
+<ul>
+<li><strong>항목</strong>: 께(<code>k␣</code>+⌘ /
+<code>k␣</code>+⇧)</li>
+<li><strong>2026-08-05 정리</strong>: 이 그룹에 있던
+할·만·면·한·수·더·데·서 8행은 <strong>종결형이 아니라</strong>
+조사·연결어미·관형사형·의존명사라 2단계로 옮겼다. <code>께</code> 는
+조사지만 <code>할께!</code> 처럼 <strong>종결형으로 쓰일 여지</strong>가
+있어 남겼다(사용자 판단)</li>
+<li><strong><code>함</code> 이탈(2026-08-05)</strong>: 여기 있던
+<code>함</code>(<code>ml</code>, 품사 <code>n</code>)은 같은 트리거
+<code>e</code> 행과 <strong>출력이 완전히 같은 중복</strong>이라
+삭제했다(<a href="../reference/rules-notes.html">rules_notes.md</a>
+규칙4). 남은 <code>함</code> 5행은 전부 품사 <code>e</code> 라 위 어미
+절에 속한다 — 무수식이 <code>함.␣</code> 인 종결형 동작이 그 자리와
+맞는다</li>
+<li><strong>묶은 근거</strong>: <code>께</code> 는
+<code>{cmd}k␣</code>(께␣)·<code>{shift}k␣</code>(께?␣) 두 변형뿐이며
+무수식 <code>k␣</code> 는 2단계 <code>게␣</code> 다 — <strong>같은 키의
+무수식/수식 갈림</strong>이라 짝으로 익힌다</li>
+<li><strong>가성비 근거</strong>: 잔류 1종뿐이라 부담이 거의 없다</li>
+</ul>
+<h1 id="4단계--자모종성이중모음-14건--가성비-하락-시작점">4단계 —
+자모(종성·이중모음) (14건) — 가성비 하락 시작점</h1>
+<p>종성 자모 7종과 이중모음 자모 7종을 한 단계로 묶었다(2026-08-05 병합
+— 구 4·5단계). 둘 다 <strong>출력이 자모 하나</strong>이고, 1~3단계까지
+이어지던 모디파이어 재사용 규칙이 여기서 끊긴다. 항목 수는 적지만 니모닉
+없이 개별 암기해야 하는 첫 구간이다.</p>
+<h2 id="종성-자모-l-7건--홑받침-5--겹받침-2">종성 자모 (l, 7건) — 홑받침
+5 → 겹받침 2</h2>
+<ul>
+<li><strong>항목</strong>: <code>~ㄷ</code>(<code>aw</code>) ·
+<code>~ㅌ</code>(<code>wq</code>) · <code>~ㅊ</code>(<code>zs</code>) ·
+<code>~ㅍ</code>(<code>q2</code>) · <code>~ㄲ</code>(<code>1w</code>) —
+여기까지 홑받침 · <code>~ㄶ</code>(<code>sa</code>) ·
+<code>~ㅄ</code>(<code>xz</code>) — 겹받침 2</li>
+<li><strong>전부 종성이다</strong> — 트리거가 모두 종성
+키(<code>1 2 3 q w a s z x</code>)이므로 <code>~</code> 를 붙여 적는다.
+<code>~ㄲ</code>(<code>1w</code>)은 1단계 초성 ㄲ(<code>kj</code>)과
+<strong>다른 자리</strong>다(<a
+href="../reference/notation.html">notation.md</a> "자모")</li>
+<li><strong>묶은 근거</strong>: <code>a+w</code>, <code>w+q</code>,
+<code>x+z</code>, <code>s+a</code> 처럼 키 배치가 손가락 인접성과 전혀
+무관하다. 1단계까지 통했던 니모닉(자리 인접 패턴)이 여기서는 통하지 않아
+<strong>순수 반복 암기</strong>로만 습득 가능하다</li>
+<li><strong>가성비 근거</strong>: 니모닉이 전혀 없어 단위 학습비용은
+매우 높다 — <strong>가성비가 처음 꺾이는 지점</strong></li>
+</ul>
+<h2 id="이중모음-자모-j-7건--ㅗ계-3--ㅜ계-3--ㅢ">이중모음 자모 (j, 7건)
+— ㅗ계 3 → ㅜ계 3 → ㅢ</h2>
+<ul>
+<li><strong>항목</strong>: ㅘ(<code>f␣</code>) · ㅙ(<code>r␣</code>) ·
+ㅚ(<code>v␣</code>) — ㅗ계 · ㅝ(<code>t␣</code>) · ㅞ(<code>c␣</code>) ·
+ㅟ(<code>d␣</code>) — ㅜ계 · ㅢ(<code>g␣</code>)</li>
+<li><strong>묶은 근거</strong>: 산출물은 자모 하나뿐이라 단순해
+보이지만, <strong>스페이스바를 자모 결합 트리거로 쓰는</strong> 이질적인
+메커니즘을 새로 익혀야 한다. "두 키 동시타"가 아니라 "모음 키 +
+스페이스바"라는 별도 패턴이다. 앞 절(종성)과 달리 <strong>첫 모음이 같은
+것끼리 묶여</strong> 있어 그만큼은 외우기 쉽다</li>
+<li>2단계의
+<code>j␣</code>(에)·<code>k␣</code>(게)·<code>8␣</code>(의)도 같은
+스페이스바 조합이다 — <strong>같은 손놀림, 다른 산출물</strong></li>
+<li><strong>가성비 근거</strong>: 항목은 적으나(7) 입력 메커니즘 자체가
+이질적이라 응용 난이도가 높다</li>
+</ul>
+<h1 id="5단계--123받침-38건">5단계 — 1·2·3받침 (38건)</h1>
+<p><a href="../cheatsheet.html">training_cheatsheet.md</a> 의
+"<code>c1+1</code> 열"·"<code>c1+3</code> 열" 표, 그리고 같은 성격의
+"2열"(과거 활용형)까지 묶었다. ⚠️ <strong>rules.md 의 행 순서는 초성
+자모순(ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ) ×
+<code>1</code>→<code>2</code>→<code>3</code></strong> 이다 — 한 초성을
+잡고 숫자만 바꿔 누르는 손의 흐름. 아래 세 절은 그 표를
+<strong>세로로</strong> 읽은 것이다. 트리거의 두 번째
+키(<code>c2</code>)가 <code>1</code>·<code>2</code>·<code>3</code> 중
+하나로 고정된 자음+숫자 조합이라, 겉보기엔 7단계(낱글자)처럼 개별암기
+대상 같지만 사실 "어떤 자음 + 어떤 숫자"라는 열(column) 규칙이 있어 표로
+외울 수 있다. <code>c</code>·<code>f</code> 양쪽 품사에서 항목을
+가져왔다.</p>
+<h2 id="1열--ㅈㅎ-계열-받침-10건">1열 —
+<code>~ㅈ</code>·<code>~ㅎ</code> 계열 받침 (10건)</h2>
+<ul>
+<li><strong>항목</strong>(초성 자모순): 갖(<code>k1</code>) ·
+낮(<code>h1</code>) · 딪(<code>u1</code>) · 렇(<code>y1</code>) ·
+맞(<code>i1</code>) · 빚(<code>;1</code>) · 싫(<code>n1</code>) ·
+잊(<code>j1</code>) · 짖(<code>l1</code>) · 찾(<code>o1</code>)</li>
+<li><strong>묶은 근거</strong>: 트리거 두 번째 키가 전부
+<code>1</code>이다. training_cheatsheet.md "<code>c1+1</code> 열" 표와
+똑같다 — 초성 키를 한 줄로 나열하고 그 뒤에 <code>1</code>을 붙이면
+그대로 외워진다</li>
+<li><strong>가성비 근거</strong>: 항목이 10개지만 "한 열"이라는 공통
+규칙으로 묶여 있어 개별 암기보다 부담이 낮다</li>
+</ul>
+<h2 id="2열--과거-활용형-받침-14건">2열 — 과거 활용형 받침 (14건)</h2>
+<ul>
+<li><strong>항목</strong>(초성 자모순): 겠(<code>k2</code>) ·
+냈(<code>h2</code>) · 됐(<code>u2</code>) · 랬(<code>y2</code>) ·
+몄(<code>i2</code>) · 봤(<code>;2</code>) · 셨(<code>n2</code>) ·
+왔(<code>j2</code>) · 졌(<code>l2</code>) · 쳤(<code>o2</code>) ·
+켰(<code>02</code>) · 탔(<code>'2</code>) · 폈(<code>p2</code>) ·
+했(<code>m2</code>)</li>
+<li><strong>묶은 근거</strong>: 트리거 두 번째 키가 전부
+<code>2</code>다. 대부분 "-았/-었"이 결합된 과거 활용형이라 "자음 + 2 =
+그 자음의 과거형"이라는 공식 하나로 통일된다</li>
+<li><strong>가성비 근거</strong>: 14건이지만 규칙이 하나라 1열과
+마찬가지로 개별암기보다 부담이 낮다</li>
+</ul>
+<h2 id="3열--ㅂ-계열-받침-14건">3열 — <code>~ㅂ</code> 계열 받침
+(14건)</h2>
+<ul>
+<li><strong>항목</strong>(초성 자모순): 갑(<code>k3</code>) ·
+납(<code>h3</code>) · 됩(<code>u3</code>) · 롭(<code>y3</code>) ·
+맙(<code>i3</code>) · 뵙(<code>;3</code>) · 습(<code>n3</code>) ·
+입(<code>j3</code>) · 집(<code>l3</code>) · 춥(<code>o3</code>) ·
+큽(<code>03</code>) · 탑(<code>'3</code>) · 팝(<code>p3</code>) ·
+합(<code>m3</code>)</li>
+<li><strong>묶은 근거</strong>: 트리거 두 번째 키가 전부
+<code>3</code>이다. training_cheatsheet.md "<code>c1+3</code> 열" 표와
+똑같다. <code>않</code>(<code>1+3</code>)은 초성이 아니라 숫자+숫자
+조합이라 이 열에서 제외했다 — <strong>2단계</strong>(부정
+<code>안</code> 의 이웃)에 있다</li>
+<li><strong>가성비 근거</strong>: 14건이지만 규칙이 하나라 개별암기보다
+부담이 낮다</li>
+</ul>
+<h1 id="6단계최상위--낱글자-38건">6단계(최상위) — 낱글자 (38건)</h1>
+<p><strong>낱글자</strong> = 조사·어미 같은 문법 기능이 아니라, 그
+자체로 완결된 한 글자·단어를 가리키는 말이다.
+<code>c</code>(복잡글자)·<code>f</code>(예외 복잡글자)에서
+6단계(1·2·3받침)의 열 규칙으로 빼낼 수 있는 것은 다 뺐고, 그중에서도
+초성이 ㅇ(무초성)인 것은 "ㅇ초성 음절"로 한 번 더 뺐다. 남은 것은 그런
+규칙조차 없는 순수 개별암기 항목들이다.
+<code>후</code>·<code>등</code>·<code>즉</code>·<code>행</code>은 원본
+<code>품사</code> 컬럼이 비어 있었을 뿐 실제로는 의존명사·접속부사 등
+확인 가능한 품사가 있어 여기로 편입했다 — <strong>"품사 미배정"이라는
+항목은 원칙적으로 없다.</strong> 6단계보다 항목 수는 적어도(38) 묶을
+규칙이 거의 없어 이 커리큘럼에서 가장 어려운 구간이다.</p>
+<h2 id="ㅇ초성-음절-9건">ㅇ초성 음절 (9건)</h2>
+<ul>
+<li><strong>항목</strong>(가나다): 았(<code>j[</code>) ·
+없(<code>j,</code>) · 었(<code>jo</code>) · 였(<code>jp</code>) ·
+원(<code>j]</code>) · 월(<code>j\</code>) · 읽(<code>j-</code>) ·
+잃(<code>j0</code>) · 있(<code>ji</code>)</li>
+<li><strong>묶은 근거</strong>: 전부 초성이 ㅇ(무초성)이라 트리거가
+<code>j</code>(ㅇ 키)로 시작한다 — 2단계 조사의 은·와·을·에·인, 3단계
+어미의 임·음·오·요·어와 같은 "ㅇ=<code>j</code>" 규칙이다. 자음 자리는
+고정(<code>j</code>)이고 뒤 글자만 다르므로 순서(받침·모음)만 개별로
+외우면 된다</li>
+<li><strong>가성비 근거</strong>: 9건이지만 "ㅇ은 j로 친다"는 규칙
+하나로 시작 지점이 통일돼, 남은 복잡글자·품사 예외 글자보다는 학습비용이
+낮다</li>
+</ul>
+<h2 id="복잡글자받침-복합-음절-c적-17건--고유-16건">복잡글자(받침 복합
+음절) (c+적, 17건 / 고유 16건)</h2>
+<ul>
+<li><strong>항목</strong>(가나다): 괜(<code>kh</code>) ·
+것(<code>ko</code>) · 끊(<code>k,</code>) · 넣(<code>hm</code>) ·
+년(<code>hp</code>) · 넷(<code>h[</code>) · 놓(<code>hn</code>) ·
+능(<code>h.</code>) · 님(<code>hy</code>) · 뭘(<code>i9</code>) ·
+많(<code>io</code>) · 좋(<code>li</code>) · 잖(<code>lo</code>) ·
+줄(<code>l␣</code>) · 적(<code>l.</code>) · 활(<code>m.</code>) ·
+찮(<code>op</code>) · 된(<code>u8</code>) · 될(<code>u[</code>) ·
+들(<code>up</code>) · 떻(<code>uk</code>) · 윈(<code>9s</code>) — 품사
+<code>c</code>·<code>f</code>·공란이 섞여 있으나 손에는 다 같은
+개별암기다</li>
+<li><strong>묶은 근거</strong>: 겹받침+모음이 한 키페어에 압축된 형태라,
+3단계 어미처럼 모디파이어로 재사용되는 규칙이 없다 — <strong>16건 전부
+개별 암기</strong>해야 한다. 6단계로 빠진 1·2·3받침 계열과, 위 ㅇ초성
+음절로 빠진 것을 빼고 남은, 규칙 없는 항목이다.
+<code>적</code>(<code>l.</code>)은 원래 품사가 미배정이었지만 같은
+<code>복잡글자=✔</code>·<code>억지=✔</code> 특성이라 여기로
+편입했다</li>
+<li><strong>가성비 근거</strong>: 많다·괜찮다처럼 실사용 빈도는 높지만,
+재사용 가능한 규칙이 전혀 없어 항목당 학습비용이 이 표에서 가장
+높다</li>
+</ul>
+<h2 id="품사-예외-글자-f-6건">품사 예외 글자 (f, 6건)</h2>
+<ul>
+<li><strong>항목</strong>: 윈(<code>9s</code>) · 님(<code>hy</code>) ·
+뭘(<code>i9</code>) · 것(<code>ko</code>) · 좋(<code>li</code>) ·
+끊(<code>k,</code>)</li>
+<li><strong>묶은 근거</strong>: 같은 낱글자인 복잡글자와 성격은
+비슷하나(둘 다 그 자체로 완결된 한 글자) 별도 코드로 분류된 이유가
+데이터상 불명확한 소수
+예외군이다(rules_Intersection.md(<code>Extensions/n3sh/layout/rules_Intersection.md</code>)
+품사표 참조). <code>딪</code>·<code>맞</code>은 6단계 "1열"로,
+<code>없</code>은 위 "ㅇ초성 음절"로 이동했다</li>
+<li><strong>가성비 근거</strong>: 항목 수는 적지만(6) 단위 학습비용이
+복잡글자만큼 높다 — 예외 처리라는 특성 때문</li>
+</ul>
+<h2 id="체언부사-후등즉행-6건--고유-4건">체언·부사 (후·등·즉·행, 6건 /
+고유 4건)</h2>
+<ul>
+<li><strong>항목</strong>(rules.md 끝 4종): 등(<code>u0</code>,
+의존명사) · 후(<code>mn</code>, 의존명사) · 즉,/즉␣(<code>lp</code>,
+접속부사) · 행,/행␣(<code>m'</code>, 명사)</li>
+<li><strong>묶은 근거</strong>: 품사 컬럼이 비어 있었을 뿐 전부 실제
+품사가 있다 — 후("사용 후 연료는 쓰레기통에 버려주세요")·등("하는 등의
+행동은 자제해 주세요")은 의존명사, 즉은 접속부사다.
+<code>즉</code>·<code>행</code>은 ⌘ 유무로 "쉼표+공백" 여부가 갈리는
+공통 규칙으로 묶어 익힌다(<a href="../training.html">training.md</a>
+"7단계 — 체언·부사" 참조)</li>
+<li><strong>가성비 근거</strong>: 항목이 적고(6) 조사·어미만큼 필수는
+아니지만 문어체에서 흔히 쓰인다</li>
+</ul>
+<h1 id="진행-순서-요약">진행 순서 요약</h1>
+<p>예비 → 1(쌍자음·복모음) → 2(조사·짧은 기능어) → 3(종결어미) → 4(자모:
+종성·이중모음) → 5(1·2·3받침) → 6(낱글자)</p>
+<p>이 순서를 택한 근거는 위 "판정 기준" 4축이다 — 1~3단계는 규칙
+재사용성이 높아 부담이 낮고, 4단계부터 항목당 개별 암기 비중이 커진다.
+5단계(1·2·3받침)는 "열" 규칙이 있어 완전 개별암기는 아니고,
+6단계(낱글자)는 그 규칙조차 없어 <strong>설계상 가장 무거운
+구간</strong>이다.</p>
+<p>⚠️ <strong>반복 주기·소요 시간 같은 학습 운영은 여기서 정하지
+않는다</strong> — 매뉴얼(<a href="../training.html">training.md</a>
+"진행 규약")의 소관이다. 본 문서는 <em>무엇을 어느 단계에
+두는가</em>까지만 결정한다.</p>
+<h1 id="참고">참고</h1>
+<ul>
+<li>정본 데이터: <a href="../rules.html">n390/rules.md</a> (254행) — 위
+6단계 + 예비 = <strong>254건 전량</strong>이다. 2026-08-05
+<code>함</code>(<code>ml</code>) 중복 1행을 삭제해 255→254 가 됐다.
+2026-08-05 구 4·5단계(종성 자모·이중모음 자모)를 4단계로 병합해
+<strong>예비+6단계</strong> 가 됐다(id 접두도
+<code>0</code>~<code>6</code>). 구 판에서 "단계 밖" 으로 뒀던
+2건(<code>jm</code>+⌥ 의 <code>음</code>, <code>k'</code>+⌥)은
+<strong>3단계로 편입</strong>했다 — 자기 <code>품사</code> 는 공란이나
+같은 트리거의 형제 4행이 전부 품사 <code>e</code> 인 ⌥ 변형이기
+때문이다. 둘 다 기존 조합의 변형이라 <strong>고유 암기단위는 늘지
+않는다</strong>. <code>k'</code>+⌥ 는 오래 <code>txt</code> 가
+빈칸이었는데 실제로는 <code>군</code> 을 내보내고 있었다 — 2026-08-05
+채웠고 같은 유형을 막는 가드가 들어갔다</li>
+<li>행 순서·<code>id</code>: rules.md 는 단계 오름차순이고 <strong>단계
+안에서는 손의 흐름 순</strong>이다(2026-08-04 사용자 재배열).
+<code>id</code> 는 <code>{단계번호}-{3자리 순번}</code> 으로 그 순서를
+그대로 담으며 <strong>단계를 담는 유일한 자리</strong>다 — 행을 옮기면
+id 를 다시 매긴다. <strong>예비 단계의 접두는 <code>0</code></strong> —
+id 에는 한글을 쓰지 않는다(사용자 선호). 3자리 고정폭은 문자열 정렬이
+숫자 정렬과 일치하게 하려는 것</li>
+<li>품사 컬럼 확실성 등급·건수:
+rules_Intersection.md(<code>Extensions/n3sh/layout/rules_Intersection.md</code>)
+"품사 컬럼 값"</li>
+<li>같은 단계 축의 손 훈련: <a href="../training.html">training.md</a> ·
+<a href="../cheatsheet.html">training_cheatsheet.md</a></li>
+</ul>
+
+</main>
+<footer>
+<p><a href="../index.html">처음으로</a> · <a href="https://github.com/Finfra/karabiner-extensions">저장소</a></p>
+<p class="gen">이 페이지는 저장소의 마크다운에서 생성됐다. 고칠 것은 저장소 쪽이다.</p>
+</footer>
+</body>
+</html>

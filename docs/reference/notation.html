@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>표기법 — n3sh — 세벌식 390 속기</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="steps"><a class="home" href="../index.html">n3sh</a><a href="../start.html"><b>1</b> 설치와 준비</a><a href="../cheatsheet.html"><b>2</b> 한 장 치트시트</a><a href="../training.html"><b>3</b> 6단계 학습 드릴</a><a href="../rules.html"><b>4</b> 전체 규칙표</a></nav>
+<main>
+<h1 class="page-title">표기법</h1>
+<p class="refnote">학습 경로가 아니라 <b>참고 문서</b>다. 필요할 때 들어와 찾아보는 곳.</p>
+<p>규칙표의 행을 <strong>산문·훈련 문서에서 어떻게 적는가</strong>를
+정한다. 같은 표기를 <a
+href="../reference/steps.html">rules_step.md</a>·<a
+href="../training.html">n390/training.md</a>·<a
+href="../cheatsheet.html">training_cheatsheet.md</a>가 각자 정의하다
+갈라진 것을 여기로 모았다.</p>
+<p>자모를 적는 방법(초성/종성 <code>~</code> 접두)도 여기가 SSOT 다 —
+그쪽은 산문뿐 아니라 <strong>셀 값</strong>으로도 들어간다:
+staging.md(<code>Extensions/n3sh/layout/n390/staging.md</code>) 의
+<code>h1</code>·<code>h2</code>, 그리고 <strong>규칙표 <code>txt</code>
+의 종성 낱자</strong>(<code>~ㄲ</code>·<code>~ㄷ</code> — ,
+2026-08-06).</p>
+<h1 id="공통-표기">공통 표기</h1>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">표기</th>
+<th style="text-align: left;">뜻</th>
+<th style="text-align: left;">예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>c1c2</code></td>
+<td style="text-align: left;">두 키 <strong>동시타</strong> — 키 이름을
+그대로
+이어붙임(<code>;</code>·<code>,</code>·<code>'</code>·<code>0</code> 은
+그 문자 그대로)</td>
+<td style="text-align: left;"><code>kj</code> = k+j 동시타 → ㄲ ·
+<code>j1</code> = j+1 → 잊</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>␣</code></td>
+<td style="text-align: left;"><strong>스페이스바</strong> (누르는 키
+자리에 올 때)</td>
+<td style="text-align: left;"><code>c␣</code> = c+스페이스바 → ㅞ</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>·</code></td>
+<td style="text-align: left;"><strong>타건 단위 구분</strong> — 여러
+트리거를 이어 문장을 만들 때</td>
+<td style="text-align: left;"><code>j1·k2</code> = 잊 → 겠</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>→</code></td>
+<td style="text-align: left;">트리거 → 실제 출력</td>
+<td style="text-align: left;"><code>kj</code>→ㄲ</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>`</code></td>
+<td style="text-align: left;"><strong>fSnippet 백틱 트리거</strong> —
+로마자 시퀀스를 <strong>순차</strong> 타건 후 백틱</td>
+<td style="text-align: left;"><code>n`</code> = 습니다.␣
+(fsnippet-한글속기.md(<code>Extensions/n3sh/_doc/n390/fsnippet-한글속기.md</code>))</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨ ⟩</td>
+<td style="text-align: left;">속기 규칙 <strong>없음</strong> — 평타로
+침</td>
+<td style="text-align: left;">⟨괜⟩·<code>op</code> = 괜찮</td>
+</tr>
+<tr>
+<td style="text-align: left;">⌥·⇧·⌘</td>
+<td style="text-align: left;">Option·Shift·Command <strong>키
+자체</strong>를 가리킬 때</td>
+<td style="text-align: left;">"⌥ 조합 없이 두 키만"</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>~ㄱ</code></td>
+<td style="text-align: left;"><strong>종성(받침)</strong> 자음 — 접두가
+없으면 초성·중성 (아래 절)</td>
+<td style="text-align: left;"><code>kj</code> → 초성 ㄲ ·
+<code>1w</code> → <code>~ㄲ</code></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>⚠️ 동시타와 순차 타건은 다르다 — <code>n'</code>(서)는 n+' 을
+<strong>같이</strong>, <code>n'`</code>(세요.␣)는 n → ' 를
+<strong>순서대로</strong> 친 뒤 백틱</li>
+</ul>
+<h1 id="자모--초성중성종성">자모 — 초성·중성·종성</h1>
+<p>세벌식은 같은 자음이 초성과 종성 양쪽에 있어, 글자만 적으면
+<strong>어느 자리인지 알 수 없다</strong>. 실제로 390 규칙표에는 출력이
+<code>ㄲ</code> 인 행이 <strong>둘</strong> 있다 —
+<code>kj</code>(초성)와 <code>1w</code>(종성).</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">자리</th>
+<th style="text-align: left;">표기</th>
+<th style="text-align: left;">해당 키 (390)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">초성</td>
+<td style="text-align: left;">접두 없음</td>
+<td style="text-align: left;">오른손 — <code>y u i o p</code> ·
+<code>h j k l ; '</code> · <code>n m</code> · <code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">중성</td>
+<td style="text-align: left;">접두 없음</td>
+<td style="text-align: left;"><code>r t</code> · <code>d f g</code> ·
+<code>c v b</code> · <code>e</code> · <code>4</code> 등</td>
+</tr>
+<tr>
+<td style="text-align: left;">종성</td>
+<td style="text-align: left;"><strong><code>~</code> 접두</strong></td>
+<td style="text-align: left;"><code>1 2 3</code> · <code>q w</code> ·
+<code>a s</code> · <code>z x</code></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>초성과 중성은 <strong>자음이냐 모음이냐로 이미 갈리므로</strong>
+접두를 쓰지 않는다. 접두가 필요한 것은 자음의 초성↔︎종성 구분뿐이다</li>
+<li>✅ <strong>이 표기는 규칙표 <code>txt</code> 에서 실제로
+동작한다</strong>(2026-08-06). 그 전까지 두 <code>ㄲ</code> 행은 글자가
+같아 생성기가 키를 정하지 못했고, 오라클 literal(<code>억지=✔</code>)로
+덮어 산출했다. <code>1w</code> 행을 <code>~ㄲ</code> 로 적자 심볼이
+<code>jong ㄲ</code>(<code>1+shift</code>)와 <code>lit ㄲ</code>(초성
+<code>k k</code>)로 갈려 그 예외가 사라졌다 — <strong>표현으로 푼
+것</strong>이다</li>
+<li>자리는 <strong>누르는 키</strong>가 정한다. 위 목록은
+keymap_390.json(<code>Extensions/n3sh/core/keymap_390.json</code>) 의
+<code>cho</code>·<code>jung</code>·<code>jong</code> 에서 나온 것이다(<a
+href="../reference/keymap.html">keymap.md</a>)</li>
+</ul>
+<h2 id="어디에-쓰고-어디에-쓰지-않는가">어디에 쓰고 어디에 쓰지
+않는가</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">자리</th>
+<th style="text-align: left;"><code>~</code></th>
+<th style="text-align: left;">이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">staging 의 <code>h1</code>·<code>h2</code>
+컬럼</td>
+<td style="text-align: left;">✅ 쓴다</td>
+<td style="text-align: left;">그 셀이 곧 자모 표기다. JSON 에도
+<code>"~ㅂ"</code> 로 그대로 저장된다</td>
+</tr>
+<tr>
+<td style="text-align: left;">산문·훈련 문서 서술</td>
+<td style="text-align: left;">✅ 쓴다</td>
+<td style="text-align: left;">초성 ㄲ 과 종성 ㄲ 을 가려야 한다</td>
+</tr>
+<tr>
+<td style="text-align: left;">rules 의 <code>txt</code> 컬럼</td>
+<td style="text-align: left;">❌ <strong>쓰지 않는다</strong></td>
+<td style="text-align: left;"><strong>실제로 출력되는
+문자열</strong>이다. <code>~</code> 를 넣으면 <code>~ㄲ</code> 가 그대로
+찍힌다</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>c1</code>·<code>c2</code> 컬럼</td>
+<td style="text-align: left;">❌ 해당 없음</td>
+<td style="text-align: left;">누르는 <strong>키 이름</strong>이지 자모가
+아니다</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>그래서 <code>txt</code> 가 <code>ㄲ</code> 인 두 행은 표 안에서
+<code>c1</code>·<code>c2</code> 로만
+구분된다(<code>k</code>+<code>j</code> = 초성 ·
+<code>1</code>+<code>w</code> = 종성). <strong>문서에서 그 행을 지칭할
+때는</strong> <code>~ㄲ</code> 로 적는다</li>
+</ul>
+<h1 id="초성--종성-구분---접두">초성 · 종성 구분 — <code>~</code>
+접두</h1>
+<p>세벌식은 초성 ㄱ 과 종성 ㄱ 을 <strong>다른 글쇠</strong>에 두므로,
+자모를 적을 때 둘을 구별해야 한다. <strong>종성에만 <code>~</code> 를
+접두</strong>하고 초성은 맨 자음으로 둔다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">표기</th>
+<th style="text-align: left;">뜻</th>
+<th style="text-align: left;">실제 사용처</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ㅊ</code></td>
+<td style="text-align: left;">초성 ㅊ</td>
+<td
+style="text-align: left;">n390/staging.md(<code>Extensions/n3sh/layout/n390/staging.md</code>)
+<code>h1</code>·<code>h2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>~ㅂ</code></td>
+<td style="text-align: left;">종성 ㅂ</td>
+<td style="text-align: left;">같은 곳 (390 15건 · 최종식 2건)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>값의 <strong>일부</strong>다 — JSON 에도 <code>"h1": "~ㅎ"</code> 로
+그대로 저장된다. <code>—</code>·<code>␣</code> 같은 왕복 마커가
+아니다</li>
+<li>산문에서는 <code>~</code> 대신 <strong>"종성 ㅂ"</strong> 처럼
+낱말로 적어도 된다. 같은 표의 <code>DESC</code> 열이 이미 그렇게
+쓴다(<code>종성 ㅂ + ㄹ</code>)</li>
+</ul>
+<h2 id="rotating_light-xy-로-붙여-쓰지-말-것-pandoc-아래첨자">🚨
+<code>~X~Y</code> 로 붙여 쓰지 말 것 (pandoc 아래첨자)</h2>
+<p>틸드 2개가 <strong>공백 없이</strong> 한 텍스트 런에 오면 pandoc 기본
+<code>markdown</code> 리더가 아래첨자로 먹는다. 실측:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">입력</th>
+<th style="text-align: left;">pandoc <code>markdown</code></th>
+<th style="text-align: left;">pandoc <code>gfm</code> ·
+micromark(GFM)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>~ㅎ</code></td>
+<td style="text-align: left;"><code>~ㅎ</code> (안전)</td>
+<td style="text-align: left;"><code>~ㅎ</code> (안전)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>~ㅂ~ㄹ</code></td>
+<td style="text-align: left;">🚨
+<code>&lt;sub&gt;ㅂ&lt;/sub&gt;ㄹ</code></td>
+<td style="text-align: left;"><code>~ㅂ~ㄹ</code> (안전)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>GFM 취소선은 <code>~~</code> 두 개</strong>라 단일
+<code>~</code> 는 GFM 계열(GitHub·VSCode 미리보기·micromark)에서 전부
+안전하다. 위험은 pandoc 경로(<code>md2pdf</code>·슬라이드 변환)
+하나뿐이다</li>
+<li>규약: 표 셀은 <strong>1셀 1자모</strong>(현행 그대로), 산문은
+<code>~ㅂ + ~ㄹ</code> 처럼 <strong>띄운다</strong></li>
+<li>현재 위반 0건 — 17건 모두 셀이 갈려 있고 산문 사용도 없다</li>
+</ul>
+<h2 id="왜--인가-다른-기호를-안-쓴-이유">왜 <code>~</code> 인가 (다른
+기호를 안 쓴 이유)</h2>
+<p><strong>초성/종성을 구별하는 표준 접두 기호는 존재하지
+않는다.</strong> 유니코드는 아예 <strong>별도 코드포인트</strong>로
+가르고(초성 ㄱ <code>ᄀ</code> U+1100 / 종성 ㄱ <code>ᆨ</code> U+11A8,
+유형 약칭 <strong>L·V·T</strong>), 한국어 자판 문헌은 기호 없이
+<strong>"받침 ㄱ"·"끝소리 ㄱ"</strong> 낱말로 적는다. 그래서
+<code>~</code> 는 자체 고안이며, 검토한 대안은 전부 이 프로젝트에서 더
+비쌌다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">대안</th>
+<th style="text-align: left;">기각 사유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>-ㄱ</code></td>
+<td style="text-align: left;">❌ <code>-</code> 가 이미 2중 점유 —
+모디파이어 미사용 표시(<code>⌥</code>·<code>⇧</code>·<code>⌘</code> 열
+140행) + <strong>하이픈 키</strong>(<code>c2</code> 값, ex:
+<code>j</code>+<code>-</code> → 읽)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ᆨ</code> (U+11A8)</td>
+<td style="text-align: left;">❌ 조합용 자모라 단독 표시 시 폭 0 또는
+점원(◌ᆨ)이 붙어 표가 깨진다</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Tㄱ</code> (L/V/T)</td>
+<td style="text-align: left;">유니코드 근거는 가장 강하나 한글 표에 라틴
+문자가 섞인다</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>받침ㄱ</code></td>
+<td style="text-align: left;">안전하고 자명하지만 셀 폭이 2자 늘고, 이미
+<code>DESC</code> 가 그 역할을 한다</td>
+</tr>
+</tbody>
+</table></div>
+<p>즉 <code>~</code> 는 <strong>비용이 가장 싼 선택</strong>이지 표준이
+아니다. 근거: <a href="https://www.unicode.org/faq/korean">Unicode FAQ —
+Korean</a> · <a
+href="https://ko.wikipedia.org/wiki/%EC%84%B8%EB%B2%8C%EC%8B%9D_%EC%9E%90%ED%8C%90%EC%9D%98_%EC%A2%85%EB%A5%98">세벌식
+자판의 종류</a></p>
+<h1 id="모디파이어--두-표기는-같은-뜻">모디파이어 — 두 표기는 같은
+뜻</h1>
+<p>문서 성격에 따라 <strong>후치</strong>와 <strong>전치</strong>를 각각
+쓴다. 통일하지 않는다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">후치 (<code>+⌘</code>)</th>
+<th style="text-align: left;">전치 (<code>{cmd}</code>)</th>
+<th style="text-align: left;">뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>k;</code>+⌘</td>
+<td style="text-align: left;"><code>{cmd}k;</code></td>
+<td style="text-align: left;">k+; 를 ⌘ 누른 채 → 까</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>k␣</code>+⇧</td>
+<td style="text-align: left;"><code>{shift}k␣</code></td>
+<td style="text-align: left;">k+스페이스바 + ⇧ → 께</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>f.</code>+⇧⌘</td>
+<td style="text-align: left;"><code>{shift}{cmd}f.</code></td>
+<td style="text-align: left;">f+. 를 ⇧+⌘ 누른 채 → 아!</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>왜 통일하지 않는가</strong>: 시퀀스
+예문(<code>j1·{cmd};o·13·k2·n`</code>)에서는 <strong>전치</strong>가
+<code>·</code> 구분과 겹치지 않아 토큰 경계를 잡아 준다. 단건
+나열(<code>k;</code>+⌘ = 까)에서는 <strong>후치</strong>가 트리거를 먼저
+보여줘 읽기 쉽다. 한쪽으로 강제하면 반대쪽이 반드시 나빠진다</li>
+<li><strong>단, 한 문서 안에서는 한 표기만 쓴다.</strong> 혼용은 규약
+위반이다. 문서별 채택은 아래 표 참조</li>
+<li><code>+</code> 는 두 자리에서 쓰인다 — <strong>모디파이어
+결합</strong>(<code>k;</code>+⌘)과 <strong>자모
+결합</strong>(<code>~ㅂ</code>+<code>~ㄹ</code>). 뒤에 오는 것이 ⌥·⇧·⌘
+이면 모디파이어다</li>
+</ul>
+<h1 id="문서별-채택">문서별 채택</h1>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">문서</th>
+<th style="text-align: left;">모디파이어</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a
+href="../reference/steps.html">rules_step.md</a></td>
+<td style="text-align: left;">후치 <code>+⌘</code></td>
+<td style="text-align: left;">단계 설계 — 단계별 단건 나열</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a
+href="../training.html">n390/training.md</a></td>
+<td style="text-align: left;">전치 <code>{cmd}</code></td>
+<td style="text-align: left;"><code>·</code> 로 잇는 문장 예문 다수</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a
+href="../cheatsheet.html">training_cheatsheet.md</a></td>
+<td style="text-align: left;">전치 <code>{cmd}</code></td>
+<td style="text-align: left;">training.md 의 한 장 요약이라 표기를
+승계</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="여기서-정의하지-않는-것">여기서 정의하지 않는 것</h1>
+<p>아래는 <strong>다른 문서가 SSOT</strong> 다. 본 문서에 사본을 두지
+않는다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">항목</th>
+<th style="text-align: left;">SSOT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">md 셀 <code>—</code>·<code>␣</code> ↔︎ JSON
+<code>""</code>·<code>" "</code>·<code>_</code> 왕복 규약</td>
+<td
+style="text-align: left;">data-md-first-rules.md(<code>.claude/rules/data-md-first-rules.md</code>)
+"셀 표기"</td>
+</tr>
+<tr>
+<td style="text-align: left;">무수식=<code>.</code> / ⇧=<code>?</code> /
+⇧⌘=<code>!</code> 분기 (390 ↔︎ 최종식 <strong>반대</strong>)</td>
+<td style="text-align: left;"><a
+href="../reference/rules-notes.html">n390/rules_notes.md</a> 규칙3</td>
+</tr>
+<tr>
+<td style="text-align: left;">품사 컬럼 값·확실성 등급</td>
+<td
+style="text-align: left;">rules_Intersection.md(<code>Extensions/n3sh/layout/rules_Intersection.md</code>)
+"품사 컬럼 값"</td>
+</tr>
+<tr>
+<td style="text-align: left;">규칙표 컬럼 구성</td>
+<td style="text-align: left;"><a href="../rules.html">n390/rules.md</a>
+·
+final/rules.md(<code>Extensions/n3sh/layout/final/rules.md</code>)</td>
+</tr>
+</tbody>
+</table></div>
+
+</main>
+<footer>
+<p><a href="../index.html">처음으로</a> · <a href="https://github.com/Finfra/karabiner-extensions">저장소</a></p>
+<p class="gen">이 페이지는 저장소의 마크다운에서 생성됐다. 고칠 것은 저장소 쪽이다.</p>
+</footer>
+</body>
+</html>

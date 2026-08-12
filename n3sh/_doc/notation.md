@@ -9,6 +9,7 @@ arch: _doc_arch/data-pipeline-design.md
 
 자모를 적는 방법(초성/종성 `~` 접두)도 여기가 SSOT 다 — 그쪽은 산문뿐 아니라 **셀 값**으로도 들어간다: [staging.md](../layout/n390/staging.md) 의 `h1`·`h2`, 그리고 **규칙표 `txt` 의 종성 낱자**(`~ㄲ`·`~ㄷ` — , 2026-08-06).
 
+<!-- site:skip -->
 ⚠️ **md 표 셀의 값 보존 규약(`—`·`␣` ↔ JSON `""`·`" "`·`_`)과는 별개 축이다.** 그쪽 SSOT 는 `.claude/rules/data-md-first-rules.md` "셀 표기 — 값 손실 없는 왕복" 이다. 본 문서가 정하는 것은 **무엇을 어떻게 표기하는가**이지, md↔JSON 왕복을 위한 치환이 아니다 — `~ㅎ` 는 값 그 자체라 JSON 에도 `"~ㅎ"` 로 남는다.
 
 # 공통 표기
@@ -122,6 +123,7 @@ arch: _doc_arch/data-pipeline-design.md
 | 품사 컬럼 값·확실성 등급                                  | [rules_Intersection.md](../layout/rules_Intersection.md) "품사 컬럼 값"               |
 | 규칙표 컬럼 구성                                          | [n390/rules.md](../layout/n390/rules.md) · [final/rules.md](../layout/final/rules.md) |
 
+<!-- site:skip-section -->
 # 관련
 
 * 문서 인덱스: [Extensions/n3sh/layout/README.md](../layout/README.md)

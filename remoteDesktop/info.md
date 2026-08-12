@@ -58,9 +58,11 @@ Microsoft Remote Desktop(RDC) 앱이 최전면일 때만 발동하는 규칙. Wi
 | 대상 | 상태 |
 | :--- | :--- |
 | **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
-| **pqrs 등록** | ⏸️ **미룸** — 아래 사유 |
+| **pqrs 등록** | 🚧 **준비 완료 · 미제출** (2026-08-11) — `pqrs_submission/json/nowage_remote_desktop.json` · `pqrs_submission/extra_descriptions/nowage_remote_desktop.html` · groups_entry 3종 완비 · lint ok · 정본과 3건 전건 동일 |
 
-* pqrs 를 미루는 이유는 결격이 아니다. 하드웨어·매크로 의존이 없다는 점에서 다른 3종보다 사정이 좋다 — 다만 pqrs 에 이미 alt↔command 스왑 계열이 다수 등록돼 있어 차별점이 `keypad_comma` 한/영 전환 하나뿐이고, 그 매핑은 세벌식 + Windows 원격이라는 좁은 조합 전용이다. 등록 여부는 재개 시 함께 판단한다
+* 구 상태는 `미룸` 이었고 그 사유는 결격이 아니라 **수요 판단**이었다 — *"alt↔command 스왑 계열이 이미 다수 등록돼 있어 차별점이 `keypad_comma` 한/영 전환 하나뿐"*. 2026-08-11 실측으로 철회했다: upstream `application-specific` 의 원격 데스크톱·가상머신 계열 6건은 전부 모디파이어 재배치이며 **한/영 전환을 포함한 것은 없다**. 좁은 것과 겹치는 것은 다르다
+* ⚠️ 대상 그룹이 **`application-specific`** 이라 앞 3건(`device-specific`·`international`)과 `groups.json` 편집 위치가 다르다
+* ⚠️ 공개본은 **문안을 새로 썼다** — 정본 `title`·`description` 이 한글이라 영문화가 필요한 유일한 건이다(`CLAUDE.md` "등록 정의"). manipulator 는 전건 동일하며, `extra_descriptions` 에 한국어 요약 절을 병기했다
 * 📌 **정정 (2026-08-09)**: 이 절은 *"비공개 (현재 공개 대상 아님)"* 으로 적혀 있었으나, 이 폴더는 `tools/build_public.py` 가 공개 트리에 통째로 복사하므로 **push 되는 순간 이미 공개**였다. 보류는 pqrs 축의 판단이다
 * 라이브 상태: ✅ `Remote Desktop : v2026.07.26` (manipulator 3)
 

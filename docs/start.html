@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>설치와 준비 — n3sh — 세벌식 390 속기</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="steps"><a class="home" href="index.html">n3sh</a><a href="start.html" class="on"><b>1</b> 설치와 준비</a><a href="cheatsheet.html"><b>2</b> 한 장 치트시트</a><a href="training.html"><b>3</b> 6단계 학습 드릴</a><a href="rules.html"><b>4</b> 전체 규칙표</a></nav>
+<main>
+<h1 class="page-title">설치와 준비</h1>
+
+<p>설치는 네 가지를 갖추는 일이다. <strong>순서대로 하나씩
+확인하면서</strong> 간다 — 뒤의 것이 안 되면 앞의 것이 안 갖춰진 경우가
+대부분이다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">갖출 것</th>
+<th style="text-align: left;">확인 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">세벌식 390 배열</td>
+<td style="text-align: left;">아무 데나 <code>k</code> 를 쳐서
+<strong>ㄱ</strong> 이 나온다</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Karabiner-Elements</td>
+<td style="text-align: left;">메뉴 막대에 아이콘이 있다</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">n3sh 규칙 활성화</td>
+<td style="text-align: left;">Complex Modifications 목록에
+<code>n3sh(…)</code> 가 보인다</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">동시타 인식</td>
+<td style="text-align: left;"><code>c</code>+<code>v</code> 를 동시에
+눌러 <code>.</code> 하나가 나온다</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="1-세벌식-390-배열">1. 세벌식 390 배열</h1>
+<p>macOS 에 기본으로 들어 있다. <strong>시스템 설정 → 키보드 → 입력 소스
+→ 편집 → <code>+</code> → 한국어 → 세벌식 390</strong>.</p>
+<p>⚠️ <strong>두벌식에서는 아무것도 동작하지 않는다.</strong> n3sh 는
+자모의 물리 위치를 전제로 짜였다 — <code>j</code>+<code>h</code> 가 "을"
+이 되는 것은 그 자리에 ㅇ 과 ㅡㄹ 이 있기 때문이지, <code>j</code> 와
+<code>h</code> 라는 글자에 의미가 있어서가 아니다. 두벌식에서 같은 키를
+누르면 전혀 다른 자모가 조합된다.</p>
+<p>세벌식이 처음이라면 <strong>n3sh 를 설치하기 전에 세벌식 자체를 먼저
+익히는 편이 낫다.</strong> 속기는 세벌식 위에 얹는 것이지 세벌식을
+대신하지 않는다.</p>
+<h1 id="2-karabiner-elements">2. Karabiner-Elements</h1>
+<p><a
+href="https://karabiner-elements.pqrs.org/">karabiner-elements.pqrs.org</a>
+에서 받아 설치한다. macOS 가 입력 모니터링 권한을 묻는데, 허용해야
+동작한다.</p>
+<h1 id="3-규칙-넣기">3. 규칙 넣기</h1>
+<h2 id="방법-a--파일을-직접-넣는다-권장">방법 A — 파일을 직접 넣는다
+(권장)</h2>
+<ol type="1">
+<li><strong>n3sh-390.karabiner.json
+내려받기(<code>n3sh-390.karabiner.json</code>)</strong></li>
+<li><code>~/.config/karabiner/assets/complex_modifications/</code> 에
+넣는다</li>
+<li>Karabiner-Elements → <strong>Complex Modifications → Add
+rule</strong> → 목록에서 <code>n3sh(...)</code> 를
+<strong>Enable</strong></li>
+</ol>
+<p>목록에 안 보이면 Karabiner-Elements 를 완전히 종료했다 다시 연다.
+파일을 넣은 뒤 앱이 다시 읽어야 목록에 뜬다.</p>
+<p>⚠️ <strong>저장소의 <code>n3sh/build/n3sh-390.json</code> 을 그대로
+넣지 말 것.</strong> 그 파일은 규칙 <strong>내용물</strong>이라 Complex
+Modifications 목록에 뜨지 않는다. 위 내려받기 링크는 같은 254 규칙을
+Karabiner 가 읽는 형태(<code>{title, rules}</code>)로 감싼 것이다.</p>
+<h2 id="방법-b--저장소에서-가져온다">방법 B — 저장소에서 가져온다</h2>
+<pre class="bash"><code>git clone https://github.com/Finfra/karabiner-extensions.git</code></pre>
+<p><code>n3sh/rule.json</code> 은 그대로 넣을 수 있는 형태지만
+<strong>2022년 판(227 규칙)</strong> 이다. 최신 254 규칙은 위 방법 A 를
+쓴다.</p>
+<h1 id="4-동시타-확인--예비-단계">4. 동시타 확인 — 예비 단계</h1>
+<p>설치가 끝났으면 <strong>한글 입력 상태에서</strong> 아래 둘을 쳐
+본다. 세벌식 지식이 필요 없는 워밍업이고, 장비가 두 키를 동시에 받는지
+보는 것이다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">누른다</th>
+<th style="text-align: left;">나온다</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>c</code> + <code>v</code> 동시</td>
+<td style="text-align: left;"><code>.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.</code> + <code>,</code> 동시</td>
+<td style="text-align: left;"><code>.</code></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>나오면 준비 끝이다.</strong> 안 나온다면 아래를 순서대로
+본다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">증상</th>
+<th style="text-align: left;">원인</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">아무 반응 없음</td>
+<td style="text-align: left;">규칙이 Enable 되지 않았다 (3번)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cv</code> 처럼 두 글자가 그대로</td>
+<td style="text-align: left;">영문 입력 상태다 — 한글로 바꾼다</td>
+</tr>
+<tr>
+<td style="text-align: left;">하나만 나오거나 순서가 뒤집힘</td>
+<td style="text-align: left;">동시타 간격이 넓었다. <strong>두 키를 같은
+순간에</strong> 누른다</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>한글 입력 상태에서만 동작한다.</strong> 규칙이
+<code>keyboardLayoutSettingIsEng == 0</code> 조건을 달고 있어 영문일
+때는 통째로 잠든다 — 영문 타이핑을 방해하지 않으려는 설계다.</p>
+<h1 id="순서는-중요하지-않다">순서는 중요하지 않다</h1>
+<p><code>j</code>+<code>h</code> 든 <code>h</code>+<code>j</code> 든
+같은 결과가 나온다. <strong>모아치기(동시타)라 순서가 없다.</strong>
+문서의 열 순서(<code>c1</code>·<code>c2</code>)는 읽기 편의일
+뿐이다.</p>
+<h1 id="다음">다음</h1>
+<p>한 장 치트시트(<code>cheatsheet.html</code>)로 자판 배치를 훑고,
+6단계 학습 드릴(<code>training.html</code>)로 들어간다.</p>
+<p>⚠️ <strong>254개는 설치해서 바로 쓰는 분량이 아니다.</strong>
+조사·어미(2·3단계)부터 익히면 나머지를 몰라도 이득이 나도록 단계를 짜
+두었다 — 처음부터 전체 규칙표를 외우려 들지 않는 편이 좋다.</p>
+
+</main>
+<footer>
+<p><a href="index.html">처음으로</a> · <a href="https://github.com/Finfra/karabiner-extensions">저장소</a></p>
+<p class="gen">이 페이지는 저장소의 마크다운에서 생성됐다. 고칠 것은 저장소 쪽이다.</p>
+</footer>
+</body>
+</html>

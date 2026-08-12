@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>규칙 서술 — n3sh — 세벌식 390 속기</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="steps"><a class="home" href="../index.html">n3sh</a><a href="../start.html"><b>1</b> 설치와 준비</a><a href="../cheatsheet.html"><b>2</b> 한 장 치트시트</a><a href="../training.html"><b>3</b> 6단계 학습 드릴</a><a href="../rules.html"><b>4</b> 전체 규칙표</a></nav>
+<main>
+<h1 class="page-title">규칙 서술</h1>
+<p class="refnote">학습 경로가 아니라 <b>참고 문서</b>다. 필요할 때 들어와 찾아보는 곳.</p>
+<p><strong>390 판에 지금 적용되는 규칙</strong>이다. 행마다 외우는 것이
+아니라 <strong>한 번 익히면 여러 행에 그대로 적용되는 메타
+규칙</strong>을 모았다 — 꼬리 공백·문장부호가 여기서 갈린다.</p>
+<p>정본 데이터는 <a href="../rules.html">rules.md</a>, 단계 설계는 <a
+href="../reference/steps.html">rules_step.md</a>, 표기는 <a
+href="../reference/notation.html">notation.md</a>. 배우려는 사람은 <a
+href="../training.html">training.md</a>.</p>
+<blockquote>
+<p>아래는 전부 <strong>실측 확인분</strong>이다. 근거 없이 적지 않는다 —
+규칙마다 검증 방법을 함께 적었다.</p>
+</blockquote>
+<h1 id="출력-꼬리--공백기호">출력 꼬리 — 공백·기호</h1>
+<h2 id="규칙1-조사명사형-뒤에는-공백이-자동으로-붙는다">규칙1.
+조사·명사형 뒤에는 공백이 자동으로 붙는다</h2>
+<p><code>sp=✔</code> 인 행은 출력 끝에 <code>spacebar</code> 가 붙는다.
+조사(<code>품사=p</code>)와 명사형 전성어미(<code>품사=n</code>)가 그
+대상이다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">품사</th>
+<th style="text-align: left;">sp=✔</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>p</code> 조사</td>
+<td style="text-align: left;">30 / 36</td>
+<td style="text-align: left;">예외 6건은 <strong>전부 수식키
+변형</strong>(규칙2) — 무수식 조사는 전량 <code>✔</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>n</code> 명사형</td>
+<td style="text-align: left;">10 / 10</td>
+<td style="text-align: left;">예외 없음. 2026-08-05 부터 8행이 2단계
+소속(단계만 이동, 품사 유지)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>e</code> 어미</td>
+<td style="text-align: left;">89 / 100</td>
+<td style="text-align: left;">나머지는 ⌥ 변형 등</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>ex) <code>hl</code>(는) → <code>는␣</code> · <code>jl</code>(은) →
+<code>은␣</code> · <code>m,</code>(할) → <code>할␣</code></li>
+<li>검증: <code>품사</code> 별 <code>sp</code> 분포를 세어
+확인(2026-08-04 실측)</li>
+</ul>
+<h3 id="꼬리-공백의-표현은-sp-컬럼-하나다-2026-08-04-정리">꼬리 공백의
+표현은 <code>sp</code> 컬럼 하나다 (2026-08-04 정리)</h3>
+<p><code>txt</code> 에는 꼬리 공백을 넣지 않는다. 넣으면 <code>sp</code>
+와 이중이 되어 라벨이 실제보다 공백 하나를 더 가진 것처럼 읽힌다 —
+생성기는 <code>txt</code> 의 꼬리 공백을 무시하므로 <strong>산출은
+정상인데 문서만 틀리는</strong> 유형이다.</p>
+<ul>
+<li>정리분 9행(390) / 7행(final):
+<code>과 </code>·<code>만 </code>·<code>면 </code>·<code>행 </code>·<code>즉 </code>
+→ 꼬리 공백 제거. 산출 키열 무변화 확인(build 해시 동일)</li>
+<li>특히 <code>k.</code>+⌥(<code>2-029</code>)은 규칙2에 따라 공백이
+없는데 라벨만 <code>과␣</code> 여서 무수식 행(<code>2-026</code>)과
+구분되지 않았다 — 사용자 지적으로 발견</li>
+<li><code>sp</code>·<code>기호</code> 의 <strong>공백
+토큰(<code>␣</code>)은 폐기</strong>했다(390 4행 · final 6행 →
+<code>—</code>). 스키마 enum 에서도 뺐으므로 되돌리면
+<code>validate_schema.py</code> 가 즉시 실패한다(회귀 가드 실증
+완료)</li>
+<li>⚠️ <strong>빈값 토큰은 <code>—</code>(em dash) 다.</strong>
+<code>-</code>(하이픈)는 <code>⌥</code>·<code>⇧</code>·<code>⌘</code>
+수식키 컬럼 전용이며, <code>sp</code> 에 쓰면 리터럴 <code>"-"</code> 로
+저장돼 스키마 위반 + <code>gen_rules</code> 생성실패가 난다(2026-08-04
+실측 5건)</li>
+</ul>
+<h2 id="규칙2--변형은-꼬리가-없다--공백도-기호도-안-붙는다">규칙2.
+<code>⌥</code> 변형은 꼬리가 없다 — 공백도 기호도 안 붙는다</h2>
+<p><code>⌥=✔</code> 인 행은 <strong><code>기호</code>·<code>sp</code>
+컬럼과 무관하게</strong> 자모만 출력한다. 문장 중간에 조사를 붙여 쓸 때
+쓴다.</p>
+<ul>
+<li>ex) <code>hl</code>(는) = <code>는␣</code> ↔︎ <code>⌥hl</code> =
+<code>는</code> (공백 없음)</li>
+<li>컬럼이 그렇게 보이지 않아도 그렇다 — <code>⌥hl</code> 행은
+<code>sp=␣</code> 인데 실제 출력에 공백이 없다. <strong>컬럼보다 이
+규칙이 우선</strong></li>
+<li>검증: <code>⌥=✔</code> <strong>16행 전량</strong>이 꼬리 없음. 예외
+0건(2026-08-04 실측)</li>
+<li>같은 불변식이
+keymap_derive.py(<code>tools/n3sh/keymap_derive.py</code>)
+<code>rec_symbols</code> 주석에도 있다</li>
+</ul>
+<h2 id="규칙3-390-의-기호-대응---가---가-">규칙3. 390 의 기호 대응 — ⇧
+가 <code>?</code>, ⇧⌘ 가 <code>!</code></h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">수식키</th>
+<th style="text-align: left;">기호</th>
+<th style="text-align: left;">실제 키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">무수식</td>
+<td style="text-align: left;"><code>.</code></td>
+<td style="text-align: left;"><code>period</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>⇧</code></td>
+<td style="text-align: left;"><code>?</code></td>
+<td style="text-align: left;"><code>slash</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>⇧⌘</code></td>
+<td style="text-align: left;"><code>!</code></td>
+<td style="text-align: left;"><code>b</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>⌘</code></td>
+<td style="text-align: left;">행마다 다름</td>
+<td style="text-align: left;"><code>period</code>(는) / 없음(을·를) —
+일괄 규칙 아님</td>
+</tr>
+</tbody>
+</table></div>
+<p>✅ <strong>최종식도 같다</strong>(2026-08-06 실기 확인 — 입력 소스를
+최종식으로 두고 <code>⇧</code>+<code>/</code>→<code>?</code> ·
+<code>⇧</code>+<code>b</code>→<code>!</code>). 원문(Numbers)은
+<code>⇧</code>=<code>!</code>·<code>⇧⌘</code>=<code>?</code> 라고 적지만
+<strong>원문이 틀렸다</strong>. 390 실측은 .</p>
+<ul>
+<li><p>한때 "배열이 다르면 같은 키코드도 다른 문자를 낸다" 는 가설로 이
+차이를 설명했으나, 실측 결과 <strong>두 배열의
+<code>⇧</code>·<code>⇧⌘</code> 기호 대응은 동일</strong>하다. 배열
+차이는 <code>ㅒ</code> 트리거 등 다른 항목에만 있다</p></li>
+<li><p><strong>키코드로 기호를 추론하지 말 것.</strong> 배열을 함께 봐야
+한다</p></li>
+<li><p><code>⌘</code> 는 일괄 규칙이 없다 — <code>는</code>+⌘ 는
+<code>는.␣</code> 인데 <code>을</code>+⌘ 는 <code>을</code>(꼬리
+없음)이다. 행별 <code>기호</code>·<code>sp</code> 컬럼을 따른다</p></li>
+</ul>
+<h1 id="트리거">트리거</h1>
+<h2 id="규칙4-같은-트리거를-두-행이-쓸-수-없다">규칙4. 같은 트리거를 두
+행이 쓸 수 없다</h2>
+<p><code>(c1, c2, ⌥, ⇧, ⌘)</code> 복합키는 <strong>유일해야
+한다</strong>. Karabiner 는 같은 <code>from</code> 을 가진 manipulator
+중 먼저 나온 것만 발동시키므로, 뒤엣것은 표에 있어도 <strong>죽은
+규칙</strong>이다.</p>
+<ul>
+<li>출력(<code>txt</code>)이 달라도 트리거가 같으면 충돌이다 — 그래서
+복합키에 <code>txt</code> 를 넣지 않는다</li>
+<li>집행: validate_schema.py(<code>tools/validate_schema.py</code>)
+<code>check_trigger_unique</code></li>
+<li>✅ 해소(2026-08-05) — <code>함</code>(<code>m+l</code> 무수식)이
+어미(<code>품사 e</code>)와 명사형(<code>품사 n</code>) 두 행이었고
+실측상 <strong>둘 다 <code>함.␣</code> 로 출력이 같아</strong> 뒤엣것이
+매 빌드에서 스킵됐다. 무수식이 종결형으로 동작하고 같은 트리거의 수식
+변형 4행이 전부 <code>e</code> 이므로 <strong><code>e</code> 행을 남기고
+<code>n</code> 행을 삭제</strong>했다. 현재 이 규칙의 미해소 건은 0
+이다</li>
+</ul>
+<h2 id="규칙5-실제로-쓰는-기호-키는-10종">규칙5. 실제로 쓰는 기호 키는
+10종</h2>
+<pre><code>&#39;  ,  -  .  ;  [  \  ]  ␣  ⏎</code></pre>
+<p><code>quote · comma · hyphen · period · semicolon · open_bracket · backslash · close_bracket · spacebar · return_or_enter</code></p>
+<p>⚠️ 원문 규칙5는 <strong>8종만</strong> 적고 있다 — <code>-</code>(읽
+<code>j+-</code>)·<code>\</code>(월 <code>j+\</code>)가 빠졌다. 위가
+실측값이다(2026-08-04, 양 배열 전수).</p>
+<ul>
+<li><code>c1</code>·<code>c2</code> 컬럼에서 스페이스바는 <code>␣</code>
+로 적고 JSON 에는 <code>_</code> 로
+저장된다(data-md-first-rules.md(<code>.claude/rules/data-md-first-rules.md</code>))</li>
+</ul>
+<h2 id="규칙6-조사는-패턴-규칙이라-억지-가-아니다">규칙6. 조사는 패턴
+규칙이라 <code>억지</code> 가 아니다</h2>
+<p>이·히·가·은·는·을·를 등은 자모 조립으로 정상 산출되므로
+<code>억지=✔</code> 를 붙이지 않는다. 2026-08-03 사용자 확인으로
+3건(이·히·가)을 해제했다.</p>
+<ul>
+<li><code>억지=✔</code> 는 <strong>자모 조립이 불가능해 오라클 키열을
+그대로 써야 하는</strong> 행에만 붙인다</li>
+<li>그 literal 은
+oracle_390.json(<code>Extensions/n3sh/core/oracle_390.json</code>)
+<code>manual_overrides</code> 로 지정한다</li>
+</ul>
+<h1 id="배열-차이-390--최종식">배열 차이 (390 ↔︎ 최종식)</h1>
+<p>같은 규칙인데 트리거가 배열마다 다른 것들이다. 전체 목록은
+keymap_final_to_390.json(<code>Extensions/n3sh/core/keymap_final_to_390.json</code>).</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">출력</th>
+<th style="text-align: left;">390</th>
+<th style="text-align: left;">최종식</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ㅒ</code></td>
+<td style="text-align: left;"><code>r+f</code></td>
+<td style="text-align: left;"><code>g+f</code></td>
+<td style="text-align: left;">— 390 정본이 최종식 값을 담고 있던 오기를
+교정</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>될</code></td>
+<td style="text-align: left;"><code>u+[</code></td>
+<td style="text-align: left;"><code>u+[</code></td>
+<td style="text-align: left;">·49 — 양 배열 모두 구 <code>u+]</code>
+에서 이동. 구 자리는 staging 빈자리 등재</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>⚠️ <code>keymap_final_to_390.json</code> 의 pattern A 는
+<strong>정본을 덮는다</strong> — 정본이 틀려도 산출이 정상으로 나와
+오기가 안 드러난다. <code>gen_rules.py</code> 가 매 실행마다 정본과
+대조해 불일치를 보고한다</li>
+</ul>
+<h1 id="관련">관련</h1>
+<ul>
+<li>정본 데이터: <a href="../rules.html">rules.md</a> · 단계 설계: <a
+href="../reference/steps.html">rules_step.md</a> · 손 훈련: <a
+href="../training.html">training.md</a></li>
+<li>표기 SSOT: <a href="../reference/notation.html">notation.md</a> ·
+컬럼 해설:
+rules_Intersection.md(<code>Extensions/n3sh/layout/rules_Intersection.md</code>)</li>
+<li>훈련: <a href="../training.html">training.md</a> · <a
+href="../cheatsheet.html">training_cheatsheet.md</a></li>
+</ul>
+
+</main>
+<footer>
+<p><a href="../index.html">처음으로</a> · <a href="https://github.com/Finfra/karabiner-extensions">저장소</a></p>
+<p class="gen">이 페이지는 저장소의 마크다운에서 생성됐다. 고칠 것은 저장소 쪽이다.</p>
+</footer>
+</body>
+</html>

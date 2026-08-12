@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>키 배치 — n3sh — 세벌식 390 속기</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="steps"><a class="home" href="../index.html">n3sh</a><a href="../start.html"><b>1</b> 설치와 준비</a><a href="../cheatsheet.html"><b>2</b> 한 장 치트시트</a><a href="../training.html"><b>3</b> 6단계 학습 드릴</a><a href="../rules.html"><b>4</b> 전체 규칙표</a></nav>
+<main>
+<h1 class="page-title">키 배치</h1>
+<p class="refnote">학습 경로가 아니라 <b>참고 문서</b>다. 필요할 때 들어와 찾아보는 곳.</p>
+<h1 id="목적">목적</h1>
+<p>"초성 ㄱ 은 어느 키를 몇 번 누르는가" 같은 <strong>심볼 → 키열
+매핑</strong>을 담는 파일 3종을 설명한다.
+규칙표(<code>rules.json</code>)가 <em>무엇을 출력할지</em>를 정한다면,
+키맵은 <em>그 글자를 어떤 키로 치는지</em>를 정한다. 생성기는 이 둘을
+곱해 manipulator 를 만든다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">파일</th>
+<th style="text-align: left;">내용</th>
+<th style="text-align: right;">항목 수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;">keymap_390.json(<code>Extensions/n3sh/core/keymap_390.json</code>)</td>
+<td style="text-align: left;">세벌식 <strong>390</strong> 배열의 심볼 →
+키열</td>
+<td style="text-align: right;">79</td>
+</tr>
+<tr>
+<td
+style="text-align: left;">keymap_final.json(<code>Extensions/n3sh/core/keymap_final.json</code>)</td>
+<td style="text-align: left;">세벌식 <strong>최종식</strong> 배열의 심볼
+→ 키열</td>
+<td style="text-align: right;">79</td>
+</tr>
+<tr>
+<td
+style="text-align: left;">keymap_final_to_390.json(<code>Extensions/n3sh/core/keymap_final_to_390.json</code>)</td>
+<td style="text-align: left;">두 배열의 <strong>산출 차이
+10건</strong>만 기록한 대조표</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="심볼-표기">심볼 표기</h1>
+<p>각 항목은
+<code>{"sym": [위치, 문자], "keys": [{key_code, modifiers}, ...]}</code>
+형태다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">위치(<code>sym[0]</code>)</th>
+<th style="text-align: left;">의미</th>
+<th style="text-align: left;">문서 표기</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cho</code></td>
+<td style="text-align: left;">초성</td>
+<td style="text-align: left;">접두 없음 — <code>ㄱ</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jung</code></td>
+<td style="text-align: left;">중성</td>
+<td style="text-align: left;">접두 없음 — <code>ㅏ</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jong</code></td>
+<td style="text-align: left;">종성</td>
+<td style="text-align: left;"><strong><code>~</code> 접두</strong> —
+<code>~ㄱ</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>lit</code></td>
+<td style="text-align: left;">낱자 그대로 출력하는 항목(ex:
+<code>ㅒ</code> 한 글자)</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tail</code></td>
+<td style="text-align: left;">꼬리 — 수식키 조합·기호·spacebar 여부로
+결정되는 후행 키열</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>keys</code> 가 2개 이상이면 연타를 뜻한다(ex: 초성
+<code>ㄲ</code> = <code>k</code> 두 번).</p>
+<p><strong>문서 표기</strong> 열은 산문에서 그 심볼을 지칭하는 방법이다
+— JSON 값이 아니라 사람이 읽는 표기이며, SSOT 는 <a
+href="../reference/notation.html">notation.md</a> "자모" 다. 같은
+<code>ㄲ</code> 이라도 초성(<code>k</code> 연타)과
+종성(<code>~ㄲ</code>)이 다른 심볼이므로 접두로 가른다.</p>
+<h1 id="매핑-정본--이-표가-ssot-다">매핑 정본 — 이 표가 SSOT 다</h1>
+<p>아래 두 표가 <strong>사람 정본</strong>이다. 고친 뒤
+<code>python3 tools/keymap_build.py build</code> 로
+<code>Extensions/n3sh/core/keymap_{390,final}.json</code> 을 재생성하고
+<code>check</code> 로 정합을 확인한다.</p>
+<p>셀 표기는 프로젝트 왕복 규약을 따른다 — <code>—</code>=빈 문자열,
+<code>␣</code>=공백 1칸. <code>키열</code> 은 <code>key_code</code> 를
+공백으로 잇고 shift 가 필요하면 <code>key+shift</code> 로 적는다(빈
+키열은 <code>—</code>). <code>tail</code> 행의 다섯 칸
+(<code>⌥ ⇧ ⌘ 기호 sp</code>)은 규칙표의 같은 이름 컬럼과 대응하며,
+<strong><code>—</code>(빈 값)과 <code>-</code>(하이픈)는 서로 다른
+값</strong>이므로 구분해 적는다.</p>
+<p>⚠️ 표 위의 <code>&lt;!-- data: ... --&gt;</code> 앵커를 지우면 그
+표는 생성 대상에서 빠진다 — 도구가 fail-loud 로 멈춘다.</p>
+<h2 id="390-배열">390 배열</h2>
+<p>| 종류 | 자모 | ⌥ | ⇧ | ⌘ | 기호 | sp | 키열 | | :--- | :- | : | : |
+: | :- | :- | :------------------- | | cho | ㄱ | — | — | — | — | — | k
+| | cho | ㄲ | — | — | — | — | — | k k | | cho | ㄴ | — | — | — | — | —
+| h | | cho | ㄷ | — | — | — | — | — | u | | cho | ㄸ | — | — | — | — |
+— | u u | | cho | ㄹ | — | — | — | — | — | y | | cho | ㅁ | — | — | — |
+— | — | i | | cho | ㅂ | — | — | — | — | — | semicolon | | cho | ㅅ | —
+| — | — | — | — | n | | cho | ㅇ | — | — | — | — | — | j | | cho | ㅈ |
+— | — | — | — | — | l | | cho | ㅊ | — | — | — | — | — | o | | cho | ㅋ
+| — | — | — | — | — | 0 | | cho | ㅌ | — | — | — | — | — | quote | | cho
+| ㅍ | — | — | — | — | — | p | | cho | ㅎ | — | — | — | — | — | m | |
+jong | ㄱ | — | — | — | — | — | x | | jong | ㄲ | — | — | — | — | — |
+1+shift | | jong | ㄴ | — | — | — | — | — | s | | jong | ㄶ | — | — | —
+| — | — | s+shift | | jong | ㄷ | — | — | — | — | — | a+shift | | jong |
+ㄹ | — | — | — | — | — | w | | jong | ㄺ | — | — | — | — | — | d+shift |
+| jong | ㅀ | — | — | — | — | — | v+shift | | jong | ㅁ | — | — | — | —
+| — | z | | jong | ㅂ | — | — | — | — | — | 3 | | jong | ㅄ | — | — | —
+| — | — | x+shift | | jong | ㅅ | — | — | — | — | — | q | | jong | ㅆ |
+— | — | — | — | — | 2 | | jong | ㅇ | — | — | — | — | — | a | | jong |
+ㅈ | — | — | — | — | — | 1+shift | | jong | ㅊ | — | — | — | — | — |
+z+shift | | jong | ㅌ | — | — | — | — | — | w+shift | | jong | ㅍ | — |
+— | — | — | — | q+shift | | jong | ㅎ | — | — | — | — | — | 1 | | jung |
+ㅏ | — | — | — | — | — | f | | jung | ㅐ | — | — | — | — | — | r | |
+jung | ㅑ | — | — | — | — | — | 6 | | jung | ㅓ | — | — | — | — | — | t
+| | jung | ㅔ | — | — | — | — | — | c | | jung | ㅕ | — | — | — | — | —
+| e | | jung | ㅗ | — | — | — | — | — | v | | jung | ㅘ | — | — | — | —
+| — | slash f | | jung | ㅙ | — | — | — | — | — | slash r | | jung | ㅚ
+| — | — | — | — | — | slash d | | jung | ㅛ | — | — | — | — | — | 4 | |
+jung | ㅜ | — | — | — | — | — | b | | jung | ㅝ | — | — | — | — | — | 9
+t | | jung | ㅟ | — | — | — | — | — | 9 d | | jung | ㅡ | — | — | — | —
+| — | g | | jung | ㅢ | — | — | — | — | — | 8 | | jung | ㅣ | — | — | —
+| — | — | d | | lit | , | — | — | — | — | — | comma | | lit | . | — | —
+| — | — | — | period | | lit | ㄲ | — | — | — | — | — | k k | | lit | ㄸ
+| — | — | — | — | — | u u | | lit | ㅃ | — | — | — | — | — | semicolon
+semicolon | | lit | ㅆ | — | — | — | — | — | n n | | lit | ㅉ | — | — |
+— | — | — | l l | | lit | ㅑ | — | — | — | — | — | 6 | | lit | ㅒ | — |
+— | — | — | — | r+shift | | lit | ㅖ | — | — | — | — | — | 7 | | lit |
+ㅘ | — | — | — | — | — | slash f | | lit | ㅙ | — | — | — | — | — |
+slash r | | lit | ㅚ | — | — | — | — | — | slash d | | lit | ㅝ | — | —
+| — | — | — | 9 t | | lit | ㅞ | — | — | — | — | — | 9 c | | lit | ㅟ |
+— | — | — | — | — | 9 d | | lit | ㅠ | — | — | — | — | — | 5 | | lit |
+ㅢ | — | — | — | — | — | 8 | | tail | — | — | — | — | — | — | — | | tail
+| — | — | — | — | . | ✔ | period spacebar | | tail | — | - | - | - | — |
+— | — | | tail | — | - | - | - | — | ✔ | spacebar | | tail | — | - | - |
+- | . | ✔ | period spacebar | | tail | — | - | - | ✔ | — | — | — | |
+tail | — | - | - | ✔ | — | ✔ | spacebar | | tail | — | - | - | ✔ | . | ✔
+| period spacebar | | tail | — | - | ✔ | - | — | ✔ | spacebar | | tail |
+— | - | ✔ | - | ? | — | slash+shift spacebar | | tail | — | - | ✔ | - |
+? | ✔ | slash+shift spacebar | | tail | — | - | ✔ | ✔ | ! | — | b+shift
+spacebar | | tail | — | - | ✔ | ✔ | ! | ✔ | b+shift spacebar | | tail |
+— | ✔ | - | - | — | — | — | | tail | — | ✔ | - | - | — | ✔ | spacebar
+|</p>
+<h2 id="최종식-배열">최종식 배열</h2>
+<p>| 종류 | 자모 | ⌥ | ⇧ | ⌘ | 기호 | sp | 키열 | | :--- | :- | : | : |
+: | :- | :- | :------------------- | | cho | ㄱ | — | — | — | — | — | k
+| | cho | ㄲ | — | — | — | — | — | k k | | cho | ㄴ | — | — | — | — | —
+| h | | cho | ㄷ | — | — | — | — | — | u | | cho | ㄸ | — | — | — | — |
+— | u u | | cho | ㄹ | — | — | — | — | — | y | | cho | ㅁ | — | — | — |
+— | — | i | | cho | ㅂ | — | — | — | — | — | semicolon | | cho | ㅅ | —
+| — | — | — | — | n | | cho | ㅇ | — | — | — | — | — | j | | cho | ㅈ |
+— | — | — | — | — | l | | cho | ㅊ | — | — | — | — | — | o | | cho | ㅋ
+| — | — | — | — | — | 0 | | cho | ㅍ | — | — | — | — | — | p | | cho |
+ㅎ | — | — | — | — | — | m | | jong | ㄱ | — | — | — | — | — | x | |
+jong | ㄲ | — | — | — | — | — | 1+shift | | jong | ㄴ | — | — | — | — |
+— | s | | jong | ㄶ | — | — | — | — | — | s+shift | | jong | ㄷ | — | —
+| — | — | — | a+shift | | jong | ㄹ | — | — | — | — | — | w | | jong |
+ㄺ | — | — | — | — | — | 2+shift | | jong | ㅀ | — | — | — | — | — |
+r+shift | | jong | ㅁ | — | — | — | — | — | z | | jong | ㅂ | — | — | —
+| — | — | 3 | | jong | ㅄ | — | — | — | — | — | x+shift | | jong | ㅅ |
+— | — | — | — | — | q | | jong | ㅆ | — | — | — | — | — | 2 | | jong |
+ㅇ | — | — | — | — | — | a | | jong | ㅈ | — | — | — | — | — | 3+shift |
+| jong | ㅊ | — | — | — | — | — | z+shift | | jong | ㅌ | — | — | — | —
+| — | w+shift | | jong | ㅍ | — | — | — | — | — | q+shift | | jong | ㅎ
+| — | — | — | — | — | 1 | | jung | ㅏ | — | — | — | — | — | f | | jung |
+ㅐ | — | — | — | — | — | r | | jung | ㅑ | — | — | — | — | — | 6 | |
+jung | ㅓ | — | — | — | — | — | t | | jung | ㅔ | — | — | — | — | — | c
+| | jung | ㅕ | — | — | — | — | — | e | | jung | ㅗ | — | — | — | — | —
+| v | | jung | ㅘ | — | — | — | — | — | slash f | | jung | ㅙ | — | — |
+— | — | — | slash r | | jung | ㅚ | — | — | — | — | — | slash d | | jung
+| ㅛ | — | — | — | — | — | 4 | | jung | ㅜ | — | — | — | — | — | b | |
+jung | ㅝ | — | — | — | — | — | 9 t | | jung | ㅟ | — | — | — | — | — |
+9 d | | jung | ㅡ | — | — | — | — | — | g | | jung | ㅢ | — | — | — | —
+| — | 8 | | jung | ㅣ | — | — | — | — | — | d | | lit | . | — | — | — |
+— | — | period | | lit | ㄲ | — | — | — | — | — | k k | | lit | ㄸ | — |
+— | — | — | — | u u | | lit | ㅃ | — | — | — | — | — | semicolon
+semicolon | | lit | ㅆ | — | — | — | — | — | n n | | lit | ㅉ | — | — |
+— | — | — | l l | | lit | ㅑ | — | — | — | — | — | 6 | | lit | ㅒ | — |
+— | — | — | — | g+shift | | lit | ㅖ | — | — | — | — | — | 7 | | lit |
+ㅘ | — | — | — | — | — | slash f | | lit | ㅙ | — | — | — | — | — |
+slash r | | lit | ㅚ | — | — | — | — | — | slash d | | lit | ㅝ | — | —
+| — | — | — | 9 t | | lit | ㅞ | — | — | — | — | — | 9 c | | lit | ㅟ |
+— | — | — | — | — | 9 d | | lit | ㅠ | — | — | — | — | — | 5 | | lit |
+ㅢ | — | — | — | — | — | 8 | | tail | — | — | — | — | — | — | — | | tail
+| — | — | — | — | . | ✔ | period spacebar | | tail | — | - | - | - | — |
+— | — | | tail | — | - | - | - | — | ✔ | spacebar | | tail | — | - | - |
+- | . | ✔ | period spacebar | | tail | — | - | - | ✔ | — | — | — | |
+tail | — | - | - | ✔ | — | ✔ | spacebar | | tail | — | - | - | ✔ | . | ✔
+| period spacebar | | tail | — | - | ✔ | - | — | ✔ | spacebar | | tail |
+— | - | ✔ | - | ? | — | slash+shift spacebar | | tail | — | - | ✔ | - |
+? | ✔ | slash+shift spacebar | | tail | — | - | ✔ | ✔ | ! | — | b+shift
+spacebar | | tail | — | - | ✔ | ✔ | ! | ✔ | b+shift spacebar | | tail |
+— | ✔ | - | - | — | — | — | | tail | — | ✔ | - | - | — | ✔ | spacebar
+|</p>
+<h1 id="왜-역추론에서-선언으로-바꿨나-2026-08-06">왜 역추론에서 선언으로
+바꿨나 (2026-08-06)</h1>
+<p>2026-08-06 이전에는 이 파일이 <strong>설명 문서</strong>였고, 키맵은
+keymap_derive.py(<code>tools/n3sh/keymap_derive.py</code>) 가 원본
+오라클에서 <strong>역추론</strong>했다 —
+<code>(출력 글자, 실제 키열)</code> 쌍을 제약으로 두고 미지 심볼이
+하나만 남는 레코드부터 확정해 나가는 제약 전파다.</p>
+<p>그 구조가 막다른 길을 만들었다. <strong>재배치 이후의 오라클이 없는
+배열은 자기 코퍼스로 학습할 수 없다</strong> — 390 을 자기 정본으로
+학습시키면 5단계 받침의 <code>1↔︎3</code> 한 칸 밀림 때문에 14행이
+<em>다른 글자의</em> 오라클 항목에 매칭돼 출력 21행이 바뀌고 5행이
+사라진다. 그중 18행은 교집합 밖이라 오라클 대조가 잡지 못하는
+<strong>조용한 회귀</strong>였다.</p>
+<p>애초에 <strong>세벌식 자모→키 위치는 자판 정의에서 결정적으로 나오는
+값</strong>이라 추론할 대상이 아니었다. 그래서 표를 정본으로 올리고,
+역추론은 <strong>검증 수단</strong>으로 남긴다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">이전</th>
+<th style="text-align: left;">지금</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">정본</td>
+<td style="text-align: left;">오라클(역추론 결과)</td>
+<td style="text-align: left;"><strong>이 문서의 표</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>keymap_derive.py</code></td>
+<td style="text-align: left;">학습기 — 매 실행 재학습</td>
+<td style="text-align: left;"><strong>검증기</strong> — 선언값과
+대조</td>
+</tr>
+<tr>
+<td style="text-align: left;">배열 분리</td>
+<td style="text-align: left;">불가(오라클 부재)</td>
+<td style="text-align: left;">표를 배열별로 적으면 끝</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="조립-불가-레코드는-검증에서-제외된다">조립 불가 레코드는
+검증에서 제외된다</h2>
+<p><code>txt</code> 가 빈 레코드는 cho/jung/jong 심볼 자체가 없어
+<strong>개별 키로 분해되는 압축식 모델을 따르지 않으므로</strong> 역추론
+검증에서 뺀다(<code>is_forced</code>). 현재 해당 행은
+<strong>0건</strong>이다.</p>
+<p>✅ <strong>구 <code>억지</code> 컬럼은 폐지됐다</strong>(2026-08-06).
+예전에는 손 축약 타건 16행(390)이 여기 걸려 오라클 literal 로만
+산출됐다. 그 행들이 필요로 하던 심볼을 <strong>이 문서의 표에
+선언</strong>하면서 전부 자모 조립으로 넘어갔고, 산출물은 <strong>바이트
+단위로 동일</strong>했다 — 표현이 바뀌었을 뿐 동작은 그대로다.</p>
+<h1 id="배열-차이-keymap_final_to_390json">배열 차이
+(<code>keymap_final_to_390.json</code>)</h1>
+<p>227건 중 <strong>217건은 두 배열이 동일</strong>하고 10건만 다르다.
+차이는 세 패턴으로 나뉜다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">패턴</th>
+<th style="text-align: left;">의미</th>
+<th style="text-align: left;">해당</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>A</strong></td>
+<td style="text-align: left;"><strong>트리거 조합 자체가 다름</strong>
+(from 이 다름)</td>
+<td style="text-align: left;"><code>ㅒ</code> — 최종 <code>g+f</code> ↔︎
+390 <code>f+r</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;"><code>~ㅈ</code> 키가 다름</td>
+<td style="text-align: left;">늦·찾·맞·잊·갖·<strong>짖</strong> (최종
+<code>3+shift</code> ↔︎ 390 <code>1+shift</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">종성
+겹받침(<code>~ㄺ</code>·<code>~ㅀ</code>) 키가 다름</td>
+<td style="text-align: left;">읽·잃·싫</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="짖-은-왜-뒤늦게-들어왔나"><code>짖</code> 은 왜 뒤늦게
+들어왔나</h2>
+<p>이 목록은 원래 <strong>두 오라클을 직접 대조</strong>해 만들었다.
+그런데 390 오라클의 <code>짖</code> 에는 390 전환 때 최종식 값이 그대로
+남아 있었다(<code>3+shift</code>). 그 결과 두 오라클이 우연히 같은 값이
+되어 "차이 없음" 으로 판정됐고, 실제로는 배열 차이 항목인데 목록에서
+빠졌다.</p>
+<p><strong>오라클에 결함이 있는 항목일수록 오히려 조용히
+누락되는</strong> 구조였다는 뜻이다. 그래서 지금은 오라클을 대조하지
+않고 두 배열 keymap 으로 <strong>산출한 결과</strong>를 비교해
+검증한다.</p>
+<pre class="bash"><code>python3 tools/verify_array_diff.py       # 계산 ↔ 선언 대조 (불일치 시 exit 1)
+python3 tools/verify_array_diff.py -v    # 판정 경로(calc/oracle)까지 전건 출력</code></pre>
+<p>구 <code>억지='✔'</code> 레코드(맞·잃·읽)는 압축식 모델 밖이라 오라클
+대조로 판정했다(출력의 <code>판정=oracle</code>). ** 이후 그런 레코드는
+0건**이라 전건이 계산 경로로 판정된다. 검증기는 <code>diff_count</code>
+= 실제 항목 수, <code>diff_count + identical_count</code> =
+<code>total_manipulators</code> 산술도 함께 본다.</p>
+<p>패턴 A 는 출력이 아니라 <strong>입력 트리거</strong>가 달라 오라클
+매칭 자체가 실패하므로, 생성기가 이 파일을 배열별 트리거 예외의 SSOT 로
+읽는다.</p>
+<h1 id="스냅샷-재현성-2026-07-27-해소">스냅샷 재현성 (2026-07-27
+해소)</h1>
+<p>한동안 <code>keymap_390.json</code>(87 심볼)이
+<code>keymap_derive.py</code> 재실행으로 재현되지 않았다(81 심볼).
+원인은 <strong>스냅샷이 시절 산출물</strong>이었기 때문이다 — 그때는
+억지 레코드까지 학습에 넣어 실제 자판과 무관한 심볼이 섞였다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">구 스냅샷(87)</th>
+<th style="text-align: left;">현행(81)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>lit</code> <code>ㄲ</code></td>
+<td style="text-align: left;"><code>k</code>+<code>k</code> (억지 축약
+타건에서 잘못 학습)</td>
+<td style="text-align: left;"><code>1+shift</code> (실제 키)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cho</code> <code>ㄸ</code> ·
+<code>jong</code>
+<code>ㄱ</code>·<code>ㄺ</code>·<code>ㅄ</code>·<code>ㅅ</code> ·
+<code>jung</code> <code>ㅟ</code> · <code>lit</code> <code>.</code></td>
+<td style="text-align: left;">있음</td>
+<td style="text-align: left;">없음 → <strong>2026-08-06 선언으로
+부활</strong>(아래)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jong</code> <code>ㅇ</code></td>
+<td style="text-align: left;">없음</td>
+<td style="text-align: left;"><code>a</code> (정상 학습)</td>
+</tr>
+</tbody>
+</table></div>
+<p>현행 코드로 만든 build 는 오라클과 전건 일치(390 227/최종식
+228)하므로 <strong>생성기가 옳고 스냅샷이 낡았던 것</strong>이다.
+2026-07-27 재생성으로 정합화했다.</p>
+<h2 id="심볼별-출처-2026-07-29">심볼별 출처 (2026-07-29)</h2>
+<p>위 표의 "전부 억지 레코드에서만 나오던 것" 이라는 판정은 심볼마다
+출처 레코드를 짚어야 재검증할 수 있다. 아래는 각 심볼을 산출하던 레코드
+전체다. <code>idx</code> 는 <code>rules.json</code> 레코드 인덱스이며,
+억지 열이 <code>✔</code> 인 레코드는 현행 <code>is_forced</code> 가
+학습에서 제외한다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">심볼</th>
+<th style="text-align: left;">산출 레코드 (idx · 트리거 ·
+<code>txt</code>)</th>
+<th style="text-align: center;">억지</th>
+<th style="text-align: left;">현행 판정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>lit</code> <code>.</code></td>
+<td style="text-align: left;">idx0
+<code>period</code>+<code>comma</code> → <code>.</code> · idx1
+<code>c</code>+<code>v</code> → <code>.</code></td>
+<td style="text-align: center;">✔ ✔</td>
+<td style="text-align: left;">소거 — 정상 출처 없음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cho</code> <code>ㄸ</code></td>
+<td style="text-align: left;">idx53 <code>u</code>+<code>1</code> →
+<code>떻</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: left;">소거 — 정상 출처 없음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jong</code> <code>ㄱ</code></td>
+<td style="text-align: left;">idx51 <code>l</code>+<code>period</code> →
+<code>적</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: left;">소거 — 정상 출처 없음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jong</code> <code>ㄺ</code></td>
+<td style="text-align: left;">idx44 <code>j</code>+<code>-</code> →
+<code>읽</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: left;">소거 — 정상 출처 없음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jong</code> <code>ㅄ</code></td>
+<td style="text-align: left;">idx45 <code>j</code>+<code>comma</code> →
+<code>없</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: left;">소거 — 정상 출처 없음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jong</code> <code>ㅅ</code></td>
+<td style="text-align: left;">idx38
+<code>h</code>+<code>open_bracket</code> → <code>넷</code> · idx49
+<code>k</code>+<code>o</code> → <code>것</code></td>
+<td style="text-align: center;">✔ ✔</td>
+<td style="text-align: left;">소거 — 정상 출처 없음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jung</code> <code>ㅟ</code></td>
+<td style="text-align: left;">idx37 <code>9</code>+<code>s</code> →
+<code>윈</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: left;">소거 — 정상 출처 없음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>lit</code> <code>ㄲ</code></td>
+<td style="text-align: left;">idx21 <code>k</code>+<code>j</code> →
+<code>ㄲ</code> · <strong>idx166 <code>1.0</code>+<code>w</code> →
+<code>ㄲ</code></strong></td>
+<td style="text-align: center;">✔ · —</td>
+<td style="text-align: left;"><strong>유지</strong> — 정상 출처 idx166
+이 <code>1+shift</code> 를 준다</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jong</code> <code>ㅇ</code></td>
+<td style="text-align: left;">idx229 <code>u</code>+<code>0</code> →
+<code>등</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;"><strong>추가</strong> — 처음부터 정상
+레코드였고 구 스냅샷이 놓쳤다</td>
+</tr>
+</tbody>
+</table></div>
+<p>읽는 법은 두 가지다.</p>
+<ul>
+<li><p><strong>소거 7종</strong>은 산출 레코드가 전부 억지다. 억지
+레코드는 <code>gen_rules.py</code> 가 오라클 키열을 그대로 literal
+override 로 쓰므로 키맵이 없어도 build 결과가 동일하다. 즉 이 심볼들은
+애초에 쓰이지 않았다.</p>
+<p>✅ <strong>2026-08-06 에 전부 되살아났다.</strong> 억지를 없애려면 그
+행들이 자모 조립으로 산출돼야 하고, 그러려면 바로 이 7종이 있어야 한다.
+지금은 역추론으로 <em>배우는</em> 것이 아니라 위 표에
+<strong>선언</strong>한다 — 그래서 "정상 출처가 없다" 는 사실이 더 이상
+결격 사유가 아니다. 선언값이 옳다는 근거는 build 산출물이 <strong>바이트
+단위로 변하지 않았다</strong>는 것이다.</p></li>
+<li><p><strong><code>lit ㄲ</code> 은 두 출처가 공존한 유일한
+사례</strong>다. 구 스냅샷은 억지 쪽(idx21,
+<code>k</code>+<code>j</code> 를 눌러 <code>ㄲ</code> 을 강제 출력)을
+학습해 키열을 <code>k</code>+<code>k</code> 로 잘못 유도했다. 억지를
+빼면 정상 레코드 idx166 만 남아 실제 키 <code>1+shift</code> 가 나온다.
+회귀의 직접 원인이 이 오염이었다.</p>
+<p>✅ <strong>그 공존이 곧 결함이었다</strong>. 두 레코드는 서로 다른
+글자를 친다 — idx21 은 <strong>초성</strong>
+<code>ㄲ</code>(<code>k</code> 연타), idx166 은 <strong>종성</strong>
+<code>ㄲ</code>(<code>1+shift</code>). 같은 심볼 이름을 나눠 쓴 것이
+문제였지 어느 한쪽이 오염된 것이 아니었다. 지금은 종성 낱자를
+<code>txt</code> 에 <strong><code>~ㄲ</code></strong> 로 적어 심볼을
+<code>jong ㄲ</code> 로 가르고, <code>lit ㄲ</code> 은 초성
+<code>k k</code> 를 갖는다. <strong>제외가 아니라 표현으로 푼
+것</strong>이며, 학습에서 무엇을 빼야 하는지 고민할 필요 자체가
+사라졌다.</p></li>
+</ul>
+<p>재현 명령은 다음과 같다.</p>
+<pre class="bash"><code>python3 - &lt;&lt;&#39;PY&#39;
+import sys; sys.path.insert(0, &#39;tools&#39;)
+from n3sh import keymap_derive as kd
+targets = {(&#39;cho&#39;,&#39;ㄸ&#39;), (&#39;jong&#39;,&#39;ㄱ&#39;), (&#39;jong&#39;,&#39;ㄺ&#39;), (&#39;jong&#39;,&#39;ㅄ&#39;),
+           (&#39;jong&#39;,&#39;ㅅ&#39;), (&#39;jung&#39;,&#39;ㅟ&#39;), (&#39;lit&#39;,&#39;.&#39;), (&#39;lit&#39;,&#39;ㄲ&#39;), (&#39;jong&#39;,&#39;ㅇ&#39;)}
+for i, r in enumerate(kd.load_records):
+    if kd.is_disabled(r):
+        continue
+    hit = {tuple(s) for s in kd.rec_symbols(r)} &amp; targets
+    if hit:
+        print(f&quot;idx{i:3d} forced={&#39;Y&#39; if kd.is_forced(r) else &#39;n&#39;} &quot;
+              f&quot;{r.get(&#39;c1n&#39;)!r}+{r.get(&#39;c2n&#39;)!r} txt={r.get(&#39;txt&#39;)!r} {sorted(hit)}&quot;)
+PY</code></pre>
+<h1 id="알려진-원본-결함">알려진 원본 결함</h1>
+<ul>
+<li><code>짖</code>(트리거 <code>l+3</code>) 은 390 원본에서
+<code>~ㅈ</code> 이 <code>3+shift</code>(최종식 값)로 남아 있다. 같은
+<code>~ㅈ</code> 을 쓰는 다른 5건이 모두 <code>1+shift</code> 이므로
+<strong>390 전환 때 남은 미변환 잔재</strong>다. 라이브는 2026-07-26
+부터 <code>1+shift</code> 로 정상 동작한다.
+<ul>
+<li>원본 오라클 자체는 수정 금지 백업이므로 그대로 둔다. 생성기가 390
+keymap 대로 <code>1+shift</code> 를 산출하므로 실사용에는 영향이
+없다.</li>
+</ul></li>
+</ul>
+<h1 id="관련">관련</h1>
+<ul>
+<li>규칙표: 배열별 정본 <a
+href="../rules.html">n390/rules.md</a>·final/rules.md(<code>Extensions/n3sh/layout/final/rules.md</code>)
+(교집합 뷰
+rules_Intersection.md(<code>Extensions/n3sh/layout/rules_Intersection.md</code>))</li>
+</ul>
+
+</main>
+<footer>
+<p><a href="../index.html">처음으로</a> · <a href="https://github.com/Finfra/karabiner-extensions">저장소</a></p>
+<p class="gen">이 페이지는 저장소의 마크다운에서 생성됐다. 고칠 것은 저장소 쪽이다.</p>
+</footer>
+</body>
+</html>

@@ -32,6 +32,7 @@ n3sh 폴더는 **역할 3분할**이다(2026-08-08).
 | [n390/training_cheatsheet.md](n390/training_cheatsheet.md) | 매뉴얼과 짝인 **한 장 요약** — 초성 자판 지도와 1·2·3열 배치 |
 | `_doc_base/training_for_nowage.md` | 옛 습관 교정표 — 재배치 **이전** 손버릇을 가진 사람 전용(범용 아님) |
 | [final/training.md](final/training.md) | 최종식 매뉴얼 초안 + 암기 보조표 |
+| [site/start.md](site/start.md) | **문서 사이트 전용 원고** — 설치·요구 환경. 저장소 안에서는 쓸 곳이 없고 `docs/` 사이트의 1단계 페이지가 된다 |
 
 ## ⚠️ 판정 기준의 예외 2건
 
@@ -43,6 +44,7 @@ n3sh 폴더는 **역할 3분할**이다(2026-08-08).
 | `final/training.md` | `md_to_json.py` → [practice.json](../core/final/practice.json) 4건 · [memory_aid.json](../core/final/memory_aid.json) 15건 | **매뉴얼 계열**이라 `training*` 넷이 함께 문서로 묶였다. 그중 final 판만 표 2개를 품고 있다 |
 
 * `n390/training*.md` 3종은 예외가 아니다 — `validate_docs.py` 가 **검사만** 하고 아무것도 생성하지 않는다
+* `site/start.md` 도 예외가 아니다 — `build_docs.py` 가 읽지만 **HTML 을 렌더할 뿐** 데이터 JSON 을 만들지 않는다. 사이트에 실리는 다른 md 8편도 전부 각자 원래 자리(`layout/`·`_doc/`)에 그대로 있다
 * 예외 2건도 **편집 절차는 `layout/` 의 md 와 똑같다** — 고친 뒤 `md_to_json.py build` → `check` 를 돌린다. 여기 있다고 해서 자유 문서가 아니다
 * 판정 기준을 바꾼 것이 아니라 **두 건을 예외로 둔 것**이다. 다른 파일을 옮길 때 이 배치를 선례로 삼지 말 것
 

@@ -1,0 +1,93 @@
+/* n3sh docs — 생성물. 원본은 tools/build_docs.py 의 CSS 상수다. */
+:root {
+  --bg: #fff; --fg: #1c1c1e; --dim: #6b6b70; --line: #e3e3e6;
+  --accent: #2f6f4f; --accent-bg: #eef5f1; --code-bg: #f5f5f7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181a; --fg: #e6e6e8; --dim: #9a9aa0; --line: #2e2f33;
+    --accent: #7fc9a3; --accent-bg: #1d2723; --code-bg: #202126;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+main { max-width: 52rem; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+
+/* 상단 학습 경로 네비 — 어느 문서에서도 다음 단계가 보이게 */
+.steps {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; gap: .25rem; flex-wrap: wrap; align-items: center;
+  padding: .6rem 1.25rem; background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.steps a {
+  color: var(--dim); text-decoration: none; font-size: .88rem;
+  padding: .25rem .6rem; border-radius: 999px;
+}
+.steps a b { color: var(--accent); margin-right: .25rem; }
+.steps a:hover { background: var(--code-bg); color: var(--fg); }
+.steps a.on { background: var(--accent-bg); color: var(--fg); }
+.steps .home { font-weight: 700; color: var(--fg); margin-right: .5rem; }
+
+.hero {
+  padding: 3.5rem 1.25rem 2.5rem; text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.hero h1 { margin: 0; font-size: 3rem; letter-spacing: -.03em; }
+.tagline { margin: .5rem 0 0; color: var(--dim); }
+
+.lead { margin: 2rem 0 3rem; }
+.warn {
+  background: var(--accent-bg); border-left: 3px solid var(--accent);
+  padding: .75rem 1rem; border-radius: 0 6px 6px 0;
+}
+h2.sec { margin: 2.5rem 0 1rem; font-size: 1.15rem; color: var(--dim); font-weight: 600; }
+.page-title { margin: 1.5rem 0 1rem; letter-spacing: -.02em; }
+.refnote { color: var(--dim); font-size: .92rem; margin-top: -.5rem; }
+
+.cards { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.card {
+  display: block; padding: 1.1rem 1.2rem; text-decoration: none; color: inherit;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--bg);
+}
+.card:hover { border-color: var(--accent); background: var(--accent-bg); }
+.card .num { color: var(--accent); font-weight: 700; font-size: .82rem; }
+.card h2 { margin: .2rem 0 .4rem; font-size: 1.1rem; }
+.card p { margin: 0; color: var(--dim); font-size: .92rem; line-height: 1.6; }
+.card .note { margin-top: .5rem; font-size: .85rem; opacity: .85; }
+.refs { padding-left: 1.1rem; }
+.refs li { margin: .4rem 0; color: var(--dim); }
+.refs a { color: var(--fg); }
+
+a { color: var(--accent); }
+code, kbd {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: .92em; background: var(--code-bg); padding: .1em .35em; border-radius: 4px;
+}
+kbd { border: 1px solid var(--line); box-shadow: 0 1px 0 var(--line); }
+pre { background: var(--code-bg); padding: 1rem; border-radius: 8px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+blockquote {
+  margin: 1rem 0; padding: .5rem 1rem; color: var(--dim);
+  border-left: 3px solid var(--line);
+}
+
+/* 규칙표가 254행이라 가로 스크롤 + 헤더 고정이 필요하다 */
+.tablewrap { overflow-x: auto; margin: 1rem 0; border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+.tablewrap table { margin: 0; }
+th, td { padding: .4rem .6rem; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+thead th { position: sticky; top: 0; background: var(--bg); border-bottom: 2px solid var(--line); }
+tbody tr:hover { background: var(--code-bg); }
+.demo { max-width: 26rem; }
+
+footer {
+  max-width: 52rem; margin: 0 auto; padding: 2rem 1.25rem 3rem;
+  border-top: 1px solid var(--line); color: var(--dim); font-size: .9rem;
+}
+footer .gen { font-size: .82rem; opacity: .75; }

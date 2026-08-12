@@ -1,0 +1,1767 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6단계 학습 드릴 — n3sh — 세벌식 390 속기</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="steps"><a class="home" href="index.html">n3sh</a><a href="start.html"><b>1</b> 설치와 준비</a><a href="cheatsheet.html"><b>2</b> 한 장 치트시트</a><a href="training.html" class="on"><b>3</b> 6단계 학습 드릴</a><a href="rules.html"><b>4</b> 전체 규칙표</a></nav>
+<main>
+<h1 class="page-title">6단계 학습 드릴</h1>
+
+<p>단계별 <strong>타건 드릴과 연습 문장</strong>을 담는다. 규칙 정본은
+<a href="rules.html">rules.md</a>, 단계 배정 근거·건수는 <a
+href="reference/steps.html">rules_step.md</a> — 둘 다 <strong>설계
+문서라 배우는 데는 필요하지 않다.</strong> 단계 번호는 세 문서가 같은
+축을 쓴다.</p>
+<h1 id="표기법">표기법</h1>
+<p>공통 표기(동시타 · 타건 구분 <code>·</code> · fSnippet 백틱
+<code>`</code> · 스페이스바 <code>␣</code>)는 <a
+href="reference/notation.html">notation.md</a> 가 SSOT 다. 본 문서 고유
+사항만 적는다.</p>
+<ul>
+<li><strong>모디파이어는 전치</strong> — <code>{cmd}o;</code>. <a
+href="reference/steps.html">rules_step.md</a>는
+후치(<code>o;</code>+⌘)를 쓰니 <strong>혼용하지 말 것</strong> (대응표:
+<a href="reference/notation.html">notation.md</a> "모디파이어")</li>
+<li><strong>키 순서는 <code>c1</code>·<code>c2</code> 순으로
+적는다</strong> — 동시타라 실제로는 순서가 없지만, 표기는 <a
+href="rules.html">rules.md</a> 컬럼 순서를 따른다(구 판의
+<code>;o</code> 는 뒤집힌 표기였다)</li>
+<li><strong>⟨ ⟩ 는 평타</strong> — 규칙이 없어 자모를 그대로 치는
+음절이다. ex) ⟨괜⟩ 이 아니라 <code>kh</code> 처럼 트리거가 생긴 글자는 ⟨
+⟩ 를 벗긴다</li>
+<li><strong>출력의 <code>␣</code></strong> 는 자동으로 붙는 공백이다.
+손으로 스페이스바를 누르는 것이 아니다</li>
+<li><strong>시퀀스의 단독 <code>␣</code></strong> 는 반대로
+<strong>손으로 누르는 스페이스바</strong>다. <code>k␣</code> 처럼 트리거
+안에 붙은 <code>␣</code> 는 그 트리거의 둘째 키다 — 자리가 다르니
+헷갈리지 말 것</li>
+<li><strong>드릴 표의 <code>id</code> 는 <a
+href="rules.html">rules.md</a> 의 행 번호다.</strong> 그 순서 자체가
+<strong>손의 흐름</strong>이라 임의로 재정렬하지 않고 그대로 따른다 —
+표를 외우는 순서가 곧 id 순서다</li>
+</ul>
+<h2 id="꼬리-규칙-전-단계-공통--먼저-익힐-것">꼬리 규칙 (전 단계 공통 —
+먼저 익힐 것)</h2>
+<p>행마다 외우는 것이 아니라 <strong>메타 규칙 하나</strong>다.
+상세·근거: <a href="reference/rules-notes.html">rules_notes.md</a>
+규칙1~3.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">수식키</th>
+<th style="text-align: left;">결과</th>
+<th style="text-align: left;">예 (<code>y;</code> = 래)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">무수식</td>
+<td style="text-align: left;"><code>기호</code> 컬럼대로 — 어미는 대개
+<code>.</code></td>
+<td style="text-align: left;"><code>y;</code> → 래.␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>⇧</code></td>
+<td style="text-align: left;"><code>?</code></td>
+<td style="text-align: left;"><code>{shift}y;</code> → 래?␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>⇧⌘</code></td>
+<td style="text-align: left;"><code>!</code></td>
+<td style="text-align: left;"><code>{shift}{cmd}y;</code> → 래!␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>⌘</code></td>
+<td style="text-align: left;"><strong>행마다 다름</strong> — 대개 기호만
+억제</td>
+<td style="text-align: left;"><code>{cmd}y;</code> → 래␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>⌥</code></td>
+<td style="text-align: left;"><strong>꼬리 없음</strong> — 공백도 기호도
+안 붙음</td>
+<td style="text-align: left;"><code>{opt}y;</code> → 래</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ 최종식은 <code>⇧</code>·<code>⇧⌘</code> 가 반대다. 390 은 위 표가
+맞다.</p>
+<p>⚠️ <strong>다섯 변형이 다 있는 트리거는 오히려 소수다.</strong> 없는
+조합을 치면 그냥 원래 키가 나간다 — 각 단계 표의 <code>—</code> 는 "그
+조합은 등록돼 있지 않다"는 뜻이다.</p>
+<h1 id="진행-규약">진행 규약</h1>
+<ul>
+<li><strong>아래 단계까지 배운 것만 쓴다</strong> — 각 단계의 연습
+문장은 그 단계 이하의 트리거 + 평타 ⟨ ⟩ 로만 짰다. 앞서 배운 것이 뒤에서
+계속 재등장한다</li>
+<li>단계당 <strong>드릴 표 3회전 → 문장 표 3회전</strong>. 오타가 난
+트리거는 그 단계 드릴 표로 돌아간다</li>
+<li>1~3단계는 규칙 재사용성이 높아 빠르게 지나가고, 4단계부터는 반복
+주기를 늘린다(<a href="reference/steps.html">rules_step.md</a> "진행
+순서 요약")</li>
+</ul>
+<h1 id="예비-단계--동시타-확인">예비 단계 — 동시타 확인</h1>
+<p>세벌식 지식이 아니라 <strong>장비가 동시타를 받는지</strong> 보는
+워밍업이다. 둘 다 출력이 마침표 자체다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">트리거</th>
+<th style="text-align: left;">출력</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>0-001</code></td>
+<td style="text-align: left;"><code>cv</code></td>
+<td style="text-align: left;"><code>.</code>␣</td>
+<td style="text-align: left;">왼손 동시타</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0-002</code></td>
+<td style="text-align: left;"><code>.,</code></td>
+<td style="text-align: left;"><code>.</code>␣</td>
+<td style="text-align: left;">오른손 동시타</td>
+</tr>
+</tbody>
+</table></div>
+<p>두 개 다 마침표가 나오면 통과. 안 나오면 훈련이 아니라 장비·설정
+문제다.</p>
+<h1 id="1단계--쌍자음복모음">1단계 — 쌍자음·복모음</h1>
+<p>모디파이어 없이 두 키만 누르는 가장 단순한 패턴. 이후 모든 조합의
+기반이 되는 <strong>두 키 동시타</strong> 감각을 여기서 굳힌다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">트리거</th>
+<th style="text-align: left;">출력</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>1-001</code></td>
+<td style="text-align: left;"><code>nj</code></td>
+<td style="text-align: left;">ㅆ</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1-002</code></td>
+<td style="text-align: left;"><code>kj</code></td>
+<td style="text-align: left;">ㄲ</td>
+<td style="text-align: left;"><strong>초성</strong>.
+<code>{cmd}kj</code> 는 3단계 <code>까</code> 니 구분할 것</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1-003</code></td>
+<td style="text-align: left;"><code>lk</code></td>
+<td style="text-align: left;">ㅉ</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1-004</code></td>
+<td style="text-align: left;"><code>ui</code></td>
+<td style="text-align: left;">ㄸ</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1-005</code></td>
+<td style="text-align: left;"><code>;p</code></td>
+<td style="text-align: left;">ㅃ</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1-006</code></td>
+<td style="text-align: left;"><code>fd</code></td>
+<td style="text-align: left;">ㅑ</td>
+<td style="text-align: left;">여기부터 복모음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1-007</code></td>
+<td style="text-align: left;"><code>er</code></td>
+<td style="text-align: left;">ㅠ</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1-008</code></td>
+<td style="text-align: left;"><code>rt</code></td>
+<td style="text-align: left;">ㅖ</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1-009</code></td>
+<td style="text-align: left;"><code>rf</code></td>
+<td style="text-align: left;">ㅒ</td>
+<td style="text-align: left;">최종식은 <code>gf</code> — 390
+전용이다</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>여기 ㄲ 은 <strong>초성</strong>이다. 4단계의 종성
+<code>~ㄲ</code>(<code>1w</code>)과 글자만 같고 다른 자리다</li>
+<li>조합 예: <code>kj</code>+⟨ㅜㅁ⟩ → 꿈 · <code>ui</code>+⟨ㅏㄹ⟩ →
+딸</li>
+</ul>
+<h1 id="2단계--조사짧은-기능어">2단계 — 조사·짧은 기능어</h1>
+<p><code>sp</code>(공백 자동 삽입) 개념이 처음 나온다. 조사 뒤에는
+대부분 공백이 저절로 붙으므로 <strong>스페이스바를 또 누르지
+않는다</strong>.</p>
+<p>조사 외에 두 부류를 여기 함께 뒀다 — 부정
+<code>안</code>·<code>않</code>(이웃 니모닉)과, <strong>비종결 기능어
+8종</strong>(만·면·더·데·한·할·수·서). 뒤엣것은 조사가 아니라
+연결어미·관형사형·의존명사지만 <strong>무수식 2키 + 자동
+공백</strong>이라 손 패턴이 조사와 완전히 같다(2026-08-05 3단계에서 이관
+— <a href="reference/steps.html">rules_step.md</a> 2단계 참조).</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">트리거</th>
+<th style="text-align: left;">출력</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>2-001</code></td>
+<td style="text-align: left;"><code>dc</code></td>
+<td style="text-align: left;">이␣</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-002</code></td>
+<td style="text-align: left;"><code>de</code></td>
+<td style="text-align: left;">히␣</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-003</code></td>
+<td style="text-align: left;"><code>fe</code></td>
+<td style="text-align: left;">가␣</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-004</code></td>
+<td style="text-align: left;"><code>jh</code></td>
+<td style="text-align: left;">을␣</td>
+<td style="text-align: left;"><code>{cmd}jh</code> → 을 (공백 없음)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-006</code></td>
+<td style="text-align: left;"><code>yu</code></td>
+<td style="text-align: left;">를␣</td>
+<td style="text-align: left;"><code>{cmd}yu</code> → 를 (공백 없음)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-008</code></td>
+<td style="text-align: left;"><code>yi</code></td>
+<td style="text-align: left;">로␣</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-009</code></td>
+<td style="text-align: left;"><code>uo</code></td>
+<td style="text-align: left;">도␣</td>
+<td style="text-align: left;">보조사. 2026-08-04 라벨 정정 후 3단계에서
+이관</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-010</code></td>
+<td style="text-align: left;"><code>jl</code></td>
+<td style="text-align: left;">은␣</td>
+<td
+style="text-align: left;"><code>.</code>/<code>?</code>/<code>!</code>
+변형 있음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-015</code></td>
+<td style="text-align: left;"><code>hl</code></td>
+<td style="text-align: left;">는␣</td>
+<td style="text-align: left;"><code>{cmd}hl</code> → 는.␣ (조사인데
+마침표)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-020</code></td>
+<td style="text-align: left;"><code>km</code></td>
+<td style="text-align: left;">고␣</td>
+<td style="text-align: left;"><code>{shift}km</code> → 고?␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-022</code></td>
+<td style="text-align: left;"><code>k.</code></td>
+<td style="text-align: left;">과␣</td>
+<td
+style="text-align: left;"><code>.</code>/<code>?</code>/<code>!</code>
+변형 있음. <code>{opt}k.</code> → 과 (공백 없음)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-027</code></td>
+<td style="text-align: left;"><code>j.</code></td>
+<td style="text-align: left;">와␣</td>
+<td
+style="text-align: left;"><code>.</code>/<code>?</code>/<code>!</code>
+변형 있음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-032</code></td>
+<td style="text-align: left;"><code>j␣</code></td>
+<td style="text-align: left;">에␣</td>
+<td style="text-align: left;">초성 ㅇ + 스페이스바</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-033</code></td>
+<td style="text-align: left;"><code>jy</code></td>
+<td style="text-align: left;">인␣</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-034</code></td>
+<td style="text-align: left;"><code>n'</code></td>
+<td style="text-align: left;">서␣</td>
+<td style="text-align: left;"><strong>비종결 기능어</strong> — 연결어미.
+동시타(fSnippet 아님)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-035</code></td>
+<td style="text-align: left;"><code>m,</code></td>
+<td style="text-align: left;">할␣</td>
+<td style="text-align: left;"><strong>비종결 기능어</strong> — 관형사형
+(할 것)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-036</code></td>
+<td style="text-align: left;"><code>m␣</code></td>
+<td style="text-align: left;">한␣</td>
+<td style="text-align: left;"><strong>비종결 기능어</strong> — 관형사형
+(한 번)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-037</code></td>
+<td style="text-align: left;"><code>n␣</code></td>
+<td style="text-align: left;">수␣</td>
+<td style="text-align: left;"><strong>비종결 기능어</strong> — 의존명사
+(할 수 있다)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-038</code></td>
+<td style="text-align: left;"><code>k␣</code></td>
+<td style="text-align: left;">게␣</td>
+<td style="text-align: left;"><code>{cmd}k␣</code> 는 3단계 께␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-039</code></td>
+<td style="text-align: left;"><code>i␣</code></td>
+<td style="text-align: left;">만␣</td>
+<td style="text-align: left;"><strong>비종결 기능어</strong> —
+<code>{shift}i␣</code> → 면␣ (연결어미)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-041</code></td>
+<td style="text-align: left;"><code>u␣</code></td>
+<td style="text-align: left;">더␣</td>
+<td style="text-align: left;"><strong>비종결 기능어</strong> —
+<code>{shift}u␣</code> → 데␣ · <code>{opt}u␣</code> → 던␣
+(의존명사·연결어미·관형사형)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-044</code></td>
+<td style="text-align: left;"><code>8␣</code></td>
+<td style="text-align: left;">의␣</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-045</code></td>
+<td style="text-align: left;"><code>23</code></td>
+<td style="text-align: left;">안␣</td>
+<td style="text-align: left;">부정 부사. 바로 아래 않(<code>13</code>)과
+짝</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>2-046</code></td>
+<td style="text-align: left;"><code>13</code></td>
+<td style="text-align: left;">않</td>
+<td style="text-align: left;">⚠️ 조사가 아니라 복잡글자(품사
+<code>c</code>) — 안(<code>23</code>) 이웃 니모닉이라 여기서 함께
+익힌다</td>
+</tr>
+</tbody>
+</table></div>
+<p>건너뛴 id 는 같은 트리거의 수식키 변형이다(은·는·와·과 4트리거 19행)
+— 꼬리 규칙으로 파생되므로 따로 외우지 않는다.</p>
+<p><code>⌘</code> 가 조사마다 다르게 동작한다(는=마침표 추가 /
+을·를=공백 제거)는 점이 이 단계의 유일한 함정이다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">문장</th>
+<th style="text-align: left;">시퀀스</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">⟨책⟩은␣</td>
+<td style="text-align: left;">⟨책⟩·<code>jl</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨나⟩는␣</td>
+<td style="text-align: left;">⟨나⟩·<code>hl</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨물⟩이␣</td>
+<td style="text-align: left;">⟨물⟩·<code>dc</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨내⟩가␣</td>
+<td style="text-align: left;">⟨내⟩·<code>fe</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨밥⟩을␣</td>
+<td style="text-align: left;">⟨밥⟩·<code>jh</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨학교⟩로␣</td>
+<td style="text-align: left;">⟨학교⟩·<code>yi</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨집⟩에␣</td>
+<td style="text-align: left;">⟨집⟩·<code>j␣</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨너⟩와␣ ⟨나⟩</td>
+<td style="text-align: left;">⟨너⟩·<code>j.</code>·⟨나⟩</td>
+</tr>
+<tr>
+<td style="text-align: left;">안␣⟨하⟩고␣</td>
+<td style="text-align: left;"><code>23</code>·⟨하⟩·<code>km</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨책⟩도␣ ⟨좋⟩다</td>
+<td style="text-align: left;">⟨책⟩·<code>uo</code>·⟨좋다⟩</td>
+</tr>
+<tr>
+<td style="text-align: left;">않⟨는⟩</td>
+<td style="text-align: left;"><code>13</code>·<code>hl</code></td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="3단계--종결어미">3단계 — 종결어미</h1>
+<p>행 수는 전체에서 가장 많지만 실제 암기 단위는 훨씬 적다 —
+<strong>꼬리 규칙 하나로 <code>.</code>/<code>?</code>/<code>!</code> 가
+전부 파생</strong>되기 때문이다. 위 "꼬리 규칙"을 확실히 익힌 뒤 들어올
+것.</p>
+<h2 id="종결어미">종결어미</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">트리거</th>
+<th style="text-align: left;">무수식</th>
+<th style="text-align: left;"><code>{shift}</code></th>
+<th style="text-align: left;"><code>{shift}{cmd}</code></th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>3-001</code></td>
+<td style="text-align: left;"><code>u;</code></td>
+<td style="text-align: left;">다.␣</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>{cmd}u;</code> → 다␣.
+<strong><code>다?</code>·<code>다!</code> 는 없다</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-004</code></td>
+<td style="text-align: left;"><code>m;</code></td>
+<td style="text-align: left;">해.␣</td>
+<td style="text-align: left;">해?</td>
+<td style="text-align: left;">해!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-008</code></td>
+<td style="text-align: left;"><code>d.</code></td>
+<td style="text-align: left;">야.␣</td>
+<td style="text-align: left;">야?</td>
+<td style="text-align: left;">야!</td>
+<td style="text-align: left;"><code>{cmd}d.</code> → 야␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-013</code></td>
+<td style="text-align: left;"><code>f.</code></td>
+<td style="text-align: left;">아.␣</td>
+<td style="text-align: left;">아?</td>
+<td style="text-align: left;">아!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-016</code></td>
+<td style="text-align: left;"><code>j⏎</code></td>
+<td style="text-align: left;">어.␣</td>
+<td style="text-align: left;">어?</td>
+<td style="text-align: left;">어!</td>
+<td style="text-align: left;">초성 ㅇ + return</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-019</code></td>
+<td style="text-align: left;"><code>o;</code></td>
+<td style="text-align: left;">지.␣</td>
+<td style="text-align: left;">지?</td>
+<td style="text-align: left;">지!</td>
+<td style="text-align: left;"><code>{cmd}o;</code> → 지␣ — 문장
+중간용</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-023</code></td>
+<td style="text-align: left;"><code>l'</code></td>
+<td style="text-align: left;">죠.␣</td>
+<td style="text-align: left;">죠?</td>
+<td style="text-align: left;">죠!</td>
+<td style="text-align: left;"><code>{cmd}l'</code> → 죠␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-028</code></td>
+<td style="text-align: left;"><code>j'</code></td>
+<td style="text-align: left;">요.␣</td>
+<td style="text-align: left;">요?</td>
+<td style="text-align: left;">요!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-031</code></td>
+<td style="text-align: left;"><code>j;</code></td>
+<td style="text-align: left;">오.␣</td>
+<td style="text-align: left;">오?</td>
+<td style="text-align: left;">오!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-034</code></td>
+<td style="text-align: left;"><code>n;</code></td>
+<td style="text-align: left;">소.␣</td>
+<td style="text-align: left;">소?</td>
+<td style="text-align: left;">소!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-037</code></td>
+<td style="text-align: left;"><code>h;</code></td>
+<td style="text-align: left;">네.␣</td>
+<td style="text-align: left;">네?</td>
+<td style="text-align: left;">네!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-040</code></td>
+<td style="text-align: left;"><code>k'</code></td>
+<td style="text-align: left;">군.␣</td>
+<td style="text-align: left;">군?</td>
+<td style="text-align: left;">군!</td>
+<td style="text-align: left;"><code>{cmd}k'</code> → 군␣. ⌥ 변형은 빈
+행이다</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-045</code></td>
+<td style="text-align: left;"><code>ul</code></td>
+<td style="text-align: left;">돼.␣</td>
+<td style="text-align: left;">돼?</td>
+<td style="text-align: left;">돼!</td>
+<td style="text-align: left;"><code>{cmd}ul</code> → 돼␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-050</code></td>
+<td style="text-align: left;"><code>y8</code></td>
+<td style="text-align: left;">리.␣</td>
+<td style="text-align: left;">리?</td>
+<td style="text-align: left;">리!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-053</code></td>
+<td style="text-align: left;"><code>kj</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">까?</td>
+<td style="text-align: left;">까!</td>
+<td style="text-align: left;">까.␣ 는 <code>{cmd}kj</code>. 1단계 ㄲ 과
+같은 키</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-056</code></td>
+<td style="text-align: left;"><code>k;</code></td>
+<td style="text-align: left;">가.␣</td>
+<td style="text-align: left;">가?</td>
+<td style="text-align: left;">가!</td>
+<td style="text-align: left;">위 <code>kj</code>(까)와 짝으로
+익힌다</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-059</code></td>
+<td style="text-align: left;"><code>hu</code></td>
+<td style="text-align: left;">나.␣</td>
+<td style="text-align: left;">나?</td>
+<td style="text-align: left;">나!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-062</code></td>
+<td style="text-align: left;"><code>hi</code></td>
+<td style="text-align: left;">냐.␣</td>
+<td style="text-align: left;">냐?</td>
+<td style="text-align: left;">냐!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-065</code></td>
+<td style="text-align: left;"><code>ho</code></td>
+<td style="text-align: left;">니.␣</td>
+<td style="text-align: left;">니?</td>
+<td style="text-align: left;">니!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-068</code></td>
+<td style="text-align: left;"><code>y;</code></td>
+<td style="text-align: left;">래.␣</td>
+<td style="text-align: left;">래?</td>
+<td style="text-align: left;">래!</td>
+<td style="text-align: left;"><code>{cmd}y;</code> → 래␣ — 꼬리 규칙
+5변형 전부 있음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-073</code></td>
+<td style="text-align: left;"><code>l;</code></td>
+<td style="text-align: left;">자.␣</td>
+<td style="text-align: left;">자?</td>
+<td style="text-align: left;">자!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-076</code></td>
+<td style="text-align: left;"><code>l,</code></td>
+<td style="text-align: left;">줘.␣</td>
+<td style="text-align: left;">줘?</td>
+<td style="text-align: left;">줘!</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-080</code></td>
+<td style="text-align: left;"><code>;'</code></td>
+<td style="text-align: left;">봐.␣</td>
+<td style="text-align: left;">봐?</td>
+<td style="text-align: left;">봐!</td>
+<td style="text-align: left;"><code>{cmd};'</code> → 봐␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-085</code></td>
+<td style="text-align: left;"><code>i;</code></td>
+<td style="text-align: left;">마.␣</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-086</code></td>
+<td style="text-align: left;"><code>y7</code></td>
+<td style="text-align: left;">라.␣</td>
+<td style="text-align: left;">라?</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-088</code></td>
+<td style="text-align: left;"><code>ml</code></td>
+<td style="text-align: left;">함.␣</td>
+<td style="text-align: left;">함?</td>
+<td style="text-align: left;">함!</td>
+<td style="text-align: left;"><code>{cmd}ml</code> → 함␣</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-093</code></td>
+<td style="text-align: left;"><code>jm</code></td>
+<td style="text-align: left;">음.␣</td>
+<td style="text-align: left;">음?</td>
+<td style="text-align: left;">음!</td>
+<td style="text-align: left;"><code>{cmd}jm</code> → 음␣ ·
+<code>{opt}jm</code> → 음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-098</code></td>
+<td style="text-align: left;"><code>ju</code></td>
+<td style="text-align: left;">임.␣</td>
+<td style="text-align: left;">임?</td>
+<td style="text-align: left;">임!</td>
+<td style="text-align: left;"><code>{cmd}ju</code> → 임␣</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="명사형높임-잔류-기께">명사형·높임 잔류 (기·께)</h2>
+<p>비종결 기능어 8종이 2단계로 옮겨 가고 둘만 남았다. <code>께</code> 는
+조사지만 <code>할께!</code> 처럼 종결형으로 쓰일 여지가 있어 남겼다.
+<code>함</code>(<code>ml</code>)은 여기 중복으로 올라와 있었는데,
+규칙표의 중복 행이 삭제되면서 위 종결어미 표(<code>3-088</code>) 하나로
+정리됐다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">트리거</th>
+<th style="text-align: left;">출력</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>3-103</code></td>
+<td style="text-align: left;"><code>kp</code></td>
+<td style="text-align: left;">기.␣</td>
+<td style="text-align: left;"><code>{shift}kp</code> → 기? ·
+<code>{shift}{cmd}kp</code> → 기!</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>3-106</code></td>
+<td style="text-align: left;"><code>k␣</code></td>
+<td style="text-align: left;">께␣</td>
+<td style="text-align: left;"><code>{cmd}k␣</code>. 무수식은 2단계
+게␣</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">문장</th>
+<th style="text-align: left;">시퀀스</th>
+<th style="text-align: left;">메모</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">⟨간⟩다.␣</td>
+<td style="text-align: left;">⟨간⟩·<code>u;</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨같⟩네.␣</td>
+<td style="text-align: left;">⟨같⟩·<code>h;</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨먹⟩자.␣</td>
+<td style="text-align: left;">⟨먹⟩·<code>l;</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨그⟩래?</td>
+<td style="text-align: left;">⟨그⟩·<code>{shift}y;</code></td>
+<td style="text-align: left;">⇧ = 물음표</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨하⟩지␣ ⟨마⟩</td>
+<td style="text-align: left;">⟨하⟩·<code>{cmd}o;</code>·⟨마⟩</td>
+<td style="text-align: left;">⌘ 로 마침표 억제</td>
+</tr>
+<tr>
+<td style="text-align: left;">안␣돼.␣</td>
+<td style="text-align: left;"><code>23·ul</code></td>
+<td style="text-align: left;">2단계 안 + 3단계 돼</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨할⟩ 수␣ ⟨없⟩다.␣</td>
+<td
+style="text-align: left;"><code>m,·n␣</code>·⟨없⟩·<code>u;</code></td>
+<td style="text-align: left;">명사형 두 개 연속</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨너⟩만␣ ⟨하⟩면␣</td>
+<td
+style="text-align: left;">⟨너⟩·<code>i␣</code>·⟨하⟩·<code>{shift}i␣</code></td>
+<td style="text-align: left;">같은 키의 무수식/⇧ 짝</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨하⟩기.␣</td>
+<td style="text-align: left;">⟨하⟩·<code>kp</code></td>
+<td style="text-align: left;">⇧ 면 기? · ⇧⌘ 면 기!</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨공부⟩함␣</td>
+<td style="text-align: left;">⟨공부⟩·<code>{cmd}ml</code></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="4단계--자모종성이중모음">4단계 — 자모(종성·이중모음)</h1>
+<p>여기서 <strong>모디파이어 재사용 규칙이 처음 끊긴다.</strong> 출력이
+자모 하나뿐이라 단순해 보이지만 니모닉이 없어 순수 반복 암기 구간이다.
+앞 7종(종성)과 뒤 7종(이중모음)은 입력 메커니즘이 서로 다르니 나눠
+익힌다.</p>
+<h2 id="종성-자모--홑받침-5--겹받침-2">종성 자모 — 홑받침 5 → 겹받침
+2</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">트리거</th>
+<th style="text-align: left;">출력</th>
+<th style="text-align: left;">조합 예 (평타 음절 + 종성 동시타)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>4-001</code></td>
+<td style="text-align: left;"><code>aw</code></td>
+<td style="text-align: left;"><code>~ㄷ</code></td>
+<td style="text-align: left;">⟨고⟩·<code>aw</code> → 곧</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-002</code></td>
+<td style="text-align: left;"><code>wq</code></td>
+<td style="text-align: left;"><code>~ㅌ</code></td>
+<td style="text-align: left;">⟨바⟩·<code>wq</code> → 밭</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-003</code></td>
+<td style="text-align: left;"><code>zs</code></td>
+<td style="text-align: left;"><code>~ㅊ</code></td>
+<td style="text-align: left;">⟨나⟩·<code>zs</code> → 낯</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-004</code></td>
+<td style="text-align: left;"><code>q2</code></td>
+<td style="text-align: left;"><code>~ㅍ</code></td>
+<td style="text-align: left;">⟨아⟩·<code>q2</code> → 앞</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-005</code></td>
+<td style="text-align: left;"><code>1w</code></td>
+<td style="text-align: left;"><code>~ㄲ</code></td>
+<td style="text-align: left;">⟨바⟩·<code>1w</code> → 밖</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-006</code></td>
+<td style="text-align: left;"><code>sa</code></td>
+<td style="text-align: left;"><code>~ㄶ</code></td>
+<td style="text-align: left;">⟨아⟩·<code>sa</code> → 않 (2단계
+<code>13</code> 의 정공법)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-007</code></td>
+<td style="text-align: left;"><code>xz</code></td>
+<td style="text-align: left;"><code>~ㅄ</code></td>
+<td style="text-align: left;">⟨가⟩·<code>xz</code> → 값</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>전부 종성이다</strong> — 그래서 <code>~</code> 를 붙여
+적는다(<a href="reference/notation.html">notation.md</a> "자모")</li>
+<li><code>1w</code>(종성 ㄲ)와 1단계 <code>kj</code>(초성 ㄲ)를 헷갈리지
+말 것. <strong>밖</strong> 은 이 종성으로 친다 — 별도 트리거가 없다</li>
+<li>앞 5개가 홑받침, 뒤 2개(<code>sa</code>·<code>xz</code>)가
+겹받침이다</li>
+</ul>
+<h2 id="이중모음-자모--ㅗ계-3--ㅜ계-3--ㅢ">이중모음 자모 — ㅗ계 3 → ㅜ계
+3 → ㅢ</h2>
+<p>"두 키 동시타"가 아니라 <strong>모음 키 + 스페이스바</strong> 라는
+별도 메커니즘이다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">트리거</th>
+<th style="text-align: left;">출력</th>
+<th style="text-align: left;">쓰이는 곳</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>4-008</code></td>
+<td style="text-align: left;"><code>f␣</code></td>
+<td style="text-align: left;">ㅘ</td>
+<td style="text-align: left;">과·완·활</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-009</code></td>
+<td style="text-align: left;"><code>r␣</code></td>
+<td style="text-align: left;">ㅙ</td>
+<td style="text-align: left;">왜·괜</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-010</code></td>
+<td style="text-align: left;"><code>v␣</code></td>
+<td style="text-align: left;">ㅚ</td>
+<td style="text-align: left;">외·되</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-011</code></td>
+<td style="text-align: left;"><code>t␣</code></td>
+<td style="text-align: left;">ㅝ</td>
+<td style="text-align: left;">워·원</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-012</code></td>
+<td style="text-align: left;"><code>c␣</code></td>
+<td style="text-align: left;">ㅞ</td>
+<td style="text-align: left;">웨·궤</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-013</code></td>
+<td style="text-align: left;"><code>d␣</code></td>
+<td style="text-align: left;">ㅟ</td>
+<td style="text-align: left;">위·귀</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>4-014</code></td>
+<td style="text-align: left;"><code>g␣</code></td>
+<td style="text-align: left;">ㅢ</td>
+<td style="text-align: left;">의·희</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>첫 모음이 같은 것끼리 묶여 있다 — ㅗ계(ㅘ·ㅙ·ㅚ) → ㅜ계(ㅝ·ㅞ·ㅟ) →
+ㅢ. 종성 절과 달리 이만큼은 규칙이 있다</li>
+<li>2단계의
+<code>j␣</code>(에)·<code>k␣</code>(게)·<code>8␣</code>(의)도 스페이스바
+조합이었다 — <strong>같은 손놀림, 다른 산출물</strong></li>
+</ul>
+<h1 id="5단계--123받침">5단계 — 1·2·3받침</h1>
+<p>두 번째 키가 <code>1</code>·<code>2</code>·<code>3</code> 중 하나로
+고정된 <strong>열(column) 규칙</strong>이 있어, 개별암기처럼 보여도 표로
+외워진다. 초성 키 배치는 <a
+href="cheatsheet.html">training_cheatsheet.md</a> "자판 지도" 참조.</p>
+<h2 id="드릴--초성-한-줄씩-손의-흐름-순">드릴 — 초성 한 줄씩 (손의 흐름
+순)</h2>
+<p>열을 세로로 훑는 것이 아니라 <strong>한 초성을 잡고
+<code>1</code>·<code>2</code>·<code>3</code> 을 차례로 누르는</strong>
+것이 손의 흐름이다. 아래 표는 그 흐름대로 배열했다 — <a
+href="rules.html">rules.md</a> 의 id 는 초성 <strong>가나다
+순</strong>(<code>k</code>→<code>h</code>→<code>u</code>→<code>y</code>→…)이라
+표 순서와 다르다.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">초성</th>
+<th style="text-align: left;"><code>+1</code>
+(<code>~ㅈ</code>·<code>~ㅎ</code>)</th>
+<th style="text-align: left;"><code>+2</code> (과거형)</th>
+<th style="text-align: left;"><code>+3</code> (<code>~ㅂ</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>5-001</code>~<code>5-003</code></td>
+<td style="text-align: left;">ㄱ <code>k</code></td>
+<td style="text-align: left;">갖</td>
+<td style="text-align: left;">겠</td>
+<td style="text-align: left;">갑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-004</code>~<code>5-006</code></td>
+<td style="text-align: left;">ㄴ <code>h</code></td>
+<td style="text-align: left;">낮</td>
+<td style="text-align: left;">냈</td>
+<td style="text-align: left;">납</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-007</code>~<code>5-009</code></td>
+<td style="text-align: left;">ㄷ <code>u</code></td>
+<td style="text-align: left;">딪</td>
+<td style="text-align: left;">됐</td>
+<td style="text-align: left;">됩</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-010</code>~<code>5-012</code></td>
+<td style="text-align: left;">ㄹ <code>y</code></td>
+<td style="text-align: left;">렇</td>
+<td style="text-align: left;">랬</td>
+<td style="text-align: left;">롭</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-013</code>~<code>5-015</code></td>
+<td style="text-align: left;">ㅁ <code>i</code></td>
+<td style="text-align: left;">맞</td>
+<td style="text-align: left;">몄</td>
+<td style="text-align: left;">맙</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-016</code>~<code>5-018</code></td>
+<td style="text-align: left;">ㅂ <code>;</code></td>
+<td style="text-align: left;">빚</td>
+<td style="text-align: left;">봤</td>
+<td style="text-align: left;">뵙</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-019</code>~<code>5-021</code></td>
+<td style="text-align: left;">ㅅ <code>n</code></td>
+<td style="text-align: left;">싫</td>
+<td style="text-align: left;">셨</td>
+<td style="text-align: left;">습</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-022</code>~<code>5-024</code></td>
+<td style="text-align: left;">ㅇ <code>j</code></td>
+<td style="text-align: left;">잊</td>
+<td style="text-align: left;">왔</td>
+<td style="text-align: left;">입</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-025</code>~<code>5-027</code></td>
+<td style="text-align: left;">ㅈ <code>l</code></td>
+<td style="text-align: left;">짖</td>
+<td style="text-align: left;">졌</td>
+<td style="text-align: left;">집</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-028</code>~<code>5-030</code></td>
+<td style="text-align: left;">ㅊ <code>o</code></td>
+<td style="text-align: left;">찾</td>
+<td style="text-align: left;">쳤</td>
+<td style="text-align: left;">춥</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-031</code>~<code>5-032</code></td>
+<td style="text-align: left;">ㅋ <code>0</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">켰</td>
+<td style="text-align: left;">큽</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-033</code>~<code>5-034</code></td>
+<td style="text-align: left;">ㅌ <code>'</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">탔</td>
+<td style="text-align: left;">탑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-035</code>~<code>5-036</code></td>
+<td style="text-align: left;">ㅍ <code>p</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">폈</td>
+<td style="text-align: left;">팝</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>5-037</code>~<code>5-038</code></td>
+<td style="text-align: left;">ㅎ <code>m</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">했</td>
+<td style="text-align: left;">합</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>딪·맞·탔은 나중 편입분</strong>이지만 2026-08-05 단계 재편
+때 id 가 초성 가나다 순으로 다시 매겨져 지금은 제자리
+번호다(<code>5-007</code>·<code>5-013</code>·<code>5-033</code>) — 더
+이상 끝번이 아니다</li>
+<li>2열은 "자음 + <code>2</code> = 그 자음의 과거형" 공식 하나로
+통일된다. 세로로 훑고 싶을 때는 <a
+href="cheatsheet.html">training_cheatsheet.md</a> 의 열별 자판 지도를
+본다</li>
+</ul>
+<h2 id="덩어리-낭송--자리-순서로-세-글자씩">덩어리 낭송 — 자리 순서로 세
+글자씩</h2>
+<p>위 표는 <strong>가나다 순</strong>이라 눈으로 대조하기 좋지만, 손은
+가나다 순으로 놓여 있지 않다. 외울 때는 <strong>자판에 놓인 자리
+순서</strong>로 훑고, 한 초성의
+<code>1</code>·<code>2</code>·<code>3</code> 을 <strong>세 글자 한
+덩어리로 붙여 소리내어</strong> 읽는다.</p>
+<p>이 형태가 이 단계의 핵심이다 — 초성 키 하나를 짚으면 세 글자가 통째로
+딸려 나오므로, <strong>낱건 38개가 아니라 덩어리 14개</strong>를 외우는
+일이 된다.</p>
+<pre><code>                    ᄏ켰큽 (0)
+  렇랬롭 (y)  딪됐됩 (u)  맞몄맙 (i)  찾쳤춥 (o)  ᄑ폈팝 (p)
+  낮냈납 (h)  잊왔입 (j)  갖겠갑 (k)  짖졌집 (l)  빚봤뵙 (;)  ᄐ탔탑 (&#39;)
+  싫셨습 (n)  ᄒ했합 (m)</code></pre>
+<ul>
+<li><strong><code>ᄏ</code>·<code>ᄑ</code>·<code>ᄐ</code>·<code>ᄒ</code>
+는 글자가 아니라 빈칸이다.</strong>
+<code>0</code>·<code>p</code>·<code>'</code>·<code>m</code> 의
+<code>+1</code> 에는 규칙이 없어, 쳐 보면 초성 자모만 그대로 나간다.
+덩어리의 <strong>모양 자체가 그 구멍을 기억시키므로</strong>
+<code>·</code> 로 지우지 않고 나온 대로 적었다(<a
+href="cheatsheet.html">training_cheatsheet.md</a> 의 열별 지도는
+<code>·</code> 를 쓴다 — 거기서는 열이 주인공이라 자리만 비우면
+된다)</li>
+<li>14덩어리 × 3 = 42칸 중 빈칸 4개를 빼면 <strong>38행</strong>으로, 위
+드릴 표와 수가 맞는다</li>
+<li>덩어리는 뜻이 없는 소리다 — "렇랬롭", "딪됐됩" 을 단어로 이해하려
+하지 말고 <strong>음절 리듬</strong>으로 굳힌다. 뜻은 뒤의 문장 드릴에서
+붙는다</li>
+<li>자리 순서라 <strong>같은 줄에 손가락이 이어져 있다</strong> — 윗줄
+5덩어리, 가운뎃줄 6덩어리, 아랫줄 2덩어리, 숫자열 1덩어리로 끊어
+회전한다</li>
+</ul>
+<h2 id="문장--글자마다-한-번씩">문장 — 글자마다 한 번씩</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">문장</th>
+<th style="text-align: left;">시퀀스</th>
+<th style="text-align: left;">메모</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">맞다.␣</td>
+<td style="text-align: left;"><code>i1·u;</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">찾자.␣</td>
+<td style="text-align: left;"><code>o1·l;</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">갖고␣</td>
+<td style="text-align: left;"><code>k1·km</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">낮과␣</td>
+<td style="text-align: left;"><code>h1·k.</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">빚을␣</td>
+<td style="text-align: left;"><code>;1·jh</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">짖는␣ ⟨소리⟩</td>
+<td style="text-align: left;"><code>l1·hl</code>·⟨소리⟩</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨공부⟩했다.␣</td>
+<td style="text-align: left;">⟨공부⟩·<code>m2·u;</code></td>
+<td style="text-align: left;">2열 + 3단계 어미</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨하⟩겠지.␣</td>
+<td style="text-align: left;">⟨하⟩·<code>k2·o;</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">안␣됐네.␣</td>
+<td style="text-align: left;"><code>23·u2·h;</code></td>
+<td style="text-align: left;">2단계 안 + 2열 + 어미</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨버스⟩를␣ 탔다.␣</td>
+<td style="text-align: left;">⟨버스⟩·<code>yu·'2·u;</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">춥다.␣</td>
+<td style="text-align: left;"><code>o3·u;</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">집에␣</td>
+<td style="text-align: left;"><code>l3·j␣</code></td>
+<td style="text-align: left;">3열 + 2단계 조사</td>
+</tr>
+<tr>
+<td style="text-align: left;">납⟨부⟩</td>
+<td style="text-align: left;"><code>h3</code></td>
+<td style="text-align: left;">납부·납품</td>
+</tr>
+<tr>
+<td style="text-align: left;">입⟨니다⟩</td>
+<td style="text-align: left;"><code>j3</code></td>
+<td style="text-align: left;">입·입다</td>
+</tr>
+<tr>
+<td style="text-align: left;">갑⟨질⟩</td>
+<td style="text-align: left;"><code>k3</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">합⟨계⟩</td>
+<td style="text-align: left;"><code>m3</code></td>
+<td style="text-align: left;">합니다·종합</td>
+</tr>
+<tr>
+<td style="text-align: left;">습⟨관⟩</td>
+<td style="text-align: left;"><code>n3</code></td>
+<td style="text-align: left;">습관·학습</td>
+</tr>
+<tr>
+<td style="text-align: left;">팝⟨업⟩</td>
+<td style="text-align: left;"><code>p3</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">탑</td>
+<td style="text-align: left;"><code>'3</code></td>
+<td style="text-align: left;">literal — ㅌ 미학습 우회</td>
+</tr>
+<tr>
+<td style="text-align: left;">맙</td>
+<td style="text-align: left;"><code>i3</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">큽</td>
+<td style="text-align: left;"><code>03</code></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="종합-예문--한-줄에-여러-글자">종합 예문 — 한 줄에 여러 글자</h2>
+<p>앞 표가 글자를 하나씩 짚는 것이라면, 여기는 <strong>실제로 쓰는 문장
+안에서 여러 개가 연달아 나오는</strong> 연습이다. 5단계 38글자가 아래
+18문장에 <strong>빠짐없이 한 번 이상</strong> 들어간다.</p>
+<ul>
+<li><strong>한 줄씩 외운다.</strong> 전부 일상에서 실제로 쓰는 말이라,
+문장째 손에 붙으면 그 안의 글자는 따로 떠올리지 않아도 나온다</li>
+<li><strong>예문 열은 읽기 위해 그대로 뒀다</strong> — 평타 ⟨ ⟩ 표시는
+시퀀스 열에만 있다</li>
+<li><strong>문장 안의 공백은 대부분 자동이다.</strong> 조사·어미가
+알아서 붙이므로, <strong>시퀀스에 <code>␣</code> 가 보이는
+자리에서만</strong> 스페이스바를 누른다</li>
+<li><code>{opt}</code> 가 붙은 자리(<code>{opt}hl</code> = 는)는
+<strong>꼬리를 없애는 것</strong>이다 — "찾았는데" 처럼 조사가 단어
+중간에 올 때 자동 공백이 끼는 것을 막는다. 꼬리 규칙 표의 ⌥ 행이 여기서
+처음 실전으로 쓰인다</li>
+</ul>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">예문</th>
+<th style="text-align: left;">시퀀스</th>
+<th style="text-align: left;">담긴 5단계 글자</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">처음 뵙겠습니다.␣</td>
+<td
+style="text-align: left;">⟨처음⟩·<code>␣</code>·<code>;3·k2·n3</code>·⟨니⟩·<code>u;</code></td>
+<td style="text-align: left;">뵙·겠·습</td>
+</tr>
+<tr>
+<td style="text-align: left;">자료를 갖고 왔습니다.␣</td>
+<td
+style="text-align: left;">⟨자료⟩·<code>yu·k1·km·j2·n3</code>·⟨니⟩·<code>u;</code></td>
+<td style="text-align: left;">갖·왔·습</td>
+</tr>
+<tr>
+<td style="text-align: left;">내가 그랬고 결국 그렇게 됐다.␣</td>
+<td
+style="text-align: left;">⟨내⟩·<code>fe</code>·⟨그⟩·<code>y2·km</code>·⟨결국⟩·<code>␣</code>·⟨그⟩·<code>y1·k␣·u2·u;</code></td>
+<td style="text-align: left;">랬·렇·됐</td>
+</tr>
+<tr>
+<td style="text-align: left;">찾았는데 맞는지 모르겠다.␣</td>
+<td
+style="text-align: left;"><code>o1</code>·⟨았⟩·<code>{opt}hl</code>·⟨데⟩·<code>␣</code>·<code>i1·{opt}hl·{cmd}o;</code>·⟨모르⟩·<code>k2·u;</code></td>
+<td style="text-align: left;">찾·맞·겠</td>
+</tr>
+<tr>
+<td style="text-align: left;">편지를 부쳤고 회비도 냈다.␣</td>
+<td
+style="text-align: left;">⟨편지⟩·<code>yu</code>·⟨부⟩·<code>o2·km</code>·⟨회비⟩·<code>uo·h2·u;</code></td>
+<td style="text-align: left;">쳤·냈</td>
+</tr>
+<tr>
+<td style="text-align: left;">모퉁이에 부딪쳐 넘어졌다.␣</td>
+<td
+style="text-align: left;">⟨모퉁이⟩·<code>j␣</code>·⟨부⟩·<code>u1</code>·⟨쳐⟩·<code>␣</code>·⟨넘어⟩·<code>l2·u;</code></td>
+<td style="text-align: left;">딪·졌</td>
+</tr>
+<tr>
+<td style="text-align: left;">선생님이 오셨고 같이 영화를 봤다.␣</td>
+<td
+style="text-align: left;">⟨선생님⟩·<code>dc</code>·⟨오⟩·<code>n2·km</code>·⟨같이⟩·<code>␣</code>·⟨영화⟩·<code>yu·;2·u;</code></td>
+<td style="text-align: left;">셨·봤</td>
+</tr>
+<tr>
+<td style="text-align: left;">맙소사 지갑을 또 잊었다.␣</td>
+<td
+style="text-align: left;"><code>i3</code>·⟨소사⟩·<code>␣</code>·⟨지갑⟩·<code>jh</code>·⟨또⟩·<code>␣</code>·<code>j1</code>·⟨었⟩·<code>u;</code></td>
+<td style="text-align: left;">맙·잊</td>
+</tr>
+<tr>
+<td style="text-align: left;">개가 짖어서 낮잠을 깼다.␣</td>
+<td
+style="text-align: left;">⟨개⟩·<code>fe·l1</code>·⟨어⟩·<code>n'·h1</code>·⟨잠⟩·<code>jh</code>·⟨깼⟩·<code>u;</code></td>
+<td style="text-align: left;">짖·낮</td>
+</tr>
+<tr>
+<td style="text-align: left;">세금을 납부했고 빚도 갚았다.␣</td>
+<td
+style="text-align: left;">⟨세금⟩·<code>jh·h3</code>·⟨부⟩·<code>m2·km·;1·uo</code>·⟨갚았⟩·<code>u;</code></td>
+<td style="text-align: left;">납·했·빚</td>
+</tr>
+<tr>
+<td style="text-align: left;">이만 하면 됩니다.␣</td>
+<td
+style="text-align: left;">⟨이⟩·<code>i␣</code>·⟨하⟩·<code>{shift}i␣·u3</code>·⟨니⟩·<code>u;</code></td>
+<td style="text-align: left;">됩</td>
+</tr>
+<tr>
+<td style="text-align: left;">팝콘을 들고 버스를 탔다.␣</td>
+<td
+style="text-align: left;"><code>p3</code>·⟨콘⟩·<code>jh</code>·⟨들⟩·<code>km</code>·⟨버스⟩·<code>yu·'2·u;</code></td>
+<td style="text-align: left;">팝·탔</td>
+</tr>
+<tr>
+<td style="text-align: left;">남산 탑에 올라갑니다.␣</td>
+<td
+style="text-align: left;">⟨남산⟩·<code>␣</code>·<code>'3·j␣</code>·⟨올라⟩·<code>k3</code>·⟨니⟩·<code>u;</code></td>
+<td style="text-align: left;">탑·갑</td>
+</tr>
+<tr>
+<td style="text-align: left;">꽃이 폈고 방도 예쁘게 꾸몄다.␣</td>
+<td
+style="text-align: left;">⟨꽃⟩·<code>dc·p2·km</code>·⟨방⟩·<code>uo</code>·⟨예쁘⟩·<code>k␣</code>·⟨꾸⟩·<code>i2·u;</code></td>
+<td style="text-align: left;">폈·몄</td>
+</tr>
+<tr>
+<td style="text-align: left;">텔레비전을 켰는데 이 장면은 싫다.␣</td>
+<td
+style="text-align: left;">⟨텔레비전⟩·<code>jh·02·{opt}hl</code>·⟨데⟩·<code>␣</code>·<code>dc</code>·⟨장면⟩·<code>jl·n1·u;</code></td>
+<td style="text-align: left;">켰·싫</td>
+</tr>
+<tr>
+<td style="text-align: left;">여기가 제 집입니다. 잘 부탁합니다.␣</td>
+<td
+style="text-align: left;">⟨여기⟩·<code>fe</code>·⟨제⟩·<code>␣</code>·<code>l3·j3</code>·⟨니⟩·<code>u;</code>·⟨잘⟩·<code>␣</code>·⟨부탁⟩·<code>m3</code>·⟨니⟩·<code>u;</code></td>
+<td style="text-align: left;">집·입·합</td>
+</tr>
+<tr>
+<td style="text-align: left;">혼자라 외롭지만 자유롭다.␣</td>
+<td
+style="text-align: left;">⟨혼자라⟩·<code>␣</code>·⟨외⟩·<code>y3</code>·⟨지⟩·<code>i␣</code>·⟨자유⟩·<code>y3·u;</code></td>
+<td style="text-align: left;">롭</td>
+</tr>
+<tr>
+<td style="text-align: left;">방은 큽니다. 그런데 좀 춥다.␣</td>
+<td
+style="text-align: left;">⟨방⟩·<code>jl·03</code>·⟨니⟩·<code>u;</code>·⟨그런데⟩·<code>␣</code>·⟨좀⟩·<code>␣</code>·<code>o3·u;</code></td>
+<td style="text-align: left;">큽·춥</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><code>⟨니⟩</code>·<code>⟨었⟩</code>·<code>⟨았⟩</code> 은
+<strong>6단계에 트리거가 있지만 아직 안 배운 것</strong>이라 평타로
+친다. 6단계를 마치면 이 예문들을 <code>jo</code>·<code>j[</code> 로 다시
+쳐 보면서 단축량을 비교해 볼 것</li>
+<li>오타가 나면 문장을 통째로 다시 치지 말고, 걸린 글자만 위 드릴 표로
+돌아간다</li>
+</ul>
+<h1 id="6단계--낱글자">6단계 — 낱글자</h1>
+<p>열 규칙조차 없는 <strong>개별 암기 구간</strong>이다. 그나마 묶이는
+것은 "ㅇ 초성은 <code>j</code> 로 시작한다" 하나뿐이고, 그 묶음이 이
+단계 맨 앞 9행이다.</p>
+<h2 id="드릴-id-순">드릴 (id 순)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">트리거</th>
+<th style="text-align: left;">출력</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>6-001</code></td>
+<td style="text-align: left;"><code>j[</code></td>
+<td style="text-align: left;">았</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-002</code></td>
+<td style="text-align: left;"><code>j,</code></td>
+<td style="text-align: left;">없</td>
+<td style="text-align: left;">ㅇ초성이지만 id 는 여기다</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-003</code></td>
+<td style="text-align: left;"><code>jo</code></td>
+<td style="text-align: left;">었</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-004</code></td>
+<td style="text-align: left;"><code>jp</code></td>
+<td style="text-align: left;">였</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-005</code></td>
+<td style="text-align: left;"><code>j]</code></td>
+<td style="text-align: left;">원</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-006</code></td>
+<td style="text-align: left;"><code>j\</code></td>
+<td style="text-align: left;">월</td>
+<td style="text-align: left;">ㅇ초성 묶음 끝</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-007</code></td>
+<td style="text-align: left;"><code>j-</code></td>
+<td style="text-align: left;">읽</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-008</code></td>
+<td style="text-align: left;"><code>j0</code></td>
+<td style="text-align: left;">잃</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-009</code></td>
+<td style="text-align: left;"><code>ji</code></td>
+<td style="text-align: left;">있</td>
+<td style="text-align: left;"><strong>여기부터 ㅇ초성 8연속</strong> —
+왼손 <code>j</code> 고정</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-010</code></td>
+<td style="text-align: left;"><code>kh</code></td>
+<td style="text-align: left;">괜</td>
+<td style="text-align: left;">괜찮 — <code>op</code> 와 짝</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-011</code></td>
+<td style="text-align: left;"><code>ko</code></td>
+<td style="text-align: left;">것</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-012</code></td>
+<td style="text-align: left;"><code>k,</code></td>
+<td style="text-align: left;">끊</td>
+<td style="text-align: left;">구 <code>k1</code> 에서 이동 — 세로
+인접키</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-013</code></td>
+<td style="text-align: left;"><code>hm</code></td>
+<td style="text-align: left;">넣</td>
+<td style="text-align: left;">2026-08-04 등재분</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-014</code></td>
+<td style="text-align: left;"><code>hp</code></td>
+<td style="text-align: left;">년</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-015</code></td>
+<td style="text-align: left;"><code>h[</code></td>
+<td style="text-align: left;">넷</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-016</code></td>
+<td style="text-align: left;"><code>hy</code></td>
+<td style="text-align: left;">님</td>
+<td style="text-align: left;">왼손 검지로 <code>y</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-017</code></td>
+<td style="text-align: left;"><code>i9</code></td>
+<td style="text-align: left;">뭘</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-018</code></td>
+<td style="text-align: left;"><code>io</code></td>
+<td style="text-align: left;">많</td>
+<td style="text-align: left;">구 <code>i1</code> 에서 이동 — 가로
+인접키</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-019</code></td>
+<td style="text-align: left;"><code>li</code></td>
+<td style="text-align: left;">좋</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-020</code></td>
+<td style="text-align: left;"><code>lo</code></td>
+<td style="text-align: left;">잖</td>
+<td style="text-align: left;">구 <code>l1</code> 에서 이동 — 세로
+인접키</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-021</code></td>
+<td style="text-align: left;"><code>l␣</code></td>
+<td style="text-align: left;">줄␣</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-022</code></td>
+<td style="text-align: left;"><code>l.</code></td>
+<td style="text-align: left;">적</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-023</code></td>
+<td style="text-align: left;"><code>m.</code></td>
+<td style="text-align: left;">활</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-024</code></td>
+<td style="text-align: left;"><code>op</code></td>
+<td style="text-align: left;">찮</td>
+<td style="text-align: left;">구 <code>o1</code> 에서 이동 — 가로
+인접키</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-025</code></td>
+<td style="text-align: left;"><code>u8</code></td>
+<td style="text-align: left;">된</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-026</code></td>
+<td style="text-align: left;"><code>u[</code></td>
+<td style="text-align: left;">될␣</td>
+<td style="text-align: left;">구 <code>u]</code> 에서 이동</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-027</code></td>
+<td style="text-align: left;"><code>up</code></td>
+<td style="text-align: left;">들</td>
+<td style="text-align: left;">2026-08-04 라벨 정정(구 "도␣") — 공백
+없음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-028</code></td>
+<td style="text-align: left;"><code>uk</code></td>
+<td style="text-align: left;">떻</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-029</code></td>
+<td style="text-align: left;"><code>9s</code></td>
+<td style="text-align: left;">윈</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-030</code></td>
+<td style="text-align: left;"><code>u0</code></td>
+<td style="text-align: left;">등</td>
+<td style="text-align: left;">의존명사</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-031</code></td>
+<td style="text-align: left;"><code>mn</code></td>
+<td style="text-align: left;">후␣</td>
+<td style="text-align: left;">의존명사</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-032</code></td>
+<td style="text-align: left;"><code>lp</code></td>
+<td style="text-align: left;">즉,␣</td>
+<td style="text-align: left;"><code>{cmd}lp</code> → 즉␣
+(<code>6-033</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-034</code></td>
+<td style="text-align: left;"><code>m'</code></td>
+<td style="text-align: left;">행,␣</td>
+<td style="text-align: left;"><code>{cmd}m'</code> → 행␣
+(<code>6-035</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-036</code></td>
+<td style="text-align: left;"><code>hn</code></td>
+<td style="text-align: left;">놓</td>
+<td style="text-align: left;">2026-08-05 등재분이라 끝번 —
+<code>hm</code>(넣) 과 이웃</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>6-037</code></td>
+<td style="text-align: left;"><code>h.</code></td>
+<td style="text-align: left;">능</td>
+<td style="text-align: left;"><code>{shift}h.</code> → 능?
+(<code>6-038</code>). <code>hn</code>(놓)·<code>hm</code>(넣) 과 같은
+ㄴ초성 묶음</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong><code>lp</code>(즉)·<code>m'</code>(행) 은 ⌘ 로 쉼표가
+갈린다</strong> — 무수식 = 쉼표+공백, ⌘ = 쉼표 없이 글자+공백. 둘을 한
+규칙으로 묶어 익힌다</li>
+</ul>
+<h2 id="문장">문장</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">문장</th>
+<th style="text-align: left;">시퀀스</th>
+<th style="text-align: left;">메모</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">많이␣</td>
+<td style="text-align: left;"><code>io·dc</code></td>
+<td style="text-align: left;">7단계 + 2단계</td>
+</tr>
+<tr>
+<td style="text-align: left;">괜찮아.␣</td>
+<td style="text-align: left;"><code>kh·op·f.</code></td>
+<td style="text-align: left;">괜도 트리거가 있다</td>
+</tr>
+<tr>
+<td style="text-align: left;">그렇잖아.␣</td>
+<td style="text-align: left;">⟨그⟩·<code>y1·lo·f.</code></td>
+<td style="text-align: left;">6단계 렇 + 7단계 잖</td>
+</tr>
+<tr>
+<td style="text-align: left;">끊고␣</td>
+<td style="text-align: left;"><code>k,·km</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">좋은␣ ⟨생각⟩</td>
+<td style="text-align: left;"><code>li·jl</code>·⟨생각⟩</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">다.␣ 즉,␣</td>
+<td style="text-align: left;"><code>u;·lp</code></td>
+<td style="text-align: left;"><code>~다. 즉, ~</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨진⟩행,␣</td>
+<td style="text-align: left;">⟨진⟩·<code>m'</code></td>
+<td style="text-align: left;">진 은 평타</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨진⟩행␣ ⟨중⟩</td>
+<td style="text-align: left;">⟨진⟩·<code>{cmd}m'</code></td>
+<td style="text-align: left;">⌘ 로 쉼표 억제</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨사용⟩ 후␣</td>
+<td style="text-align: left;">⟨사용⟩·<code>mn</code></td>
+<td style="text-align: left;">의존명사</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨넣⟩ → 넣고␣</td>
+<td style="text-align: left;"><code>hm·km</code></td>
+<td style="text-align: left;">2026-08-04 등재분</td>
+</tr>
+<tr>
+<td style="text-align: left;">놓고␣ ⟨보자⟩</td>
+<td style="text-align: left;"><code>hn·km</code>·⟨보자⟩</td>
+<td style="text-align: left;">2026-08-05 등재분 — <code>hm</code>(넣) 과
+손이 헷갈리기 쉽다</td>
+</tr>
+<tr>
+<td style="text-align: left;">⟨가⟩능⟨하⟩다.␣</td>
+<td
+style="text-align: left;">⟨가⟩·<code>h.</code>·⟨하⟩·<code>u;</code></td>
+<td style="text-align: left;"><code>{shift}h.</code> → 능? 변형도
+함께</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="종합-문장">종합 문장</h1>
+<p>전 단계를 섞는다. <code>`</code> 로 시작하는 것은 fSnippet 축약이라
+Karabiner 규칙이
+아니다(fsnippet-한글속기.md(<code>Extensions/n3sh/_doc/n390/fsnippet-한글속기.md</code>)).</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: left;">문장</th>
+<th style="text-align: left;">시퀀스</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">맞습니다.␣</td>
+<td style="text-align: left;"><code>i1·n`</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">찾겠습니다.␣</td>
+<td style="text-align: left;"><code>o1·,`</code> (fSnippet
+<code>,</code>=겠습니다)</td>
+</tr>
+<tr>
+<td style="text-align: left;">많이␣갖고␣있습니다.␣</td>
+<td style="text-align: left;"><code>io·dc·k1·km·ji·n`</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">잊지␣않겠습니다.␣</td>
+<td style="text-align: left;"><code>j1·{cmd}o;·13·k2·n`</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">빚을␣⟨갚⟩지␣않겠습니다.␣</td>
+<td
+style="text-align: left;"><code>;1·jh·⟨갚⟩·{cmd}o;·13·k2·n`</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">쉽지␣않습니다.␣</td>
+<td style="text-align: left;"><code>⟨쉽⟩·{cmd}o;·13·n`</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">안␣쉽다.␣ 즉,␣⟨하⟩기␣⟨어⟩렵다.␣</td>
+<td
+style="text-align: left;"><code>23·⟨쉽⟩·u;·lp·⟨하⟩·kp·⟨어⟩·y1·u;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">안␣쉽습니다.␣</td>
+<td style="text-align: left;"><code>23·⟨쉽⟩·n`</code></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><code>n3</code> 는 습(3열)으로 배정돼 있다 — 형용사 "쉽다"의 어간
+<strong>쉽</strong> 은 트리거가 없어 위 문장들에서 ⟨쉽⟩ 평타로 친다</li>
+</ul>
+<h1 id="규칙에서-빠진-글자--평타로-친다">규칙에서 빠진 글자 — 평타로
+친다</h1>
+<p>트리거가 없는 것은 없다고 알고 있어야 손이 헤매지 않는다.</p>
+<ul>
+<li><strong>늦 · 밖</strong> — 트리거 소멸. 종성 조합으로 친다(밖 =
+⟨바⟩·<code>1w</code>). <code>놓</code> 은 2026-08-05 <code>hn</code>
+으로 부활했다(6-036)</li>
+<li><strong>ㄺ <code>2+1</code></strong> — 390 에서는 출력이 ㄺ 이
+아니라 <code>@</code> 였다. 오작동 잔재라 제거했고 최종식 판에만 남아
+있다. <code>1+2</code> 는 빈자리로 유지</li>
+<li>그 밖의 빈자리·보류 목록:
+staging.md(<code>Extensions/n3sh/layout/n390/staging.md</code>)</li>
+</ul>
+<h1 id="관련">관련</h1>
+<ul>
+<li>단계 정의·배정 SSOT: <a
+href="reference/steps.html">rules_step.md</a></li>
+<li>규칙 정본: <a href="rules.html">rules.md</a> · 적용 규칙 서술: <a
+href="reference/rules-notes.html">rules_notes.md</a></li>
+<li>표기 SSOT: <a href="reference/notation.html">notation.md</a></li>
+<li>재배치 스냅샷: <a
+href="cheatsheet.html">training_cheatsheet.md</a></li>
+</ul>
+
+</main>
+<footer>
+<p><a href="index.html">처음으로</a> · <a href="https://github.com/Finfra/karabiner-extensions">저장소</a></p>
+<p class="gen">이 페이지는 저장소의 마크다운에서 생성됐다. 고칠 것은 저장소 쪽이다.</p>
+</footer>
+</body>
+</html>

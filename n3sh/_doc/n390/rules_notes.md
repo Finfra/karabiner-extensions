@@ -6,9 +6,12 @@ rule: .claude/rules/data-md-first-rules.md
 arch: _doc_arch/data-pipeline-design.md
 documents: [Extensions/n3sh/core/n390/rules.json]
 ---
+<!-- site:skip -->
 **390 판에 지금 적용되는 규칙**이다. 공통 수집본([_doc/rules_notes_intersection.md](../rules_notes_intersection.md))에서 배열별로 분리했다(2026-08-04) — 최종식 판은 [final/rules_notes.md](../final/rules_notes.md). 원문 쪽은 Numbers 원본을 손대지 않고 두는 곳이라 현행 동작을 적기에 맞지 않는다.
 
-정본 데이터는 [rules.md](../../layout/n390/rules.md), 단계 설계는 [rules_step.md](../../layout/n390/rules_step.md), 표기는 [notation.md](../notation.md). 배우려는 사람은 [training.md](training.md)(매뉴얼 초안).
+**390 판에 지금 적용되는 규칙**이다. 행마다 외우는 것이 아니라 **한 번 익히면 여러 행에 그대로 적용되는 메타 규칙**을 모았다 — 꼬리 공백·문장부호가 여기서 갈린다.
+
+정본 데이터는 [rules.md](../../layout/n390/rules.md), 단계 설계는 [rules_step.md](../../layout/n390/rules_step.md), 표기는 [notation.md](../notation.md). 배우려는 사람은 [training.md](training.md).
 
 > 아래는 전부 **실측 확인분**이다. 근거 없이 적지 않는다 — 규칙마다 검증 방법을 함께 적었다.
 
@@ -103,7 +106,8 @@ documents: [Extensions/n3sh/core/n390/rules.json]
 
 # 관련
 
+<!-- site:skip-line -->
 * 공통 수집본(양 배열 공통 규칙 + Numbers 원문 절): [_doc/rules_notes_intersection.md](../rules_notes_intersection.md) · 최종식 적용본: [final/rules_notes.md](../final/rules_notes.md)
-* 정본 데이터: [rules.md](../../layout/n390/rules.md) · 단계 설계: [rules_step.md](../../layout/n390/rules_step.md) · 매뉴얼 초안: [training.md](training.md)
+* 정본 데이터: [rules.md](../../layout/n390/rules.md) · 단계 설계: [rules_step.md](../../layout/n390/rules_step.md) · 손 훈련: [training.md](training.md)
 * 표기 SSOT: [notation.md](../notation.md) · 컬럼 해설: [rules_Intersection.md](../../layout/rules_Intersection.md)
 * 훈련: [training.md](training.md) · [training_cheatsheet.md](training_cheatsheet.md)

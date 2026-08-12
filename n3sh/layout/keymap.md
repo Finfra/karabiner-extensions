@@ -9,6 +9,7 @@ documents: [Extensions/n3sh/core/keymap_final_to_390.json]
 ---
 # 목적
 
+<!-- site:skip -->
 > **이 문서가 `keymap_{390,final}.json` 을 만든다**. 심볼 shape 이
 > 2종(2원소 자모 / 6원소 tail)이라 `md_to_json.py` 의 Spec 모델 밖이며, 전용 도구
 > `tools/keymap_build.py` 가 생성·검증한다. `keymap_final_to_390.json`
@@ -363,6 +364,8 @@ PY
 
 # 관련
 
+<!-- site:skip-line -->
 * 생성기 설계: `_doc_arch/rule-generator-design.md`
+<!-- site:skip-line -->
 * 자모 코드 스펙: `_doc_arch/jamo-code-spec-design.md`
 * 규칙표: 배열별 정본 [n390/rules.md](n390/rules.md)·[final/rules.md](final/rules.md) (교집합 뷰 [rules_Intersection.md](rules_Intersection.md))

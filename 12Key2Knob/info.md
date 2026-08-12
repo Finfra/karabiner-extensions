@@ -65,11 +65,13 @@ ke_sync:
 | 대상 | 상태 |
 | :--- | :--- |
 | **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
-| **pqrs 등록** | ⏸️ **미룸** — 동봉 export 는 이름 뼈대뿐이라(본문 비어 있음) 남의 환경에서 곧바로 동작하지 않는다. 등록 기준을 아직 못 채운다. *하지 않기로 한 것이 아니라 지금은 안 하는 것* |
+| **pqrs 등록** | 🚧 **준비 완료 · 미제출** (2026-08-11) — 산출물 3종 완비(`pqrs_submission/json/nowage_12key2knob.json` · `pqrs_submission/extra_descriptions/nowage_12key2knob.html` · groups_entry) · lint ok · 정본과 66건 전건 동일. PR 만 남았고 **제출 여부는 사용자 판단** |
 
 > 📌 **방침 철회 (2026-08-09)**: 이 절은 *"공개하지 않는다 — 예정 없음"* 으로 적혀 있었다. 이 폴더는 `tools/build_public.py` 가 통째로 공개 트리에 복사하므로 **push 되는 순간 이미 공개**이며, 비공개 방침은 사실과 어긋난 채 남아 있었다. 철회하고 두 축으로 갈라 적는다 — 근본 원인은 `data/rule_source.yaml` 의 `공개_대상` 한 필드가 **pqrs 등록**과 **GitHub 공개**를 겸한 것이다.
 
-* ⚠️ **[FootPedal](../footPedal/info.md) 식 해법은 pqrs 축에서 성립하지 않는다.** FootPedal 은 Keyboard Maestro 의존을 순수 키 동작으로 걷어내 등록했지만(PR #1982), 본 규칙은 **매크로 호출 자체가 기능**이라 걷어내면 남는 것이 없다
+* ✅ **미룸 철회 (2026-08-11)** — 구 사유는 *"매크로 본문이 비어 있어 등록 기준을 못 채운다"* 였으나, upstream [hub16-launchapps.json](https://github.com/pqrs-org/KE-complex_modifications/blob/main/public/json/hub16-launchapps.json) 이 `device_if` + `shell_command` 매크로패드 규칙을 **`(template)`** 로 같은 `device-specific` 그룹에 등록해 둔 것이 확인됐다. 받는 사람이 내용을 채우는 형태는 이미 허용된다
+    - ⚠️ **잔여 리스크**: hub16 은 `open '/Applications/X.app'` 이라 KM 없이 즉시 동작하지만 본 규칙은 KM(유료) + 매크로 62종 없이는 **아무 일도 하지 않는다**. 리뷰어가 결격으로 볼 여지가 남아, 공개본 설명 첫 절이 이를 정면으로 밝히고 시작한다
+* ⚠️ **[FootPedal](../footPedal/info.md) 식 해법은 pqrs 축에서 성립하지 않는다.** FootPedal 은 Keyboard Maestro 의존을 순수 키 동작으로 걷어내 등록했지만(PR #1982), 본 규칙은 **매크로 호출 자체가 기능**이라 걷어내면 남는 것이 없다 — 그래서 **재작성 없이 정본 그대로** 낸다(드리프트 0)
 * ✅ **매크로 export 동봉 (2026-08-09)** — 구 방침은 *"export 원본은 개인 경로가 박혀 있어 공개 트리 밖에 둔다"* 였다. 실제로 내보낸 파일을 전수 스캔한 결과 **개인 경로·계정·실명·메일 0건**이었다(본문이 비어 있는 뼈대라 경로가 애초에 없다). 방침을 철회하고 [KeyboardMaestro_exports/](KeyboardMaestro_exports) 에 동봉한다 — 보관소였던 `_doc_base/km_macros/12Key2Knob/README.md` 는 이제 익명화 절차 문서만 남는다
 * ⚠️ **개인 동작이 든 매크로를 추가로 내려면 익명화가 선행 조건**이다 — 경로는 지우지 말고 `/Users/{yourname}` 로 예제화하고, `build_public.py` → `validate_public.py` **exit 0** 을 확인한 뒤 push 한다
 * 판정 근거: `data/rule_source.yaml` `pqrs_보류_사유`

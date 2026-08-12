@@ -11,7 +11,10 @@ arch: _doc_arch/data-pipeline-design.md
 
 [n390/rules.md](rules.md) 254행 전체를 학습 순서로 재배열한 **단계 설계**다(예비 + **6단계**). 본 문서가 단계 정의·배정·건수의 **SSOT** 이고, `rules.md` 는 그 배정을 `id` **접두**로만 들고 있다(`3-047` → 3단계 · 접두 `0` = 예비). 2026-08-06 로 `단계` 컬럼을 폐지해 **사본 열이 사라졌다** — 이제 정의(여기) ↔ 배정(id) 한 쌍만 맞추면 된다(`.claude/rules/rules-step-sync-rules.md`).
 
+<!-- site:skip -->
 매뉴얼은 같은 단계 번호를 축으로 드릴·문장을 담는다 — **두 문서의 단계 번호는 같은 축**이다(2026-08-04 재구성 전까지는 training.md 가  재배치 적응용 별도 축이었다). 개인용 전환기 자료 `_doc_base/training_for_nowage.md` 는 범용이 아니다.
+
+[6단계 학습 드릴](../../_doc/n390/training.md)이 같은 단계 번호를 축으로 드릴·문장을 담는다 — **두 문서의 단계 번호는 같은 축**이다.
 
 # 표기법
 
@@ -200,5 +203,8 @@ arch: _doc_arch/data-pipeline-design.md
 * 정본 데이터: [n390/rules.md](rules.md) (254행) — 위 6단계 + 예비 = **254건 전량**이다. 2026-08-05 `함`(`ml`) 중복 1행을 삭제해 255→254 가 됐다. 2026-08-05 구 4·5단계(종성 자모·이중모음 자모)를 4단계로 병합해 **예비+6단계** 가 됐다(id 접두도 `0`~`6`). 구 판에서 "단계 밖" 으로 뒀던 2건(`jm`+⌥ 의 `음`, `k'`+⌥)은 **3단계로 편입**했다 — 자기 `품사` 는 공란이나 같은 트리거의 형제 4행이 전부 품사 `e` 인 ⌥ 변형이기 때문이다. 둘 다 기존 조합의 변형이라 **고유 암기단위는 늘지 않는다**. `k'`+⌥ 는 오래 `txt` 가 빈칸이었는데 실제로는 `군` 을 내보내고 있었다 — 2026-08-05 채웠고 같은 유형을 막는 가드가 들어갔다
 * 행 순서·`id`: rules.md 는 단계 오름차순이고 **단계 안에서는 손의 흐름 순**이다(2026-08-04 사용자 재배열). `id` 는 `{단계번호}-{3자리 순번}` 으로 그 순서를 그대로 담으며 **단계를 담는 유일한 자리**다 — 행을 옮기면 id 를 다시 매긴다. **예비 단계의 접두는 `0`** — id 에는 한글을 쓰지 않는다(사용자 선호). 3자리 고정폭은 문자열 정렬이 숫자 정렬과 일치하게 하려는 것
 * 품사 컬럼 확실성 등급·건수: [rules_Intersection.md](../rules_Intersection.md) "품사 컬럼 값"
-* 같은 단계 축의 손 훈련: [training.md](../../_doc/n390/training.md) — 재배치 적응(다른 목적): `_doc_base/training_for_nowage.md` · [training_cheatsheet.md](../../_doc/n390/training_cheatsheet.md)
+* 같은 단계 축의 손 훈련: [training.md](../../_doc/n390/training.md) · [training_cheatsheet.md](../../_doc/n390/training_cheatsheet.md)
+<!-- site:skip-line -->
+* 재배치 적응(다른 목적): `_doc_base/training_for_nowage.md`
+<!-- site:skip-line -->
 * 데이터 편집 규약: `.claude/rules/data-md-first-rules.md`

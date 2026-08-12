@@ -3,11 +3,13 @@ name: training
 description: "세벌식 390 매뉴얼 초안 — 단계별 타건 드릴과 연습 문장. 프로모션 전 단계라 빠른 갱신 우선"
 date: 2026.08.04
 ---
+<!-- site:skip -->
 > 📝 **매뉴얼 초안이다.** `training*.md` 는 전부 매뉴얼 계열 초안이고, 규칙 쪽([rules.md](../../layout/n390/rules.md)·[rules_step.md](../../layout/n390/rules_step.md))이 설계 계열이다.
 > **프로모션 전이라 완성도보다 갱신 속도를 택한다** — 형식을 다듬느라 규칙 반영이 늦어지지 않게 한다. 프로모션 후에는 **버전을 붙여 별도 폴더**로 옮길 예정이라, 여기서는 내용만 맞으면 된다.
 
 단계별 **타건 드릴과 연습 문장**을 담는다. 규칙 정본은 [rules.md](../../layout/n390/rules.md), 단계 배정 근거·건수는 [rules_step.md](../../layout/n390/rules_step.md) — 둘 다 **설계 문서라 배우는 데는 필요하지 않다.** 단계 번호는 세 문서가 같은 축을 쓴다.
 
+<!-- site:skip -->
 * 이전 판의 "1~4단계"는 재배치 적응용이라 rules.md 의 단계와 다른 축이었다. **이번 재구성으로 두 축을 하나로 합쳤다** — 이제 여기 "3단계"는 rules.md 의 `단계=3`(어미)과 같은 것을 가리킨다
 * 재배치 **이전** 배치를 손에 익힌 사람만 `_doc_base/training_for_nowage.md`(개인용 전환기 자료)를 함께 본다 — 신규 학습자에게는 혼란만 준다
 
@@ -43,6 +45,7 @@ date: 2026.08.04
 * **아래 단계까지 배운 것만 쓴다** — 각 단계의 연습 문장은 그 단계 이하의 트리거 + 평타 ⟨ ⟩ 로만 짰다. 앞서 배운 것이 뒤에서 계속 재등장한다
 * 단계당 **드릴 표 3회전 → 문장 표 3회전**. 오타가 난 트리거는 그 단계 드릴 표로 돌아간다
 * 1~3단계는 규칙 재사용성이 높아 빠르게 지나가고, 4단계부터는 반복 주기를 늘린다([rules_step.md](../../layout/n390/rules_step.md) "진행 순서 요약")
+<!-- site:skip-line -->
 * 회차별 판정은 `Issue.md` 에 누적 기록한다
 
 # 예비 단계 — 동시타 확인
@@ -372,6 +375,7 @@ date: 2026.08.04
 | `6-037` | `h.`   | 능   | `{shift}h.` → 능? (`6-038`). `hn`(놓)·`hm`(넣) 과 같은 ㄴ초성 묶음 |
 
 * **`lp`(즉)·`m'`(행) 은 ⌘ 로 쉼표가 갈린다** — 무수식 = 쉼표+공백, ⌘ = 쉼표 없이 글자+공백. 둘을 한 규칙으로 묶어 익힌다
+<!-- site:skip-line -->
 * 구 자리에서 옮겨온 6건(않·될·많·잖·찮·끊)은 옛 손이 그대로 남아 있으면 다른 글자가 나온다 → `_doc_base/training_for_nowage.md`
 
 ## 문장
@@ -421,5 +425,8 @@ date: 2026.08.04
 * 단계 정의·배정 SSOT: [rules_step.md](../../layout/n390/rules_step.md)
 * 규칙 정본: [rules.md](../../layout/n390/rules.md) · 적용 규칙 서술: [rules_notes.md](rules_notes.md)
 * 표기 SSOT: [notation.md](../notation.md)
-* 재배치 스냅샷: [training_cheatsheet.md](training_cheatsheet.md) · 옛 습관 교정(개인용): `_doc_base/training_for_nowage.md`
+* 재배치 스냅샷: [training_cheatsheet.md](training_cheatsheet.md)
+<!-- site:skip-line -->
+* 옛 습관 교정(개인용): `_doc_base/training_for_nowage.md`
+<!-- site:skip-line -->
 * 최종식 판 연습·암기: [final/training.md](../final/training.md)

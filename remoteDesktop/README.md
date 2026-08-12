@@ -34,8 +34,14 @@ macOS 와 Windows 의 수식키 위치 차이 때문에 원격 세션에서 복�
 
 # 공개
 
-* ⏸ **보류** — 기술적으로는 가장 공개하기 쉬운 규칙이다. `device_if` 0 · `shell_command` 0 으로 **4종 중 유일하게 하드웨어·외부앱 비의존 순수 키매핑**이다
-* 보류 사유: alt↔command 스왑 계열은 pqrs 에 이미 다수 등록돼 있고, 차별점인 `keypad_comma` 한/영 전환이 **세벌식 + Windows 원격**이라는 좁은 조합 전용이라 수요가 불확실
+| 대상 | 상태 |
+| :--- | :--- |
+| **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
+| **pqrs 등록** | 🚧 **준비 완료 · 미제출** (2026-08-11) — 산출물 3종 완비 · lint ok · 정본과 3건 전건 동일. 대상 그룹 **`application-specific`** |
 
-> 💡 [EngCharOnKor](../engCharOnKor/README.md) 도 한/영 전환을 다룬다. 그쪽이 완성되면 "한국어 입력 + macOS/Windows 혼용" 묶음으로 함께 공개하는 편이 개별 등록보다 설득력이 있다 — 공개 재검토 시 같이 볼 것.
+* 기술적으로는 가장 공개하기 쉬운 규칙이다. `device_if` 0 · `shell_command` 0 으로 **5종 중 유일하게 하드웨어·외부앱 비의존 순수 키매핑**이다
+* ✅ **보류 철회 (2026-08-11)** — 구 사유는 *"차별점이 좁다"* 였는데 이는 결격이 아니라 **수요 판단**이었다. 실측 대조 결과 upstream `application-specific` 의 원격 데스크톱·가상머신 계열 6건은 전부 모디파이어 재배치이고 **한/영 전환을 포함한 것은 없다** — 대조표: `pqrs_submission/README.md` `nowage_remote_desktop.json` 절
+* ⚠️ **공개본은 문안을 새로 썼다** — 정본 `title`·`description` 이 한글이라 앞 3건 중 유일하게 영문화가 필요했다. manipulator 는 전건 동일하다
+
+> 💡 [EngCharOnKor](../engCharOnKor/README.md) 도 한/영 전환을 다루지만 **묶지 않기로 했다**(2026-08-08,  쟁점 ⑥) — 트리거·목적·조건이 전혀 다르고, 묶으면 RDC 를 안 쓰는 사용자가 불필요한 규칙까지 받는다. 각각 별도 등록한다.
 

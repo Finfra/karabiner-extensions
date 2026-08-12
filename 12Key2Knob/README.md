@@ -78,9 +78,9 @@ grep -o 'do script \\"[^\\]*\\"' rule.json | sed 's/do script \\"//;s/\\"//' | s
 | 대상 | 상태 |
 | :--- | :--- |
 | **GitHub** | ✅ 공개 — [finfra/karabiner-extensions](https://github.com/Finfra/karabiner-extensions) (2026-08-09) |
-| **pqrs 등록** | ⏸️ **미룸** — 동봉 export 는 이름 뼈대뿐이라(본문 비어 있음) 남의 환경에서 곧바로 동작하지 않는다. 등록 기준을 아직 못 채운다. *하지 않기로 한 것이 아니라 지금은 안 하는 것* |
+| **pqrs 등록** | 🚧 **준비 완료 · 미제출** (2026-08-11) — 산출물 3종 완비 · lint ok · 정본과 66건 전건 동일. PR 만 남았고 **제출 여부는 사용자 판단**. 근거·잔여 리스크는 `pqrs_submission/README.md` `nowage_12key2knob.json` 절 |
 
 > 📌 **판정 정정 (2026-08-09)**: 이 절은 오래 *"공개하지 않는다 — 예정 없음"* 으로 적혀 있었다. 실제 판단은 **pqrs 등록을 미룬다**였고 GitHub 공개는 거부한 적이 없다. `data/rule_source.yaml` 의 `공개_대상` 한 필드가 **두 종류의 공개**(pqrs 등록 / GitHub 공개)를 겸해 생긴 혼동이다.
 
-* 참고: 하드웨어·외부앱 의존 자체는 pqrs 결격 사유가 아니다(device-specific 그룹 36건 확인, 2026-07-18). 걸리는 것은 **매크로 부재**다
+* 참고: 하드웨어·외부앱 의존 자체는 pqrs 결격 사유가 아니다(device-specific 그룹 37건 확인, 2026-08-11). 걸리는 것은 **매크로 부재**였는데, 그것도 upstream `hub16-launchapps.json` 이 매크로패드 규칙을 **`(template)`** 로 등록해 둔 것이 확인되며 결격에서 내려왔다(2026-08-11)
 
