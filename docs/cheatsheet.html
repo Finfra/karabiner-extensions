@@ -12,6 +12,13 @@
 <main>
 <h1 class="page-title">한 장 치트시트</h1>
 
+<p>더</p>
+<hr />
+<h2
+id="name-training_cheatsheet-description-세벌식-390-치트시트-초안--매뉴얼과-짝인-한-장-요약-자판-지도와-예비6단계-전-규칙을-결과만-압축-date-20260812">name:
+training_cheatsheet description: "세벌식 390 치트시트 초안 — 매뉴얼과
+짝인 한 장 요약. 자판 지도와 예비~6단계 전 규칙을 결과만 압축" date:
+2026.08.12</h2>
 <blockquote>
 <p>📝 <strong>매뉴얼 계열 초안</strong> — <a
 href="training.html">training.md</a>(매뉴얼 초안)와 짝인 <strong>한 장
@@ -24,13 +31,20 @@ href="reference/steps.html">rules_step.md</a> 가 맡는다. 여기는
 <strong>무엇을 누르면 무엇이 나오는지만</strong> 담는다.</p>
 <h1 id="읽는-법">읽는 법</h1>
 <ul>
-<li><code>글자 키키</code> — 두 키를 <strong>동시에</strong> 누른다.
-순서는 무관하다</li>
+<li><code>글자 키키</code> — 두 키를 <strong>동시에</strong> 누른다. 두
+키끼리는 순서가 없다</li>
 <li><code>␣</code> = 스페이스바 · <code>⏎</code> = 엔터 ·
 <code>~ㅂ</code> = 종성(초성과 다른 자리)</li>
-<li><strong>모디파이어는 후치</strong> — <code>kj</code>+⌘ 는 k+j 를 ⌘
-누른 채. (<a href="training.html">training.md</a> 는 전치 표기를 쓴다 —
-혼용하지 말 것)</li>
+<li><strong>모디파이어는 전치</strong> — <code>{cmd}kj</code> 는 ⌘ 를
+<strong>누른 채</strong> k+j. 적힌 순서가 곧 누르는 순서다(<a
+href="training.html">training.md</a> 와 같은 표기 — <a
+href="reference/steps.html">rules_step.md</a> 는 후치를 쓰니 혼용하지 말
+것)
+<ul>
+<li>⚠️ <strong>모디파이어가 먼저다.</strong> 자모를 친
+<strong>뒤에</strong> ⌥·⇧·⌘ 를 누르면 발동하지 않는다 — 키가 눌리는
+순간의 상태로 판정되므로 그때는 이미 늦다</li>
+</ul></li>
 <li><strong>조사·어미는 뒤 공백까지 함께</strong> 나온다. 그래서 아래
 글자 뒤에 스페이스바를 또 누르지 않는다</li>
 </ul>
@@ -53,12 +67,12 @@ href="reference/steps.html">rules_step.md</a> 가 맡는다. 여기는
 <td style="text-align: left;"><code>?</code> + 공백</td>
 <td style="text-align: left;"><code>!</code> + 공백</td>
 <td style="text-align: left;">부호 없이 공백만</td>
-<td style="text-align: left;">부호·공백 <strong>둘 다 없음</strong></td>
+<td style="text-align: left;">부호·공백<strong>둘 다 없음</strong></td>
 </tr>
 </tbody>
 </table></div>
 <p>아래 목록은 <strong>무수식 형태만</strong> 적는다. 트리거가 갈리는
-것(면·데·던·께·까)만 수식키를 병기했다.</p>
+것(면·데·던·께·까)만 수식키를 <strong>앞에</strong> 적었다.</p>
 <h1 id="자판-지도">자판 지도</h1>
 <p>초성 키 배치:</p>
 <pre><code>                ㅋ(0)
@@ -71,21 +85,25 @@ href="reference/steps.html">rules_step.md</a> 가 맡는다. 여기는
 <pre><code>ㄲ kj    ㄸ ui    ㅃ ;p    ㅆ nj    ㅉ lk
 ㅑ fd    ㅠ er    ㅖ rt    ㅒ rf</code></pre>
 <h1 id="2단계--조사짧은-기능어">2단계 — 조사·짧은 기능어</h1>
-<pre><code>조사    이 dc    히 de    가 fe    은 jl    는 hl    을 jh    를 yu
+<pre><code>조사
+        이 dc    히 de    가 fe    은 jl    는 hl    을 jh    를 yu
         로 yi    도 uo    고 km    과 k.    와 j.    에 j␣    게 k␣
         인 jy    의 8␣
-기능어  만 i␣    면 i␣+⇧   더 u␣    데 u␣+⇧   던 u␣+⌥
+기능어
+        만 i␣    면 {shift}i␣    더 u␣    데 {shift}u␣    던 {opt}u␣
         한 m␣    할 m,    수 n␣    서 n&#39;
-부정    안 23    않 13</code></pre>
+부정
+        안 23    않 13</code></pre>
 <h1 id="3단계--종결어미">3단계 — 종결어미</h1>
 <pre><code>평서    다 u;      해 m;    야 d.    아 f.    어 j⏎    지 o;    죠 l&#39;
         요 j&#39;      오 j;    소 n;    네 h;    군 k&#39;    돼 ul    리 y8
-의문    까 kj+⌘   가 k;    나 hu    냐 hi    니 ho    래 y;
+의문    까 {cmd}kj   가 k;    나 hu    냐 hi    니 ho    래 y;
 청유    자 l;      줘 l,    봐 ;&#39;    마 i;    라 y7
 명사형  함 ml      음 jm    임 ju    기 kp
-높임    께 k␣+⌘</code></pre>
+높임    께 {cmd}k␣</code></pre>
 <p>⚠️ <code>kj</code> 무수식은 1단계 ㄲ, <code>k␣</code> 무수식은 2단계
-게다 — <strong>같은 키를 수식키로 가른다.</strong></p>
+게다 — <strong>같은 키를 수식키로 가른다.</strong> 그래서 ⌘ 를 늦게
+누르면 까 대신 ㄲ 이, 께 대신 게 가 나간다.</p>
 <h1 id="4단계--자모종성이중모음">4단계 — 자모(종성·이중모음)</h1>
 <pre><code>종성    ~ㄷ aw   ~ㅌ wq   ~ㅊ zs   ~ㅍ q2   ~ㄲ 1w   ~ㄶ sa   ~ㅄ xz
 이중모음 ㅘ f␣    ㅙ r␣    ㅚ v␣    ㅝ t␣    ㅞ c␣    ㅟ d␣    ㅢ g␣</code></pre>
@@ -139,8 +157,8 @@ href="reference/steps.html">rules_step.md</a> 가 맡는다. 여기는
 <li>ㅇ초성 9종은 전부 <code>j</code> 로 시작한다 — 시작 지점이 고정이라
 뒤만 외우면 된다</li>
 <li><code>즉</code>·<code>행</code> 은 <strong>쉼표가 붙어
-나온다</strong>(<code>즉,␣</code>). ⌘ 를 더하면 쉼표 없이
-<code>즉␣</code>·<code>행␣</code></li>
+나온다</strong>(<code>즉,␣</code>). ⌘ 를 <strong>누른 채</strong> 치면
+쉼표 없이 <code>즉␣</code>·<code>행␣</code></li>
 </ul>
 <h1 id="참고">참고</h1>
 <ul>
