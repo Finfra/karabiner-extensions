@@ -41,7 +41,7 @@ date: 2026.08.07
 | 설계 SSOT           | `_doc_arch/eng-char-on-kor-design.md` | ✅                                    |
 | 분류 등록           | `data/rule_source.yaml` `만든_것`                   | ✅ (2026-08-07 `참고_발견` 에서 이관) |
 | 후보 시험 이력      | [forTest/](forTest) · 기각분 [forTest/z_old/](forTest/z_old)                   | 📕 보존                               |
-| 공개본 (선택)       | `pqrs_submission/json/nowage_eng_char_on_kor.json`                               | 🚧 미정                               |
+| 공개본              | `pqrs_submission/json/nowage_eng_char_on_kor.json` | ✅ 등록 완료 (2026-08-12)             |
 
 * 초안 `karabiner_json/_orignal_do-not-update/z_backup/한글모드에서functionKey로%20영문입력/karabiner_forFunctionChar_inKorMode.json` 은 **수정 금지 영역**이라 그대로 보존한다. 정본은 그것을 고친 게 아니라 새로 작성했다
 
@@ -75,7 +75,9 @@ date: 2026.08.07
 
 # 공개
 
-**pqrs 등록 대상으로 확정**(2026-08-08 재판정 — 판정 SSOT `data/rule_source.yaml`). `device_if` 0 · `shell_command` 0 인 순수 키매핑이라 [FootPedal](../footPedal/README.md) 과 같은 경로로 간다. 대상 그룹은 **`international`**(Language Specific) — FootPedal 의 `device-specific` 과 다르다.
+✅ **pqrs 등록 완료** — PR [#1991](https://github.com/pqrs-org/KE-complex_modifications/pull/1991) merge(2026-08-12), `international`(Language Specific) 그룹. 주소는 이 문서 상단. `device_if` 0 · `shell_command` 0 인 순수 키매핑이라 [FootPedal](../footPedal/README.md) 과 같은 경로로 갔다(그쪽은 `device-specific` 이라 그룹만 다르다).
+
+* **등록 후 이름 정리** (2026-08-30, PR [#2002](https://github.com/pqrs-org/KE-complex_modifications/pull/2002) 심사 중) — rule `description` 이 Karabiner 목록에 그대로 뜨는데 설명문이 들어 있어 문단이 펼쳐졌다. `Eng Char on Kor : {repo URL} v{버전}` 한 줄로 바꿨고 설명은 `extra_descriptions` 가 맡는다
 
 ⚠️ **구 보류 사유 `⇧space` 전환키 의존은 사실이 아니었다.** 입력소스 전환은 `select_input_source` 로 하지 `⇧space` 를 보내지 않고, `space`+`backspace` 는 전환이 아니라 **조합중 글자 커밋용**이다. `⇧space` 는 2026-08-07 2차 실기의 **누출 사고**였고 설계 요점 3(`mandatory:["any"]` 2분기)이 **이미 차단**했다 — 고쳐 놓고 그 위험을 보류 사유로 들고 있었던 것이다.
 
