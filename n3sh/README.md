@@ -36,7 +36,7 @@ date: 2026.08.06
 
 # 이 폴더의 구조 (저장소 작업자용)
 
-라이브 rule 이름은 `n3sh(...) : v2026.07.26` 이다.
+라이브 rule 이름은 `n3sh(Nowage ShortHand for 3set 390) : v2026.08.30` 이다 — 버전은 [layout/n390/VERSION](layout/n390/VERSION) 이 SSOT 이고 `emit.rule_description` 이 각인한다(옮겨 적은 값은 낡으므로 그 파일을 본다).
 
 **이 Extension 만 전용 데이터를 갖는다.** 사람 정본 md 는 [layout/](layout), 생성 JSON·스키마는 [core/](core), 도구가 열지 않는 문서는 [_doc/](_doc), 포매터 정렬 원형은 [z_done/forTest/](z_done/forTest) 에 **아카이브**돼 있다(소비처 0건, 2026-08-08). 나머지 4종은 rule JSON 과 정보 md 뿐이다.
 
