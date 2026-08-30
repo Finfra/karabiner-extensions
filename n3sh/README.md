@@ -4,7 +4,7 @@ description: NowageShorthand(n3sh) 진입점 — 이 프로젝트의 본체이�
 date: 2026.08.06
 ---
 
-> 🌐 **pqrs 공개 등록** (PR #2001 · 2026-08-30) — [커뮤니티 카탈로그](https://ke-complex-modifications.pqrs.org/?q=nowage_n3sh_390)에 올라가 있다.
+> 🌐 **pqrs 공개 등록** (PR #2001 · 2026-08-30) — [커뮤니티 카탈로그]([https://ke-complex-modifications.pqrs.org/?q=nowage_n3sh_390](https://ke-complex-modifications.pqrs.org/?q=n3sh))에 올라가 있다.
 
 > 📖 **배우려면 → [n3sh 문서 사이트](https://finfra.github.io/karabiner-extensions/)**
 > 설치 → 치트시트 → 6단계 드릴 → 규칙표 순으로 읽게 되어 있고, **바로 넣을 수 있는 규칙 파일**을 거기서 받는다.
