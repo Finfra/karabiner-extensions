@@ -4,6 +4,13 @@ description: EngCharOnKor 진입점 — 한글 모드에서 Insert 를 누른 �
 date: 2026.08.07
 ---
 
+> 🌐 **pqrs 공개 등록** (PR #1991 · 2026-08-12) — 커뮤니티 카탈로그에 올라가 있다.
+> · 규칙 파일(정확 주소): <https://ke-complex-modifications.pqrs.org/json/nowage_eng_char_on_kor.json>
+> · 부가 설명: <https://ke-complex-modifications.pqrs.org/extra_descriptions/nowage_eng_char_on_kor.html>
+> · 사이트에서 찾기: <https://ke-complex-modifications.pqrs.org/?q=nowage_eng_char_on_kor>
+> 사이트는 SPA 라 규칙별 고정 페이지 주소가 없다 — **위 JSON 주소가 가장 정확한 지목**이고,
+> 사람이 목록에서 볼 때는 `?q=` 검색 링크를 쓴다.
+
 # 목적
 
 > 🏷️ **영문 몇 글자 치려고 한글 치다 한/영 전환하고, 영문 타이핑하고, 다시 한/영 전환하고 — 그 왕복 없이. `Insert` 를 모디파이어처럼 누른 채 영문을 친다.**

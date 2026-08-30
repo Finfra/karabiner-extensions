@@ -3,7 +3,7 @@ name: info
 description: "Builded Extension — Remote Desktop: MS RDC 한정 alt↔command 스왑 + keypad_comma 한/영 전환"
 date: 2026.07.29
 ke_sync:
-  rule_description: "Remote Desktop에서 left_alt를 left_command로, left_command를 left_alt로 매핑"
+  rule_description: "Remote Desktop : https://github.com/Finfra/karabiner-extensions v2026.07.26"
   source_json: Extensions/remoteDesktop/rule.json
 ---
 
@@ -44,9 +44,9 @@ Microsoft Remote Desktop(RDC) 앱이 최전면일 때만 발동하는 규칙. Wi
 | `shell_command` 의존 | 0 |
 | 순수 키매핑 (장치·외부앱 비의존) | 3 |
 
-* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `Remote Desktop에서 left_alt를 left_command로, left_command를 left_alt로 매핑`
+* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `Remote Desktop : https://github.com/Finfra/karabiner-extensions v2026.07.26`
 * 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
-* 원본 rule 다이제스트(sha256 앞 12): `cef53c76a5b9`
+* 원본 rule 다이제스트(sha256 앞 12): `a92cdefefc03`
 <!-- ke-sync:end -->
 
 위 표는 `tools/ke_sync.py` 가 원본 JSON 에서 직접 계산한다.

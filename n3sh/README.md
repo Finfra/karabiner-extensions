@@ -3,6 +3,14 @@ name: README
 description: NowageShorthand(n3sh) 진입점 — 이 프로젝트의 본체이자 유일하게 데이터 파이프라인 전체를 쓰는 Extension
 date: 2026.08.06
 ---
+
+> 🌐 **pqrs 공개 등록** (PR #2001 · 2026-08-30) — 커뮤니티 카탈로그에 올라가 있다.
+> · 규칙 파일(정확 주소): <https://ke-complex-modifications.pqrs.org/json/nowage_n3sh_390.json>
+> · 부가 설명: <https://ke-complex-modifications.pqrs.org/extra_descriptions/nowage_n3sh_390.html>
+> · 사이트에서 찾기: <https://ke-complex-modifications.pqrs.org/?q=nowage_n3sh_390>
+> 사이트는 SPA 라 규칙별 고정 페이지 주소가 없다 — **위 JSON 주소가 가장 정확한 지목**이고,
+> 사람이 목록에서 볼 때는 `?q=` 검색 링크를 쓴다.
+
 > 📖 **배우려면 → [n3sh 문서 사이트](https://finfra.github.io/karabiner-extensions/)**
 > 설치 → 치트시트 → 6단계 드릴 → 규칙표 순으로 읽게 되어 있고, **바로 넣을 수 있는 규칙 파일**을 거기서 받는다.
 > 아래는 규칙 자체의 설명이고, 이 폴더의 나머지는 저장소 작업자를 위한 것이다.

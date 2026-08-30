@@ -3,7 +3,7 @@ name: info
 description: "Builded Extension — Eng Char on Kor: 한글 모드에서 Insert 를 누른 동안만 영문 입력, 떼면 한글 복귀"
 date: 2026.08.07
 ke_sync:
-  rule_description: "Eng Char on Kor : v2026.08.07"
+  rule_description: "Eng Char on Kor : https://github.com/Finfra/karabiner-extensions v2026.08.07"
   source_json: Extensions/engCharOnKor/rule.json
 ---
 
@@ -134,7 +134,7 @@ ke_sync:
 | `shell_command` 의존 | 0 |
 | 순수 키매핑 (장치·외부앱 비의존) | 30 |
 
-* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `Eng Char on Kor : v2026.08.07`
+* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `Eng Char on Kor : https://github.com/Finfra/karabiner-extensions v2026.08.07`
 * 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
-* 원본 rule 다이제스트(sha256 앞 12): `82f1a68f05cd`
+* 원본 rule 다이제스트(sha256 앞 12): `07752b26b1aa`
 <!-- ke-sync:end -->

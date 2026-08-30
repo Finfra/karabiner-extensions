@@ -47,7 +47,10 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해 페달마다 계층을 
 # 공개
 
 * ✅ **pqrs 등록 완료** — PR [#1982](https://github.com/pqrs-org/KE-complex_modifications/pull/1982) merge(commit `42db4a4`, 2026-07-19)
-* 사이트 노출: [ke-complex-modifications.pqrs.org](https://ke-complex-modifications.pqrs.org/?q=foot%20pedal) — *USB Foot Pedal (3 pedals) - Editing / Navigation / Media layers* (Maintained by @nowage)
+* 사이트 노출 (Maintained by @nowage) — 사이트는 SPA 라 규칙별 고정 페이지가 없다. **JSON 주소가 가장 정확한 지목**이다
+    - 규칙 파일: <https://ke-complex-modifications.pqrs.org/json/nowage_foot_pedal.json>
+    - 부가 설명: <https://ke-complex-modifications.pqrs.org/extra_descriptions/nowage_foot_pedal.html>
+    - 사이트에서 찾기: <https://ke-complex-modifications.pqrs.org/?q=nowage_foot_pedal>
 * 제출 절차: `pqrs_submission/README.md`
 
 # 이력

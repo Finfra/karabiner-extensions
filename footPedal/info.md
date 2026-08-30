@@ -3,7 +3,7 @@ name: info
 description: "Builded Extension — Foot Pedal: USB 3페달 풋스위치, 모디파이어 6층 편집·탐색·미디어 매핑"
 date: 2026-07-29
 ke_sync:
-  rule_description: "USB Foot Pedal (3 pedals). Pedal 1 (left, 'a') = editing: copy, control=cut, option=paste, shift=paste-without-formatting, command=undo, hyper=redo. Pedal 2 (middle, 'b') = navigation: page down, control=page up, option=end, shift=home, command=Mission Control, hyper=Launchpad. Pedal 3 (right, 'c') = media: play/pause, control=rewind, option=fast-forward, shift=mute, command=volume down, hyper=volume up. Requires a USB foot switch with vendor_id 6790 (0x1a86) / product_id 57382 (0xe026)."
+  rule_description: "Foot Pedal : https://github.com/Finfra/karabiner-extensions v2026.07.26"
   source_json: Extensions/footPedal/rule.json
 ---
 
@@ -34,9 +34,9 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해, 페달마다 편집·�
 | `shell_command` 의존 | 0 |
 | 순수 키매핑 (장치·외부앱 비의존) | 0 |
 
-* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `USB Foot Pedal (3 pedals). Pedal 1 (left, 'a') = editing: copy, control=cut, option=paste, shift=paste-without-formatting, command=undo, hyper=redo. Pedal 2 (middle, 'b') = navigation: page down, control=page up, option=end, shift=home, command=Mission Control, hyper=Launchpad. Pedal 3 (right, 'c') = media: play/pause, control=rewind, option=fast-forward, shift=mute, command=volume down, hyper=volume up. Requires a USB foot switch with vendor_id 6790 (0x1a86) / product_id 57382 (0xe026).`
+* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `Foot Pedal : https://github.com/Finfra/karabiner-extensions v2026.07.26`
 * 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
-* 원본 rule 다이제스트(sha256 앞 12): `0903db46e22b`
+* 원본 rule 다이제스트(sha256 앞 12): `e217a4769d81`
 <!-- ke-sync:end -->
 
 위 표는 `tools/ke_sync.py` 가 원본 JSON 에서 직접 계산한다. 사람이 손으로 옮겨 적던 시절 구세대 규칙의 manipulator 수를 22개로 잘못 기록했다가 아티팩트 추출 과정에서 20개로 정정한 전례가 있어, 이 수치들은 기계 산출로 넘겼다.

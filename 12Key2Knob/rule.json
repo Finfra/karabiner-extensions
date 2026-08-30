@@ -1,75 +1,2031 @@
 {
-    "title": "12Key2Knob : v2024.03.10",
+    "title": "12Key2Knob : https://github.com/Finfra/karabiner-extensions v2024.03.10",
     "rules": [
         {
-            "description": "12Key2Knob : v2024.03.10",
+            "description": "12Key2Knob : https://github.com/Finfra/karabiner-extensions v2024.03.10",
             "manipulators": [
-                {"from":{"simultaneous":[{"key_code":"f1" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_a\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_a"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f2" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_b\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_b"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f3" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_c\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_c"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f4" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_d\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_d"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f5" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_e\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_e"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f6" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_f\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_f"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f7" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_g\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_g"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f8" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_h\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_h"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f9" }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_i\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_i"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f10"}]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_j\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_j"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f11"}]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_k\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_k"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f12"}]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_l\"'"                                                 }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_l"                            }]}]},
-                {"from":{"simultaneous":[{"key_code":"f1" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_a_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_a_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f2" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_b_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_b_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f3" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_c_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_c_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f4" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_d_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_d_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f5" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_e_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_e_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f6" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_f_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_f_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f7" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_g_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_g_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f8" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_h_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_h_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f9" }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_i_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_i_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f10"}],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_j_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_j_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f11"}],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_k_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_k_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f12"}],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_l_with_shift\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_l_with_shift"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"f1" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_a_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_a_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f2" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_b_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_b_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f3" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_c_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_c_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f4" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_d_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_d_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f5" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_e_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_e_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f6" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_f_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_f_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f7" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_g_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_g_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f8" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_h_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_h_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f9" }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_i_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_i_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f10"}],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_j_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_j_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f11"}],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_k_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_k_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f12"}],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_l_with_opt\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_l_with_opt"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f1" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_a_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_a_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f2" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_b_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_b_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f3" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_c_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_c_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f4" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_d_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_d_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f5" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_e_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_e_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f6" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_f_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_f_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f7" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_g_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_g_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f8" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_h_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_h_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f9" }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_i_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_i_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f10"}],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_j_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_j_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f11"}],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_k_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_k_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"f12"}],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_l_with_ctl\"'"                                        }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_l_with_ctl"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"1"  }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1__left_with_shift\"'"                          }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob__knob1__up_with_shift"        }]}]},
-                {"from":{"simultaneous":[{"key_code":"3"  }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1__right_with_shift\"'"                         }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob__knob1__down_with_shift"      }]}]},
-                {"from":{"simultaneous":[{"key_code":"2"  }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob1_push"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"2"  }],"modifiers":{"mandatory":["command"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push_with_cmd\"'"                             }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob1_push_with_cmd"          }]}]},
-                {"from":{"simultaneous":[{"key_code":"2"  }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push_with_ctl\"'"                             }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob1_push_with_ctl"          }]}]},
-                {"from":{"simultaneous":[{"key_code":"2"  }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push_with_opt\"'"                             }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob1_push_with_opt"          }]}]},
-                {"from":{"simultaneous":[{"key_code":"2"  }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push_with_shift\"'"                           }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob1_push_with_shift"        }]}]},
-                {"from":{"simultaneous":[{"key_code":"1"  }]                                      },"to":[{                                                                                                                                    "key_code":"left_arrow" }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob__knob1__up"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"3"  }]                                      },"to":[{                                                                                                                                    "key_code":"right_arrow"}],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob__knob1__down"                 }]}]},
-                {"from":{"simultaneous":[{"key_code":"4"  }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2__left_with_shift\"'"                          }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob__knob2__down_left_with_shift" }]}]},
-                {"from":{"simultaneous":[{"key_code":"6"  }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2__right_with_shift\"'"                         }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob__knob2__down_right_with_shift"}]}]},
-                {"from":{"simultaneous":[{"key_code":"5"  }],"modifiers":{"mandatory":["command"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push_with_cmd\"'"                             }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob2_push_with_alt"          }]}]},
-                {"from":{"simultaneous":[{"key_code":"5"  }],"modifiers":{"mandatory":["control"]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push_with_ctl\"'"                             }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob2_push_with_cmd"          }]}]},
-                {"from":{"simultaneous":[{"key_code":"5"  }],"modifiers":{"mandatory":["option" ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push_with_alt\"'"                             }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob2_push_with_ctl"          }]}]},
-                {"from":{"simultaneous":[{"key_code":"5"  }],"modifiers":{"mandatory":["shift"  ]}},"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push_with_shift\"'"                           }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob2_push_with_shift"        }]}]},
-                {"from":{"simultaneous":[{"key_code":"4"  }]                                      },"to":[{                                                                                                                                    "key_code":"comma"      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob__knob2__up_left"              }]}]},
-                {"from":{"simultaneous":[{"key_code":"5"  }]                                      },"to":[{"shell_command":"osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push\"'"                                      }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob_knob2_push"                   }]}]},
-                {"from":{"simultaneous":[{"key_code":"6"  }]                                      },"to":[{                                                                                                                                    "key_code":"period"     }],"type":"basic","conditions":[{"type":"device_if","identifiers":[{"vendor_id":4489,"product_id":34960,"description":"12Key2Knob__knob2__up_right"             }]}]}
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f1"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_a\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_a"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f2"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_b\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_b"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f3"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_c\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_c"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f4"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_d\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_d"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f5"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_e\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_e"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f6"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_f\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_f"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f7"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_g\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_g"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f8"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_h\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_h"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f9"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_i\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_i"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f10"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_j\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_j"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f11"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_k\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_k"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f12"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_l\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_l"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f1"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_a_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_a_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f2"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_b_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_b_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f3"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_c_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_c_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f4"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_d_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_d_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f5"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_e_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_e_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f6"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_f_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_f_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f7"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_g_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_g_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f8"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_h_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_h_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f9"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_i_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_i_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f10"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_j_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_j_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f11"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_k_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_k_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f12"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_l_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_l_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f1"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_a_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_a_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f2"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_b_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_b_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f3"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_c_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_c_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f4"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_d_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_d_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f5"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_e_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_e_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f6"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_f_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_f_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f7"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_g_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_g_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f8"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_h_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_h_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f9"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_i_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_i_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f10"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_j_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_j_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f11"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_k_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_k_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f12"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_l_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_l_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f1"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_a_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_a_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f2"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_b_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_b_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f3"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_c_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_c_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f4"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_d_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_d_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f5"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_e_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_e_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f6"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_f_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_f_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f7"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_g_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_g_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f8"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_h_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_h_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f9"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_i_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_i_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f10"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_j_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_j_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f11"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_k_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_k_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f12"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob_l_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_l_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "1"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1__left_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob__knob1__up_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "3"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1__right_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob__knob1__down_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "2"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob1_push"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "2"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push_with_cmd\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob1_push_with_cmd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "2"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob1_push_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "2"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push_with_opt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob1_push_with_opt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "2"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob1_push_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob1_push_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "1"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob__knob1__up"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "3"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob__knob1__down"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "4"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2__left_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob__knob2__down_left_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "6"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2__right_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob__knob2__down_right_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "5"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push_with_cmd\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob2_push_with_alt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "5"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push_with_ctl\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob2_push_with_cmd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "5"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push_with_alt\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob2_push_with_ctl"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "5"
+                            }
+                        ],
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push_with_shift\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob2_push_with_shift"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "4"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "key_code": "comma"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob__knob2__up_left"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "5"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"12Key2Knob___knob2_push\"'"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob_knob2_push"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "6"
+                            }
+                        ]
+                    },
+                    "to": [
+                        {
+                            "key_code": "period"
+                        }
+                    ],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 4489,
+                                    "product_id": 34960,
+                                    "description": "12Key2Knob__knob2__up_right"
+                                }
+                            ]
+                        }
+                    ]
+                }
             ]
         }
     ]
