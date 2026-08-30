@@ -50,7 +50,7 @@ USB 풋페달(발로 밟는 스위치) 3개를 감지해 페달마다 계층을 
 * 사이트 노출 (Maintained by @nowage) — 사이트는 SPA 라 규칙별 고정 페이지가 없다. **JSON 주소가 가장 정확한 지목**이다
     - 규칙 파일: <https://ke-complex-modifications.pqrs.org/json/nowage_foot_pedal.json>
     - 부가 설명: <https://ke-complex-modifications.pqrs.org/extra_descriptions/nowage_foot_pedal.html>
-    - 사이트에서 찾기: <https://ke-complex-modifications.pqrs.org/?q=nowage_foot_pedal>
+    - 사이트에서 찾기: <https://ke-complex-modifications.pqrs.org/?q=Foot%20Pedal>
 * 제출 절차: `pqrs_submission/README.md`
 
 # 이력

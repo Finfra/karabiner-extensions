@@ -4,12 +4,9 @@ description: EngCharOnKor 진입점 — 한글 모드에서 Insert 를 누른 �
 date: 2026.08.07
 ---
 
-> 🌐 **pqrs 공개 등록** (PR #1991 · 2026-08-12) — 커뮤니티 카탈로그에 올라가 있다.
-> · 규칙 파일(정확 주소): <https://ke-complex-modifications.pqrs.org/json/nowage_eng_char_on_kor.json>
-> · 부가 설명: <https://ke-complex-modifications.pqrs.org/extra_descriptions/nowage_eng_char_on_kor.html>
-> · 사이트에서 찾기: <https://ke-complex-modifications.pqrs.org/?q=nowage_eng_char_on_kor>
-> 사이트는 SPA 라 규칙별 고정 페이지 주소가 없다 — **위 JSON 주소가 가장 정확한 지목**이고,
-> 사람이 목록에서 볼 때는 `?q=` 검색 링크를 쓴다.
+> 🌐 **pqrs 공개 등록** (PR #1991 · 2026-08-12) — [커뮤니티 카탈로그](https://ke-complex-modifications.pqrs.org/?q=Eng%20Char%20on%20Kor) 에 올라가 있다.
+> 규칙 파일 직접 주소는 <https://ke-complex-modifications.pqrs.org/json/nowage_eng_char_on_kor.json> 다.
+> ⚠️ 검색어는 **[PR #2002](https://github.com/pqrs-org/KE-complex_modifications/pull/2002) merge 후** 유효하다 — 사이트 검색은 `title` 문자열을 보는데 현재 배포본 title 이 아직 옛 영문 설명형이다.
 
 # 목적
 
