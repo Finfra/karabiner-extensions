@@ -34,6 +34,8 @@ generates: [Extensions/n3sh/core/n390/staging.json]
 
 컬럼을 채우기 전에 **빠르게 던져 놓는 자리**. 정리되면 아래 표로 옮긴다(`금지` 만 [rules_prohibit.md](rules_prohibit.md) 로). 형식은 자유이나 `트리거 : 출력` 이면 옮기기 쉽다.
 
+* 추가 : `중` (평타 `lba`) · `듯` (평타 `ugq`) — 2026-09-01 조회에서 미등록 확인
+
 # 2. Staging by Table
 
 <!-- data: staging.json -->

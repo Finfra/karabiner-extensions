@@ -1,8 +1,8 @@
 {
-  "title": "n3sh(Nowage ShortHand for 3set 390) : https://github.com/Finfra/karabiner-extensions v2026.08.30",
+  "title": "n3sh(Nowage ShortHand for 3set 390) : https://github.com/Finfra/karabiner-extensions v0.9.0",
   "rules": [
     {
-      "description": "n3sh(Nowage ShortHand for 3set 390) : https://github.com/Finfra/karabiner-extensions v2026.08.30",
+      "description": "n3sh(Nowage ShortHand for 3set 390) : https://github.com/Finfra/karabiner-extensions v0.9.0",
       "manipulators": [
         {
           "from": {

@@ -1,5 +1,5 @@
 {
-    "description": "n3sh(Nowage ShortHand 최종식) : https://github.com/Finfra/karabiner-extensions v2026.07.26",
+    "description": "n3sh(Nowage ShortHand 최종식) : https://github.com/Finfra/karabiner-extensions v0.9.0",
     "manipulators": [
         {"from":{"simultaneous":[{"key_code":"period"   },{"key_code":"comma"          }]                                                },"to":[{"key_code":"period"                       },{"key_code":"spacebar" }                                                                                                                ],"type":"basic","conditions":[{"input_sources":[{"language":"^ko$"}],"type":"input_source_if"},{"type":"variable_if","name":"keyboardLayoutSettingIsEng","value":0}]},
         {"from":{"simultaneous":[{"key_code":"c"        },{"key_code":"v"              }]                                                },"to":[{"key_code":"period"                       },{"key_code":"spacebar" }                                                                                                                ],"type":"basic","conditions":[{"input_sources":[{"language":"^ko$"}],"type":"input_source_if"},{"type":"variable_if","name":"keyboardLayoutSettingIsEng","value":0}]},

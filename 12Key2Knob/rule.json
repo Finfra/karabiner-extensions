@@ -1,8 +1,8 @@
 {
-    "title": "12Key2Knob : https://github.com/Finfra/karabiner-extensions v2024.03.10",
+    "title": "12Key2Knob : https://github.com/Finfra/karabiner-extensions v0.9.0",
     "rules": [
         {
-            "description": "12Key2Knob : https://github.com/Finfra/karabiner-extensions v2024.03.10",
+            "description": "12Key2Knob : https://github.com/Finfra/karabiner-extensions v0.9.0",
             "manipulators": [
                 {
                     "from": {

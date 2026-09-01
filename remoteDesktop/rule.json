@@ -1,8 +1,8 @@
 {
-    "title": "Remote Desktop : https://github.com/Finfra/karabiner-extensions v2026.07.26",
+    "title": "Remote Desktop : https://github.com/Finfra/karabiner-extensions v0.9.0",
     "rules": [
         {
-            "description": "Remote Desktop : https://github.com/Finfra/karabiner-extensions v2026.07.26",
+            "description": "Remote Desktop : https://github.com/Finfra/karabiner-extensions v0.9.0",
             "manipulators": [
                 {
                     "conditions": [

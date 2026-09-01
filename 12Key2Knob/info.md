@@ -3,7 +3,7 @@ name: info
 description: "Builded Extension — 12Key2Knob: 12키+2노브 매크로패드 + Keyboard Maestro 매크로 트리거"
 date: 2026.08.08
 ke_sync:
-  rule_description: "12Key2Knob : https://github.com/Finfra/karabiner-extensions v2024.03.10"
+  rule_description: "12Key2Knob : https://github.com/Finfra/karabiner-extensions v0.9.0"
   source_json: Extensions/12Key2Knob/rule.json
 ---
 
@@ -35,9 +35,9 @@ ke_sync:
 | `shell_command` 의존 | 62 |
 | 순수 키매핑 (장치·외부앱 비의존) | 0 |
 
-* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `12Key2Knob : https://github.com/Finfra/karabiner-extensions v2024.03.10`
+* 원본: [rule.json](rule.json) → `(profile 없음 — rule 단위 원본)` → rule `12Key2Knob : https://github.com/Finfra/karabiner-extensions v0.9.0`
 * 아티팩트: 없음 — 원본이 rule 단위라 추출본을 두지 않는다
-* 원본 rule 다이제스트(sha256 앞 12): `e6cd4c51327d`
+* 원본 rule 다이제스트(sha256 앞 12): `9588b31695f7`
 <!-- ke-sync:end -->
 
 위 표는 `tools/ke_sync.py` 가 원본 JSON 에서 직접 계산한다.
